@@ -1,0 +1,208 @@
+/* Text shine and caret gradient (caret updated to purple metallic) */
+
+.metallic-gold-glow-pass,
+.shiny-word {
+  position: relative;
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5bf03 0%,
+      #f8d633 30%,
+      #fff066 50%,
+      #f8d633 70%,
+      #f5bf03 100%
+    ),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.12' numOctaves='4' stitchTiles='stitch' /%3E%3C/filter%3E%3Crect width='40' height='40' filter='url(%23noise)' opacity='0.06' fill='%23000' /%3E%3C/svg%3E");
+  background-blend-mode: normal, overlay;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: 1.5px;
+  text-shadow:
+    0 0 5px rgba(245, 191, 3, 0.85),
+    0 2px 4px rgba(120, 90, 0, 0.5);
+
+  transition: background-position 3s ease-in-out;
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+}
+
+.metallic-gold-glow-pass:hover,
+.shiny-word:hover {
+  background-position: 100% 50%;
+}
+
+
+.caret {
+  display: inline-block;
+  font-weight: 900;
+  margin-left: 1px;
+  user-select: none;
+  background-color: #e1b2ff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease;
+  animation: caretShine 3s ease-in-out infinite;
+}
+
+@keyframes caretShine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Remove scaling on featured video hover but keep glow */
+
+.featured-videos > div > div {
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.featured-videos > div > div:hover {
+  transform: none !important;
+  box-shadow: 0 0 30px 1px rgba(204, 0, 255, 0.3);
+  border-radius: 18px !important;
+}
+
+/* Animations */
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Page container and layout */
+
+.page-container {
+  background-color: #872fbd;
+  margin-top: 100px;
+  padding: 3rem;
+  margin: 3rem;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Top row: left (typing text), right (dashboard) */
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+
+.typing-text {
+  flex: 1 1 50%;
+  min-width: 280px;
+}
+
+.dashboard-container {
+  flex: 1 1 40%;
+  min-width: 280px;
+}
+
+/* Featured videos */
+
+.featured-videos {
+  max-width: 400px;
+}
+
+/* Responsive for tablets and below */
+
+@media (max-width: 1024px) {
+  .top-row {
+    flex-wrap: wrap;
+  }
+
+  .typing-text,
+  .dashboard-container {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  h1 {
+    font-size: 3rem !important;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 39px !important;
+    line-height: 1.1;
+  }
+
+  
+
+  /* Hide dashboard stats except clients, videos, views */
+  .dashboard-container > * > * {
+    display: none;
+  }
+
+  /* Adjust these selectors based on your Dashboard component's class names */
+  .stat-clients,
+  .stat-videos,
+  .stat-views {
+    display: block !important;
+  }
+}
+
+
+
+
+
+/* metal */
+
