@@ -11,13 +11,13 @@ import dummyProfile from "../../assets/fea1.png";
 import "./Featured.css";
 
 const featuredVideos = [
-  { id: 1, img: fea1, desc: "الكشف عن تقييمات FC 25 : خمن البطاقة مع @AbdullahAshkanani-fl4cw و @OLYAN15K", authorImg: dummyProfile },
-  { id: 2, img: fea1, desc: "فيديو تجريبي رقم 2 - وصف قصير", authorImg: dummyProfile },
-  { id: 3, img: fea1, desc: "فيديو تجريبي رقم 3 - وصف قصير", authorImg: dummyProfile },
-  { id: 4, img: fea1, desc: "فيديو تجريبي رقم 4 - وصف قصير", authorImg: dummyProfile },
-  { id: 5, img: fea1, desc: "فيديو تجريبي رقم 5 - وصف قصير", authorImg: dummyProfile },
-  { id: 6, img: fea1, desc: "فيديو تجريبي رقم 6 - وصف قصير", authorImg: dummyProfile },
-  { id: 7, img: fea1, desc: "فيديو تجريبي رقم 7 - وصف قصير", authorImg: dummyProfile },
+  { id: 1, img: fea1, desc: "video", authorImg: dummyProfile },
+  { id: 2, img: fea1, desc: "video", authorImg: dummyProfile },
+  { id: 3, img: fea1, desc: "video", authorImg: dummyProfile },
+  { id: 4, img: fea1, desc: "video", authorImg: dummyProfile },
+  { id: 5, img: fea1, desc: "video", authorImg: dummyProfile },
+  { id: 6, img: fea1, desc: "video", authorImg: dummyProfile },
+  { id: 7, img: fea1, desc: "video", authorImg: dummyProfile },
 ];
 
 export default function Featured() {
