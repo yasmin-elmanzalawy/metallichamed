@@ -1,0 +1,157 @@
+.btn {
+ display: inline-block;
+ width: 80px;
+ height: 30px;
+ border-radius: 30px;
+ border: 2px solid #e1b2ff;
+ position: relative;
+ overflow: hidden;
+ transition: all 0.5s ease-in;
+ z-index: 1;
+}
+
+.btn::before,
+.btn::after {
+ content: '';
+ position: absolute;
+ top: 0;
+ width: 0;
+ height: 100%;
+ transform: skew(15deg);
+ transition: all 0.5s;
+ overflow: hidden;
+ z-index: -1;
+}
+
+.btn::before {
+ left: -10px;
+ background: #30054A;
+}
+
+.btn::after {
+ right: -10px;
+ background: #692395;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+ width: 58%;
+}
+
+.btn:hover span {
+ color: #e0aaff;
+ transition: 0.3s;
+}
+
+.btn span {
+ color: #e1b2ff;
+ font-size: 18px;
+ font-weight: 500;
+ transition: all 0.3s ease-in;
+
+
+}
+
+.clients-carousel-container {
+  position: relative;
+}
+
+/* Custom arrows styled like your first code */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255 255 255 / 0.3);
+  padding: 0.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.custom-arrow:hover {
+  background-color: rgba(255 255 255 / 0.6);
+}
+
+.custom-prev {
+  left: -20px;
+}
+
+.custom-next {
+  right: -20px;
+}
+
+/* Slide content styling */
+.client-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  height: 230px; /* Fixed height to align images horizontally */
+  justify-content: flex-start; /* Align content to the top */
+  padding-bottom: 10px;
+}
+
+.client-image-container {
+  background-color: #662390;
+  border-radius: 20px;
+  width: 150px;
+  height: 130px; /* Fixed height for image container */
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center;     /* vertically center */
+  overflow: hidden;
+  margin: 0 auto;
+  flex-shrink: 0;
+  position: relative;
+  /* border: 1px solid red;  <-- uncomment for debugging */
+}
+
+.client-image {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  /* border: 1px solid blue;  <-- uncomment for debugging */
+}
+
+.client-slide:hover .client-image {
+  transform: scale(1.05);
+}
+
+.client-text-container {
+  margin-top: 12px;
+  width: 100%;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.client-name {
+  color: #d4af37;
+  font-weight: 600;
+  font-size: 1.125rem; /* 18px */
+  margin-bottom: 4px;
+}
+
+.client-subscribers {
+  color: #e8ccf9;
+  font-size: 0.875rem; /* 14px */
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+/* Remove default pagination dots */
+.swiper-pagination {
+  display: none !important;
+}

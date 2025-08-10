@@ -20,7 +20,7 @@
 
 /* From Uiverse.io by Ali-Tahmazi99 */ 
 /* From uiverse.io by @Ali-Tahmazi99 */
-button {
+.btn {
  display: inline-block;
  width: 80px;
  height: 30px;
@@ -32,8 +32,8 @@ button {
  z-index: 1;
 }
 
-button::before,
-button::after {
+.btn::before,
+.btn::after {
  content: '';
  position: absolute;
  top: 0;
@@ -45,27 +45,27 @@ button::after {
  z-index: -1;
 }
 
-button::before {
+.btn::before {
  left: -10px;
  background: #30054A;
 }
 
-button::after {
+.btn::after {
  right: -10px;
  background: #692395;
 }
 
-button:hover::before,
-button:hover::after {
+.btn:hover::before,
+.btn:hover::after {
  width: 58%;
 }
 
-button:hover span {
+.btn:hover span {
  color: #e0aaff;
  transition: 0.3s;
 }
 
-button span {
+.btn span {
  color: #e1b2ff;
  font-size: 18px;
  font-weight: 500;
