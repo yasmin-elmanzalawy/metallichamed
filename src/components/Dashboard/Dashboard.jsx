@@ -1,37 +1,26 @@
 import React, { useState, useEffect } from "react";
-import {
-  FaClock,
-  FaEye,
-  FaVideo,
-  FaUsers,
-  FaCalendarAlt,
-  FaFilm,
-} from "react-icons/fa";
+import { FaEye, FaVideo, FaUsers } from "react-icons/fa";
 
 const data = [
-  { id: 1, title: "Avg. Duration", icon: <FaClock size={28} />, target: 125 },
-  { id: 2, title: "Views", icon: <FaEye size={28} />, target: 4300 },
-  { id: 3, title: "Videos", icon: <FaVideo size={28} />, target: 56 },
-  { id: 4, title: "Clients", icon: <FaUsers size={28} />, target: 12 },
-  { id: 5, title: "Videos/yr", icon: <FaCalendarAlt size={28} />, target: 15 },
-  { id: 6, title: "Videos/wk", icon: <FaFilm size={28} />, target: 2 },
+  { id: 2, title: "Views", icon: <FaEye />, target: 4300 },
+  { id: 3, title: "Videos", icon: <FaVideo />, target: 56 },
+  { id: 4, title: "Clients", icon: <FaUsers />, target: 12 },
 ];
 
-// IDs we want to keep for mobile
-const mobileVisibleIds = [2, 3, 4]; // Views, Videos, Clients
+const mobileVisibleIds = [2, 3, 4];
 
 export default function Dashboard() {
   return (
     <>
       {/* Desktop & Tablet View */}
-      <div className="hidden sm:grid p-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+      <div className="hidden sm:flex p-10 flex-nowrap justify-items-center whitespace-nowrap">
         {data.map(({ id, title, icon, target }) => (
           <GlassCard key={id} icon={icon} title={title} target={target} />
         ))}
       </div>
 
       {/* Mobile View */}
-      <div className="sm:hidden  flex justify-around p-4">
+      <div className="sm:hidden flex justify-around p-4 whitespace-nowrap">
         {data
           .filter(({ id }) => mobileVisibleIds.includes(id))
           .map(({ id, title, target }) => (
@@ -63,19 +52,46 @@ function GlassCard({ icon, title, target, noIcon }) {
 
   return (
     <div
-      className="sm:w-[11em] w-20 sm:h-24 py-2 mx-2 relative overflow-hidden rounded-xl flex items-center justify-start text-gold shadow-lg
-                 bg-gradient-to-br from-[#330c4a] via-[#5d0991] to-[#330c4a] backdrop-blur-md
-                 transition-all duration-700 ease-out
-                 bg-[length:400%_400%] bg-[position:0%_0%]
-                 hover:bg-[position:100%_100%] hover:scale-105 px-4 justify-items-center"
+      className="sm:w-30 md:w-32 lg:w-28 xl:w-28 2xl:w-32 
+        [@media(min-width:1920px)]:w-40 
+        lg:h-16 xl:h-20  [@media(min-width:1920px)]:h-24 
+        py-2 mx-2 relative overflow-hidden rounded-xl flex flex-nowrap items-center justify-start text-gold shadow-lg
+        bg-gradient-to-br from-[#330c4a] via-[#5d0991] to-[#330c4a] backdrop-blur-md
+        transition-all duration-700 ease-out
+        bg-[length:400%_400%] bg-[position:0%_0%]
+        hover:bg-[position:100%_100%] hover:scale-105 px-4"
     >
-      {/* Icon (only if not in mobile view with noIcon) */}
-      {!noIcon && <div className="mr-3">{icon}</div>}
+      {/* Icon - scales down from large */}
+      {!noIcon && (
+        <div
+          className="
+            mr-3
+            sm:text-lg md:text-lg lg:text-xl xl:text-lg 2xl:text-xl
+            [@media(min-width:1920px)]:text-2xl
+          "
+        >
+          {React.cloneElement(icon, { size: "1em" })}
+        </div>
+      )}
 
-      {/* Title above number */}
-      <div className="flex flex-col justify-content-center items-center">
-        <h3 className="font-semibold text-neutral-white sm:text-xl text-center">{title}</h3>
-        <p className="font-bold text-neutral-white sm:text-xl">{count.toLocaleString()}</p>
+      {/* Title + Number */}
+      <div className="flex flex-col justify-content-center items-center whitespace-nowrap">
+        <h3
+          className="font-semibold text-neutral-white text-center 
+            sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
+            [@media(min-width:1920px)]:text-2xl
+          "
+        >
+          {title}
+        </h3>
+        <p
+          className="font-bold text-neutral-white
+            sm:text-lg md:text-xl lg:text-xl xl:text-lg 2xl:text-lg
+            [@media(min-width:1920px)]:text-2xl
+          "
+        >
+          {count.toLocaleString()}
+        </p>
       </div>
     </div>
   );

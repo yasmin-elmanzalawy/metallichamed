@@ -5,7 +5,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
 
-  // Nav items with links only
   const linkedNavItems = [
     { label: "Home", to: "/metallichamed/" },
     { label: "About", to: "/metallichamed/#" },
@@ -16,7 +15,6 @@ export default function Navbar() {
     { label: "Contact", to: "/metallichamed/#" },
   ];
 
-  // Close mobile menu if click outside of navbar when open
   useEffect(() => {
     function handleClickOutside(event) {
       if (isOpen && navRef.current && !navRef.current.contains(event.target)) {
@@ -24,7 +22,6 @@ export default function Navbar() {
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -35,27 +32,31 @@ export default function Navbar() {
       ref={navRef}
       className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-[#30054A] py-4 text-gold"
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-8 flex justify-between items-center h-16">
+      {/* Header content */}
+      <div className="px-8 lg:px-12 flex justify-between items-center h-14">
+        {/* Left: Logo & Tagline */}
         <div className="cursor-pointer select-none">
           <Link to="/metallichamed/" className="inline-block">
             <span className="text-2xl font-extrabold tracking-wide text-neutral-white">
-              Metallic
+              M
             </span>
-            <span className="text-2xl font-extrabold tracking-wide text-purple-400 ">
-              Hamed
+            <span className="text-2xl font-extrabold tracking-wide text-neutral-white">
+              H
             </span>
           </Link>
-          <p className="text-neutral-white opacity-75 text-sm mt-1">
-            Mohamed Hamed, video editor.
+          <p className="text-neutral-white opacity-75 text-sm mt-1 lg:inline-block lg:mt-0 lg:px-2">
+            Video editor.
           </p>
         </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-12 font-semibold tracking-wide items-center">
+        {/* Right: Desktop Menu */}
+        <ul className="hidden lg:flex space-x-12 font-semibold tracking-wide items-center">
           {linkedNavItems.map(({ label, to }) => (
             <li
               key={label}
-              className="relative group cursor-pointer text-[#E8CCF9] transition-colors duration-300"
+              className="relative group cursor-pointer text-[#E8CCF9] transition-colors duration-300
+              sm:text-lg md:text-2xl lg:text-base xl:text-lg 2xl:text-lg
+              [@media(min-width:1920px)]:text-xl"
               tabIndex={-1}
             >
               <Link
@@ -75,7 +76,7 @@ export default function Navbar() {
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
-          className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none"
+          className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none"
         >
           <span
             className={`block w-7 h-[3px] bg-[#E8CCF9] rounded transition-transform duration-300 origin-left ${
@@ -97,11 +98,15 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-[#30054A] overflow-hidden transition-[max-height,padding] duration-500 ease-in-out ${
+        className={`lg:hidden bg-[#30054A] overflow-hidden transition-[max-height,padding] duration-500 ease-in-out ${
           isOpen ? "max-h-[500px] py-4" : "max-h-0 py-0"
         }`}
       >
-        <ul className="flex flex-col space-y-4 px-6 text-lg font-semibold text-[#E8CCF9]">
+        <ul
+          className="flex flex-col space-y-4 px-8 font-semibold text-[#E8CCF9]
+          sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
+          [@media(min-width:1920px)]:text-3xl"
+        >
           {linkedNavItems.map(({ label, to }) => (
             <li
               key={label}

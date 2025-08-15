@@ -24,16 +24,16 @@ import "./ClientsCarousel.css";
 import { NavLink } from "react-router-dom";
 
 const clients = [
-  { id: 1, name: "Mazaj", image: mazag, subscribers: 2930000, link: "https://www.youtube.com/@mazajofficial" },
-  { id: 2, name: "NVIDIA GeForce Middle East", image: nvidia, subscribers: 241000, link: "https://www.instagram.com/nvidiageforceme" },
-  { id: 3, name: "Spartan Middle East", image: spartan, subscribers: 0, link: "https://www.instagram.com/spartanmiddleeast" },
-  { id: 4, name: "Call of Duty Arabic", image: callofduty, subscribers: 500000, link: "https://www.tiktok.com/@callofdutyarabic" },
-  { id: 5, name: "Ubisoft Arabic", image: ubisoft, subscribers: 105000, link: "https://www.tiktok.com/@ubisoftme" },
-  { id: 6, name: "Claritin Arabia", image: claritine, subscribers: 229000, link: "https://www.facebook.com/ClaritineArabia" },
-  { id: 7, name: "EA Middle East", image: ea, subscribers: 84000, link: "https://www.youtube.com/@ElectronicArtsME" },
-  { id: 8, name: "AboFlah", image: aboflah, subscribers: 46800000, link: "https://www.youtube.com/@AboFlah" },
-  { id: 9, name: "Aziz", image: aziz, subscribers: 3100000, link: "https://www.youtube.com/@Aziz14" },
-  { id: 10, name: "Ahmed Show", image: ahmedshow, subscribers: 5500000, link: "https://www.youtube.com/@Ahmedowsari" },
+  { id: 1, name: "Mazaj", image: mazag, link: "https://www.youtube.com/@mazajofficial" },
+  { id: 2, name: "NVIDIA GeForce Middle East", image: nvidia, link: "https://www.instagram.com/nvidiageforceme" },
+  { id: 3, name: "Spartan Middle East", image: spartan, link: "https://www.instagram.com/spartanmiddleeast" },
+  { id: 4, name: "Call of Duty Arabic", image: callofduty, link: "https://www.tiktok.com/@callofdutyarabic" },
+  { id: 5, name: "Ubisoft Arabic", image: ubisoft, link: "https://www.tiktok.com/@ubisoftme" },
+  { id: 6, name: "Claritin Arabia", image: claritine, link: "https://www.facebook.com/ClaritineArabia" },
+  { id: 7, name: "EA Middle East", image: ea, link: "https://www.youtube.com/@ElectronicArtsME" },
+  { id: 8, name: "AboFlah", image: aboflah, link: "https://www.youtube.com/@AboFlah" },
+  { id: 9, name: "Aziz", image: aziz, link: "https://www.youtube.com/@Aziz14" },
+  { id: 10, name: "Ahmed Show", image: ahmedshow, link: "https://www.youtube.com/@Ahmedowsari" },
 ];
 
 export default function ClientsCarousel() {
@@ -43,10 +43,11 @@ export default function ClientsCarousel() {
   return (
     <div className="relative mt-5 clients-carousel-container">
       <div className="flex items-center mb-5">
-        <h3 className="text-2xl text-gold font-bold">Clients</h3>
+        <h3 className="text-2xl text-gold font-bold sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
+            [@media(min-width:1920px)]:text-3xl ">Clients</h3>
         <NavLink
           to="/metallichamed/clients"
-          className="btn text-sm ml-5 text-center font-bold  text-gold hover:text-white transition-colors"
+          className="btn text-sm [@media(min-width:1920px)]:text-lg ml-5  ml-5 text-center font-bold  text-gold hover:text-white transition-colors"
         >
           more
         </NavLink>
@@ -68,32 +69,33 @@ export default function ClientsCarousel() {
         <FaChevronRight className="text-white text-xl" />
       </div>
 
-  <Swiper
-  modules={[Navigation, Autoplay]}
-  spaceBetween={20}
-  slidesPerView={2} // mobile default
-  breakpoints={{
-    640: { slidesPerView: 3 },
-    768: { slidesPerView: 4 },
-    1024: { slidesPerView: 5 },
-    1280: { slidesPerView: 7 },  // Changed from 6 to 7 here
-  }}
-  navigation={{
-    prevEl: prevRef.current,
-    nextEl: nextRef.current,
-  }}
-  onSwiper={(swiper) => {
-    setTimeout(() => {
-      swiper.params.navigation.prevEl = prevRef.current;
-      swiper.params.navigation.nextEl = nextRef.current;
-      swiper.navigation.init();
-      swiper.navigation.update();
-    });
-  }}
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={2}
+        breakpoints={{
+          640: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 5 },
+          1280: { slidesPerView: 7 },
+          1880: { slidesPerView: 9 },
+        }}
+        navigation={{
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+        }}
+        onSwiper={(swiper) => {
+          setTimeout(() => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          });
+        }}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         loop
       >
-        {clients.map(({ id, name, image, subscribers, link }) => (
+        {clients.map(({ id, name, image, link }) => (
           <SwiperSlide key={id}>
             <a
               href={link}
@@ -111,9 +113,6 @@ export default function ClientsCarousel() {
 
               <div className="client-text-container">
                 <p className="client-name">{name}</p>
-                <span className="client-subscribers">
-                  {subscribers.toLocaleString()} subscribers
-                </span>
               </div>
             </a>
           </SwiperSlide>

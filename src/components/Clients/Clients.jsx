@@ -22,24 +22,24 @@ import ahmedshow from "../../assets/creators/AhmedShow3.jpg";
 import aziz from "../../assets/creators/Aziz.jpg";
 
 import Navbar from "../Navbar/Navbar";
-import { motion, AnimatePresence } from "framer-motion"; // Added for animation
+import { motion, AnimatePresence } from "framer-motion";
 
 const companies = [
-  { id: 2, name: "Mazaj", image: mazag, subscribers: 2930000, link: "https://www.youtube.com/@mazajofficial" },
-  { id: 3, name: "ITP Media Group", image: itp, subscribers: 0, link: "https://www.itp.com" },
-  { id: 4, name: "Spartan Middle East", image: spartan, subscribers: 0, link: "https://www.instagram.com/spartanmiddleeast" },
-  { id: 5, name: "Call of Duty Arabic", image: callofduty, subscribers: 500000, link: "https://www.tiktok.com/@callofdutyarabic" },
-  { id: 6, name: "Ubisoft Arabic", image: ubisoft, subscribers: 105000, link: "https://www.tiktok.com/@ubisoftme" },
-  { id: 7, name: "Fortnite Arabic", image: fortnite, subscribers: 258000, link: "https://www.tiktok.com/@fortniteme" },
-  { id: 8, name: "EA Middle East", image: ea, subscribers: 84000, link: "https://www.youtube.com/@ElectronicArtsME" },
-  { id: 1, name: "Acer", image: acer, subscribers: 21000, link: "https://www.instagram.com/acermiddleeast" },
-  { id: 9, name: "NVIDIA GeForce Middle East", image: nvidia, subscribers: 241000, link: "https://www.instagram.com/nvidiageforceme" },
-  { id: 10, name: "Claritin Arabia", image: claritine, subscribers: 229000, link: "https://www.facebook.com/ClaritineArabia" },
-  { id: 11, name: "Ulta Beauty", image: ulta, subscribers: 0, link: "https://www.ulta.com" },
-  { id: 12, name: "Swarmio Media", image: swarmio, subscribers: 0, link: "https://swarmio.inc" },
-  { id: 13, name: "Arena Esports", image: arena, subscribers: 0, link: "https://arenaesports.ae" },
-  { id: 14, name: "Tundra Esports", image: tundra, subscribers: 122000, link: "https://www.tiktok.com/@tundraesports" },
-  { id: 15, name: "OoredooEz", image: ooredo, subscribers: 0, link: "https://www.facebook.com/OoredooEZ" },
+  { id: 2, name: "Mazaj", image: mazag, link: "https://www.youtube.com/@mazajofficial" },
+  { id: 3, name: "ITP Media Group", image: itp, link: "https://www.itp.com" },
+  { id: 4, name: "Spartan Middle East", image: spartan, link: "https://www.instagram.com/spartanmiddleeast" },
+  { id: 5, name: "Call of Duty Arabic", image: callofduty, link: "https://www.tiktok.com/@callofdutyarabic" },
+  { id: 6, name: "Ubisoft Arabic", image: ubisoft, link: "https://www.tiktok.com/@ubisoftme" },
+  { id: 7, name: "Fortnite Arabic", image: fortnite, link: "https://www.tiktok.com/@fortniteme" },
+  { id: 8, name: "EA Middle East", image: ea, link: "https://www.youtube.com/@ElectronicArtsME" },
+  { id: 1, name: "Acer", image: acer, link: "https://www.instagram.com/acermiddleeast" },
+  { id: 9, name: "NVIDIA GeForce Middle East", image: nvidia, link: "https://www.instagram.com/nvidiageforceme" },
+  { id: 10, name: "Claritin Arabia", image: claritine, link: "https://www.facebook.com/ClaritineArabia" },
+  { id: 11, name: "Ulta Beauty", image: ulta, link: "https://www.ulta.com" },
+  { id: 12, name: "Swarmio Media", image: swarmio, link: "https://swarmio.inc" },
+  { id: 13, name: "Arena Esports", image: arena, link: "https://arenaesports.ae" },
+  { id: 14, name: "Tundra Esports", image: tundra, link: "https://www.tiktok.com/@tundraesports" },
+  { id: 15, name: "OoredooEz", image: ooredo, link: "https://www.facebook.com/OoredooEZ" },
 ];
 
 const contentCreators = [
@@ -79,12 +79,12 @@ export default function Clients() {
       {/* Clients Grid with Zoom Animation */}
       <AnimatePresence mode="wait">
         <motion.div
-          key={activeTab} // re-trigger animation when tab changes
+          key={activeTab}
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="grid grid-cols-2 lg:grid-cols-6 gap-6 bg-[#662390] md:mx-24 mx-4 p-8 md:p-12 m-12 rounded-[30px]"
+          className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-9 bg-[#662390] md:mx-24 mx-4 p-8 md:p-12 m-12 rounded-[30px]"
         >
           {clientsToShow.map(({ id, name, image, subscribers, link }) => (
             <div key={id} className="flex flex-col items-center">
@@ -110,10 +110,16 @@ export default function Clients() {
               >
                 {name}
               </a>
-              <span className="text-[#E8CCF9] text-xs sm:text-base">
-                {subscribers.toLocaleString()}
-              </span>
-              <p className="text-[#E8CCF9] text-xs sm:text-base">subscribers</p>
+
+              {/* Show subscribers only for content creators */}
+              {activeTab === "contentCreators" && subscribers !== undefined && (
+                <>
+                  <span className="text-[#E8CCF9] text-xs sm:text-base">
+                    {subscribers.toLocaleString()}
+                  </span>
+                  <p className="text-[#E8CCF9] text-xs sm:text-base">subscribers</p>
+                </>
+              )}
             </div>
           ))}
         </motion.div>

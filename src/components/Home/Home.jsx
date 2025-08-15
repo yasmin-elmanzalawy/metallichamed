@@ -7,31 +7,28 @@ import Featured from "../Featured/Featured";
 import ClientsCarousel from "../ClientsCarousel/ClientsCarousel";
 
 export default function Home() {
-  const words = ["etallic", "ohamed"];
+  const words = ["etallicHamed", "ohamed Hamed"]; // M is static
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
   const [blink, setBlink] = useState(true);
 
   useEffect(() => {
-    if (subIndex === words[index].length + 1 && !deleting) {
-      setTimeout(() => setDeleting(true), 1000);
+    if (subIndex === words[index].length && !deleting) {
+      setTimeout(() => setDeleting(true), 2500);
       return;
     }
-
     if (subIndex === 0 && deleting) {
       setDeleting(false);
       setIndex((prev) => (prev + 1) % words.length);
       return;
     }
-
     const timeout = setTimeout(
       () => {
         setSubIndex((prev) => prev + (deleting ? -1 : 1));
       },
-      deleting ? 100 : 150
+      deleting ? 100 : 120
     );
-
     return () => clearTimeout(timeout);
   }, [subIndex, deleting, index]);
 
@@ -49,34 +46,39 @@ export default function Home() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="bg-[#662390] md:mt-[100px] md:mx-24 mt-[110px] mx-4 p-8 md:p-12 m-12 rounded-[30px] relative overflow-hidden"
       >
-        <div className="flex flex-col lg:flex-row items-center justify-center">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text Section */}
-          <div className="w-full lg:w-[40%]">
-            <h1 className="font-extrabold min-h-[80px] text-5xl sm:text-6xl lg:text-7xl">
-              <span className="golden-gradient hover:scale-105 transition-transform duration-300">
-                M{words[index].substring(0, subIndex)}
+          <div className="w-full
+            lg:w-[50%]  2xl:w-[60%] 
+              [@media(min-width:1920px)]:w-[55%] 
+          flex-shrink-0">
+            <h1
+              className="font-extrabold min-h-[80px]
+            text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl 
+              [@media(min-width:1920px)]:text-7xl 
+              flex flex-wrap items-center group transition-transform duration-300 hover:scale-105"
+            >
+              <span className="golden-gradient">M</span>
+              <span className="golden-gradient">
+                {words[index].substring(0, subIndex)}
               </span>
               <span className="golden-gradient">{blink ? "|" : " "}</span>
             </h1>
 
-            <h1 className="md:mt-0 mt-[-20px] font-extrabold text-5xl sm:text-6xl lg:text-7xl golden-gradient hover:scale-105 transition-transform duration-300">
-              Hamed
-            </h1>
-
-            <p className="text-neutral-white text-lg sm:text-xl mt-4">
+            <p className="text-neutral-white text-base sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
+            [@media(min-width:1920px)]:text-2xl ">
               Transforming raw footage into captivating visual experiences that
               inspire and connect.
             </p>
           </div>
 
-          {/* Dashboard Section */}
-          <div className="w-full lg:w-[70%] mt-6 lg:mt-0 flex justify-center">
+          <div className="w-full  flex justify-center">
             <Dashboard />
           </div>
         </div>
 
         <Featured />
-        <ClientsCarousel></ClientsCarousel>
+        <ClientsCarousel />
       </motion.div>
 
       <style>{`
@@ -96,6 +98,7 @@ export default function Home() {
           -webkit-text-fill-color: transparent;
           transition: background-position 1s ease, transform 0.3s ease;
           display: inline-block;
+          white-space: nowrap;
         }
         .golden-gradient:hover {
           background-position: 100% 0;

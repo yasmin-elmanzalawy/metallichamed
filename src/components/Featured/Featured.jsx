@@ -27,8 +27,9 @@ export default function Featured() {
   return (
     <div className="relative mt-5">
       <div className="flex items-center mb-5 ">
-        <h3 className="text-2xl text-gold font-bold">Featured Videos</h3>
-        <button className="btn text-sm ml-5 pb-1 font-bold text-gold hover:text-white transition-colors">
+        <h3 className="text-2xl text-gold font-bold  sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
+            [@media(min-width:1920px)]:text-3xl ">Featured Videos</h3>
+        <button className="btn text-sm [@media(min-width:1920px)]:text-lg ml-5  font-bold text-gold hover:text-white transition-colors ">
           more
         </button>
       </div>
@@ -67,6 +68,7 @@ export default function Featured() {
           640: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
           1280: { slidesPerView: 4 },
+          1880: { slidesPerView: 5 },
         }}
       >
         {featuredVideos.map((video) => (
@@ -87,7 +89,8 @@ export default function Featured() {
                     alt="Author"
                     className="w-10 h-10 rounded-full border-2 border-gold-dark"
                   />
-                  <p className="text-[#FEF7E4] text-sm leading-snug">{video.desc}</p>
+                  <p className="text-[#FEF7E4] text-sm leading-snug  sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
+            [@media(min-width:1920px)]:text-2xl">{video.desc}</p>
                 </div>
               </a>
             </div>
