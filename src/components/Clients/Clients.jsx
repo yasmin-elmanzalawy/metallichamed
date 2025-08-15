@@ -20,6 +20,22 @@ import { NavLink } from "react-router-dom";
 import aboflah from "../../assets/creators/AboFlah.jpg";
 import ahmedshow from "../../assets/creators/AhmedShow3.jpg";
 import aziz from "../../assets/creators/Aziz.jpg";
+import B3shr from "../../assets/creators/B3shr.jpg";
+import AmrElhady from "../../assets/creators/AmrElhady.jpg";
+import cancel from "../../assets/creators/CANCEL.jpg";
+import GamersReact from "../../assets/creators/GamersReact.jpg";
+import JellyPeanut from "../../assets/creators/JellyPeanut.png";
+import MrMarvelTV from "../../assets/creators/MrMarvelTV.jpg";
+import LeoNoHero from "../../assets/creators/LeoNoHero.jpg";
+import i6arba5 from "../../assets/creators/i6arba5.jpg";
+import Sofyan from "../../assets/creators/Sofyan.jpg";
+import ColbyMartel from "../../assets/creators/ColbyMartel.jpg";
+import offside from "../../assets/creators/OFFSIDE.jpg";
+import golazo from "../../assets/creators/golazo.jpg";
+import VoltechFPS from "../../assets/creators/VoltechFPS.png";
+import TheReengineeredClub from "../../assets/creators/TheReengineeredClub.png";
+import NourKhan from "../../assets/creators/NourKhan.jpg";
+import MySalahMat from "../../assets/creators/MySalahMat.png";
 
 import Navbar from "../Navbar/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
@@ -46,6 +62,21 @@ const contentCreators = [
   { id: 1, name: "AboFlah", image: aboflah, subscribers: 46800000, link: "https://www.youtube.com/@AboFlah" },
   { id: 2, name: "Aziz", image: aziz, subscribers: 3100000, link: "https://www.youtube.com/@Aziz14" },
   { id: 3, name: "Ahmed Show", image: ahmedshow, subscribers: 5500000, link: " https://www.youtube.com/@Ahmedowsari" },
+  { id: 4, name: "B3shr", image: B3shr, subscribers: 1400000, link: " https://www.youtube.com/@B3shr" },
+  { id: 5, name: "Amr El hady", image: AmrElhady, subscribers: 2000000, link: " https://www.tiktok.com/@amrelhady" },
+  { id: 6, name: "CANCEL", image: cancel, subscribers: 3100000, link: "https://www.youtube.com/@GamersReact" },
+  { id: 7, name: "JellyPeanut", image: JellyPeanut, subscribers: 130000, link: "https://www.twitch.tv/jellypeanut" },
+  { id: 8, name: "MrMarvelTV", image: MrMarvelTV, subscribers: 3990000, link: "https://www.youtube.com/c/MrMarvelTV" },
+  { id: 9, name: "LeoNoHero", image: LeoNoHero, subscribers: 152000, link: "https://www.youtube.com/@LeoNoHero" },
+  { id: 10, name: "i6arba5", image: i6arba5, subscribers: 2100000, link: "https://www.youtube.com/@i6rba5" },
+  { id: 11, name: "Sofyan", image: Sofyan, subscribers: 1100000, link: "https://www.youtube.com/@SofyanBN" },
+  { id: 12, name: "Colby Martel", image: ColbyMartel, subscribers: 226000, link: "https://www.tiktok.com/@colbymartel" },
+  { id: 13, name: "OFFSIDE", image: offside, subscribers: 198000, link: "https://www.youtube.com/@OFFSIDE__Football" },
+  { id: 14, name: "Golazo", image: golazo, subscribers: 65000, link: " https://www.youtube.com/@goolazo" },
+  { id: 15, name: "VoltechFPS", image: VoltechFPS, subscribers: 22000, link: " https://www.instagram.com/voltech.fps" },
+  { id: 16, name: "The Re-engineered Club", image: TheReengineeredClub, subscribers: 6200, link: "https://www.youtube.com/@reengineeredclub" },
+  { id: 17, name: "Nour Khan", image: NourKhan, subscribers: 11800, link: "https://www.youtube.com/@nourkhanne" },
+  { id: 17, name: "MySalahMat", image: MySalahMat, subscribers: 0, link: "https://www.mysalahmat.com" },
 ];
 
 export default function Clients() {
