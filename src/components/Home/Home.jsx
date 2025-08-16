@@ -118,7 +118,7 @@ export default function Home() {
               alt="About"
             />
           </div>
-          <div className="w-full md:w-[70%] px-12">
+          <div className="w-full md:w-[70%] md:px-12 px-4">
             <h3
               className="text-gold text-2xl sm:text-3xl md:text-3xl  xl:text-4xl 2xl:text-4xl
             [@media(min-width:1920px)]:text-5xl font-bold "
