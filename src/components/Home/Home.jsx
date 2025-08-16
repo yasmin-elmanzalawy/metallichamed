@@ -4,6 +4,7 @@ import "./Home.css";
 import Navbar from "../Navbar/Navbar";
 import Dashboard from "../Dashboard/Dashboard";
 import Featured from "../Featured/Featured";
+import about from "../../assets/about.png";
 import ClientsCarousel from "../ClientsCarousel/ClientsCarousel";
 
 export default function Home() {
@@ -38,20 +39,22 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div id="hero" >
       <Navbar />
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-[#662390] md:mt-[100px] md:mx-24 mt-[110px] mx-4 p-8 md:p-12 m-12 rounded-[30px] relative overflow-hidden"
+       className=" bg-[#662390] md:mt-[100px] md:mx-24 mt-[110px] mx-4 p-8 md:p-12 m-12 rounded-[30px] relative overflow-hidden"
       >
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div id="hero" className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text Section */}
-          <div className="w-full
+          <div
+            className="w-full
             lg:w-[50%]  2xl:w-[60%] 
               [@media(min-width:1920px)]:w-[55%] 
-          flex-shrink-0">
+          flex-shrink-0"
+          >
             <h1
               className="font-extrabold min-h-[80px]
             text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl 
@@ -65,8 +68,10 @@ export default function Home() {
               <span className="golden-gradient">{blink ? "|" : " "}</span>
             </h1>
 
-            <p className="text-neutral-white text-base sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
-            [@media(min-width:1920px)]:text-2xl ">
+            <p
+              className="text-neutral-white text-base sm:text-lg md:text-xl  xl:text-xl 2xl:text-xl
+            [@media(min-width:1920px)]:text-2xl "
+            >
               Transforming raw footage into captivating visual experiences that
               inspire and connect.
             </p>
@@ -104,6 +109,40 @@ export default function Home() {
           background-position: 100% 0;
         }
       `}</style>
+      <section className="px-4 md:px-14 py-8" id="about">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          <div className="w-full md:w-[40%]">
+            <img
+              src={about}
+              className="block w-[70%] md:w-[70%] mx-auto"
+              alt="About"
+            />
+          </div>
+          <div className="w-full md:w-[70%] px-12">
+            <h3
+              className="text-gold text-2xl sm:text-3xl md:text-3xl  xl:text-4xl 2xl:text-4xl
+            [@media(min-width:1920px)]:text-5xl font-bold "
+            >
+              {" "}
+              A Senior Video Editor
+            </h3>
+            <p
+              className=" md:text-left text-neutral-white text-base sm:text-lg md:text-xl  xl:text-xl 2xl:text-xl
+            [@media(min-width:1920px)]:text-2xl"
+            >
+              <br />
+              With +6 years of experience delivering exceptional results for
+              major brands and content creators. <br />
+              Proven track record in increasing engagement, views, and channel
+              subscriptions through expert editing, color correction, motion
+              graphics, and visual storytelling.
+              <br /> Achieved more than 150 million
+              cumulative views, after editing over 1500 long form, short form
+              and advertising videos.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

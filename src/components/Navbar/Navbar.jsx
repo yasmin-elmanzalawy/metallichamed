@@ -1,13 +1,15 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const linkedNavItems = [
     { label: "Home", to: "/metallichamed/" },
-    { label: "About", to: "/metallichamed/#" },
+    { label: "About", to: "/metallichamed/#about" },
     { label: "Videos", to: "/metallichamed/#" },
     { label: "Designs", to: "/metallichamed/#" },
     { label: "Clients", to: "/metallichamed/clients" },
@@ -27,12 +29,32 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  const handleScrollLink = (label) => {
+    setIsOpen(false);
+
+    let sectionId = null;
+    if (label === "Home") sectionId = "hero";
+    if (label === "About") sectionId = "about";
+
+    if (sectionId) {
+      if (location.pathname !== "/metallichamed/") {
+        navigate("/metallichamed/");
+        setTimeout(() => {
+          const section = document.getElementById(sectionId);
+          section?.scrollIntoView({ behavior: "smooth" });
+        }, 50);
+      } else {
+        const section = document.getElementById(sectionId);
+        section?.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <nav
       ref={navRef}
       className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-[#30054A] py-4 text-gold"
     >
-      {/* Header content */}
       <div className="px-8 lg:px-12 flex justify-between items-center h-14">
         {/* Left: Logo & Tagline */}
         <div className="cursor-pointer select-none">
@@ -49,7 +71,7 @@ export default function Navbar() {
           </p>
         </div>
 
-        {/* Right: Desktop Menu */}
+        {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-12 font-semibold tracking-wide items-center">
           {linkedNavItems.map(({ label, to }) => (
             <li
@@ -62,7 +84,13 @@ export default function Navbar() {
               <Link
                 to={to}
                 className="group-hover:text-purple-400"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  if (label === "Home" || label === "About") {
+                    e.preventDefault();
+                    handleScrollLink(label);
+                  }
+                  setIsOpen(false);
+                }}
                 tabIndex={-1}
               >
                 {label}
@@ -114,7 +142,17 @@ export default function Navbar() {
               tabIndex={0}
               onClick={() => setIsOpen(false)}
             >
-              <Link to={to}>{label}</Link>
+              <Link
+                to={to}
+                onClick={(e) => {
+                  if (label === "Home" || label === "About") {
+                    e.preventDefault();
+                    handleScrollLink(label);
+                  }
+                }}
+              >
+                {label}
+              </Link>
             </li>
           ))}
         </ul>
