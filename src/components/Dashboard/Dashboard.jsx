@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { FaEye, FaVideo, FaUsers } from "react-icons/fa";
 
 const data = [
-  { id: 2, title: "Views", icon: <FaEye />, target: 4300 },
-  { id: 3, title: "Videos", icon: <FaVideo />, target: 56 },
-  { id: 4, title: "Clients", icon: <FaUsers />, target: 12 },
+  { id: 2, title: "Views", icon: <FaEye />, target: 185, suffix: " Mil" },
+  { id: 3, title: "Videos", icon: <FaVideo />, target: 56, suffix: "" },
+  { id: 4, title: "Clients", icon: <FaUsers />, target: 12, suffix: "" },
 ];
 
 const mobileVisibleIds = [2, 3, 4];
@@ -14,8 +14,8 @@ export default function Dashboard() {
     <>
       {/* Desktop & Tablet View */}
       <div className="hidden sm:flex p-10 flex-nowrap justify-items-center whitespace-nowrap">
-        {data.map(({ id, title, icon, target }) => (
-          <GlassCard key={id} icon={icon} title={title} target={target} />
+        {data.map(({ id, title, icon, target, suffix }) => (
+          <GlassCard key={id} icon={icon} title={title} target={target} suffix={suffix} />
         ))}
       </div>
 
@@ -23,15 +23,15 @@ export default function Dashboard() {
       <div className="sm:hidden flex justify-around p-4 whitespace-nowrap">
         {data
           .filter(({ id }) => mobileVisibleIds.includes(id))
-          .map(({ id, title, target }) => (
-            <GlassCard key={id} title={title} target={target} noIcon />
+          .map(({ id, title, target, suffix }) => (
+            <GlassCard key={id} title={title} target={target} suffix={suffix} noIcon />
           ))}
       </div>
     </>
   );
 }
 
-function GlassCard({ icon, title, target, noIcon }) {
+function GlassCard({ icon, title, target, suffix = "", noIcon }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -61,7 +61,7 @@ function GlassCard({ icon, title, target, noIcon }) {
         bg-[length:400%_400%] bg-[position:0%_0%]
         hover:bg-[position:100%_100%] hover:scale-105 px-4"
     >
-      {/* Icon - scales down from large */}
+      {/* Icon */}
       {!noIcon && (
         <div
           className="
@@ -91,6 +91,7 @@ function GlassCard({ icon, title, target, noIcon }) {
           "
         >
           {count.toLocaleString()}
+          {suffix}
         </p>
       </div>
     </div>

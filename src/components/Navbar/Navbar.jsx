@@ -10,7 +10,7 @@ export default function Navbar() {
   const linkedNavItems = [
     { label: "Home", to: "/metallichamed/" },
     { label: "About", to: "/metallichamed/#about" },
-    { label: "Videos", to: "/metallichamed/#" },
+    { label: "Videos", to: "/metallichamed/videos" },
     { label: "Designs", to: "/metallichamed/#" },
     { label: "Clients", to: "/metallichamed/clients" },
     { label: "Endorsements", to: "/metallichamed/#" },
@@ -72,30 +72,36 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex space-x-12 font-semibold tracking-wide items-center">
+        <ul className="hidden lg:flex space-x-6 font-semibold tracking-wide items-center">
           {linkedNavItems.map(({ label, to }) => (
-            <li
-              key={label}
-              className="relative group cursor-pointer text-[#E8CCF9] transition-colors duration-300
-              sm:text-lg md:text-2xl lg:text-base xl:text-lg 2xl:text-lg
-              [@media(min-width:1920px)]:text-xl"
-              tabIndex={-1}
-            >
-              <Link
-                to={to}
-                className="group-hover:text-purple-400"
-                onClick={(e) => {
-                  if (label === "Home" || label === "About") {
-                    e.preventDefault();
-                    handleScrollLink(label);
-                  }
-                  setIsOpen(false);
-                }}
-                tabIndex={-1}
-              >
-                {label}
-              </Link>
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+            <li key={label}>
+              {label === "Contact" ? (
+                <a
+                  href="mailto:metallichamed@gmail.com"
+                  className="px-4 py-1.5 rounded-full bg-[#FED03B] text-[#4B0082] hover:bg-[#e6c22f] transition-colors duration-300
+                    sm:text-sm md:text-base lg:text-sm xl:text-base 2xl:text-base
+                    [@media(min-width:1920px)]:text-lg"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {label}
+                </a>
+              ) : (
+                <Link
+                  to={to}
+                  className="px-4 py-1.5 rounded-full bg-purple-500/20 hover:bg-purple-500/40 text-[#E8CCF9] transition-colors duration-300
+                    sm:text-sm md:text-base lg:text-sm xl:text-base 2xl:text-base
+                    [@media(min-width:1920px)]:text-lg"
+                  onClick={(e) => {
+                    if (label === "Home" || label === "About") {
+                      e.preventDefault();
+                      handleScrollLink(label);
+                    }
+                    setIsOpen(false);
+                  }}
+                >
+                  {label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -130,29 +136,36 @@ export default function Navbar() {
           isOpen ? "max-h-[500px] py-4" : "max-h-0 py-0"
         }`}
       >
-        <ul
-          className="flex flex-col space-y-4 px-8 font-semibold text-[#E8CCF9]
+        <ul className="flex flex-col space-y-4 px-8 font-semibold text-[#E8CCF9]
           sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
-          [@media(min-width:1920px)]:text-3xl"
-        >
+          [@media(min-width:1920px)]:text-3xl">
           {linkedNavItems.map(({ label, to }) => (
             <li
               key={label}
-              className="cursor-pointer hover:text-purple-400 transition-colors duration-300 rounded"
+              className="cursor-pointer transition-colors duration-300 rounded"
               tabIndex={0}
               onClick={() => setIsOpen(false)}
             >
-              <Link
-                to={to}
-                onClick={(e) => {
-                  if (label === "Home" || label === "About") {
-                    e.preventDefault();
-                    handleScrollLink(label);
-                  }
-                }}
-              >
-                {label}
-              </Link>
+              {label === "Contact" ? (
+                <a
+                  href="mailto:metallichamed@gmail.com"
+                  className="px-4 py-1.5 rounded-full bg-[#FED03B] text-[#4B0082] hover:bg-[#e6c22f] transition-colors duration-300 block text-center"
+                >
+                  {label}
+                </a>
+              ) : (
+                <Link
+                  to={to}
+                  onClick={(e) => {
+                    if (label === "Home" || label === "About") {
+                      e.preventDefault();
+                      handleScrollLink(label);
+                    }
+                  }}
+                >
+                  {label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

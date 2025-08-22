@@ -46,3 +46,25 @@
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
+.golden-gradient {
+  background: linear-gradient(
+    90deg,
+    #ddaa00,
+    #f5bf03,
+    #ffd13d,
+    #ffe07a,
+    #ffc812,
+    #f5bf03,
+    #c29502
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  transition: background-position 1.5s ease;
+}
+
+.golden-gradient:hover {
+  background-position: 100% 0;
+}

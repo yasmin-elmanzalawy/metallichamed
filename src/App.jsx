@@ -4,6 +4,7 @@ import './App.css';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import Clients from './components/Clients/Clients';
+import Videos from './components/Videos/Videos';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/metallichamed/" element={<Home />} />
           <Route path="/metallichamed/navbar" element={<Navbar />} />
           <Route path="/metallichamed/clients" element={<Clients />} />
+          <Route path="/metallichamed/videos" element={<Videos></Videos>} />
         </Routes>
       </div>
 

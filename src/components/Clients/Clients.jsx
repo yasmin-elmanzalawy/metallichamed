@@ -75,7 +75,6 @@ const contentCreators = [
   { id: 14, name: "Golazo", image: golazo, subscribers: 65000, link: " https://www.youtube.com/@goolazo" },
   { id: 15, name: "VoltechFPS", image: VoltechFPS, subscribers: 22000, link: " https://www.instagram.com/voltech.fps" },
   { id: 16, name: "The Re-engineered Club", image: TheReengineeredClub, subscribers: 6200, link: "https://www.youtube.com/@reengineeredclub" },
-  { id: 17, name: "Nour Khan", image: NourKhan, subscribers: 11800, link: "https://www.youtube.com/@nourkhanne" },
   { id: 17, name: "MySalahMat", image: MySalahMat, subscribers: 0, link: "https://www.mysalahmat.com" },
 ];
 
