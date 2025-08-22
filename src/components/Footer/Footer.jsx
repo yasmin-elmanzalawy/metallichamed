@@ -4,12 +4,12 @@ import { FaEnvelope, FaPhone } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-[#210434] text-white py-10 rounded-t-3xl">
-      <div className="container mx-auto px-20 flex flex-col md:flex-row justify-between items-center gap-2">
+      <div className="container mx-auto px-2 flex flex-col md:flex-row justify-between items-center gap-5">
         
         {/* Left section: Quote */}
         <div className="md:w-1/2">
           <span className="text-3xl sm:text-4xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-4xl 
-  [@media(min-width:1920px)]:text-5xl m-auto font-medium  text-gold">
+  [@media(min-width:1920px)]:text-5xl  font-medium  text-gold">
             Let's make your content shine.
           </span>
         </div>
@@ -37,14 +37,14 @@ export default function Footer() {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex items-center gap-4 m-auto">
+          <div className="flex items-center gap-4 text-center m-auto">
             {/* LinkedIn */}
-            <div className="tooltip-container relative cursor-pointer">
+            <div className="tooltip-container relative items-center text-center cursor-pointer m-auto">
               <a
                 href="https://www.linkedin.com/in/metallichamed"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center text-white no-underline"
+                className="flex flex-col items-center text-white no-underline "
               >
                 <div className="layer w-12 h-12 relative transition-transform duration-300">
                   <span className="absolute inset-0 border border-blue-500 rounded-md transition-all"></span>

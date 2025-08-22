@@ -7,6 +7,7 @@ import gaming from "../../assets/thumbnails/Gaming.png";
 import vlog from "../../assets/thumbnails/vlogs.png";
 import fea1 from "../../assets/thumbnails/dum.jpg";
 import ads from "../../assets/thumbnails/ads.png";
+import Footer from "../Footer/Footer";
 
 const cards = [
   {
@@ -499,7 +500,7 @@ export default function Videos() {
             </button>
 
             <h2 className="text-2xl font-bold text-gold mb-6">
-              {selectedCard.name} Details
+              {selectedCard.name} Videos
             </h2>
 
             {/* Tabs (hide for Ads card) */}
