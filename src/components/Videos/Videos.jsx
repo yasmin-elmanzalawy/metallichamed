@@ -500,7 +500,7 @@ export default function Videos() {
             </button>
 
             <h2 className="text-2xl font-bold text-gold mb-6">
-              {selectedCard.name} Videos
+              {selectedCard.name} Edits
             </h2>
 
             {/* Tabs (hide for Ads card) */}
