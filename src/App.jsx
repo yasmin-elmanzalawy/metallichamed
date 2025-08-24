@@ -5,7 +5,7 @@ import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import Clients from './components/Clients/Clients';
 import Videos from './components/Videos/Videos';
-import ScrollToTop from './components/ScrollToTop/ScrollToTop'; // ✅ still use this
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   const [snap, setSnap] = useState(false);
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <ScrollToTop />  {/* ✅ works fine without another Router */}
+      <ScrollToTop /> {/* ✅ works fine without another Router */}
       <Navbar />
       <div>
         <Routes>
