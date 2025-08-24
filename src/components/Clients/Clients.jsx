@@ -83,7 +83,7 @@ export default function Clients() {
   const clientsToShow = activeTab === "companies" ? companies : contentCreators;
 
   return (
-    <div className="min-h-screen p-6 bg-[#30054A] text-white">
+    <div className="min-h-screen  bg-[#30054A] text-white">
       <Navbar />
 
       {/* Navigation Tabs */}
