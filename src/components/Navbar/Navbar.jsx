@@ -8,16 +8,15 @@ export default function Navbar() {
   const location = useLocation();
 
   const linkedNavItems = [
-    { label: "Home", to: "/metallichamed/" },
-    { label: "About", to: "/metallichamed/#about" },
-    { label: "Videos", to: "/metallichamed/videos" },
-    { label: "Designs", to: "/metallichamed/#" },
-    { label: "Clients", to: "/metallichamed/clients" },
-    { label: "Endorsements", to: "/metallichamed/#" },
-    { label: "Contact", to: "#" }, // Contact scrolls to bottom
+    { label: "Home", to: "/" },
+    { label: "About", to: "/#about" },
+    { label: "Videos", to: "/videos" },
+    { label: "Designs", to: "/#designs" },
+    { label: "Clients", to: "/clients" },
+    { label: "Endorsements", to: "/#endorsements" },
+    { label: "Contact", to: "#" }, // scrolls to bottom
   ];
 
-  // Close menu when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (isOpen && navRef.current && !navRef.current.contains(event.target)) {
@@ -32,10 +31,7 @@ export default function Navbar() {
     setIsOpen(false);
 
     if (label === "Contact") {
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
       return;
     }
 
@@ -44,8 +40,8 @@ export default function Navbar() {
     if (label === "About") sectionId = "about";
 
     if (sectionId) {
-      if (location.pathname !== "/metallichamed/") {
-        navigate("/metallichamed/");
+      if (location.pathname !== "/") {
+        navigate("/");
         setTimeout(() => {
           const section = document.getElementById(sectionId);
           section?.scrollIntoView({ behavior: "smooth" });
@@ -65,7 +61,7 @@ export default function Navbar() {
       <div className="md:mx-24 mx-18 px-8 md:px-4 flex justify-between items-center h-14">
         {/* Logo */}
         <div className="cursor-pointer select-none">
-          <Link to="/metallichamed/" className="inline-block">
+          <Link to="/" className="inline-block">
             <span className="text-2xl font-extrabold tracking-wide text-neutral-white">M</span>
             <span className="text-2xl font-extrabold tracking-wide text-neutral-white">H</span>
           </Link>

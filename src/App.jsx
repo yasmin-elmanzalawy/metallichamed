@@ -17,14 +17,15 @@ function App() {
 
   return (
     <>
-      <ScrollToTop /> {/* ✅ works fine without another Router */}
+      <ScrollToTop /> {/* works fine without another Router */}
       <Navbar />
       <div>
         <Routes>
-          <Route path="/metallichamed/" element={<Home />} />
-          <Route path="/metallichamed/navbar" element={<Navbar />} />
-          <Route path="/metallichamed/clients" element={<Clients />} />
-          <Route path="/metallichamed/videos" element={<Videos />} />
+          {/* Remove /metallichamed prefix */}
+          <Route path="/" element={<Home />} />
+          <Route path="/navbar" element={<Navbar />} />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/videos" element={<Videos />} />
         </Routes>
       </div>
     </>
