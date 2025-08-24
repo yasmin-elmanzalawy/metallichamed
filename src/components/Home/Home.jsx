@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import Dashboard from "../Dashboard/Dashboard";
 import Featured from "../Featured/Featured";
 import about from "../../assets/about.png";
+import hamed from "../../assets/hamed.png";
 import ClientsCarousel from "../ClientsCarousel/ClientsCarousel";
 import Footer from "../Footer/Footer";
 
@@ -15,7 +16,7 @@ export default function Home() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className=" bg-[#662390] md:mt-[100px] md:mx-24 mt-[110px] mx-4 p-8 md:p-12 m-12 rounded-[30px] relative overflow-hidden"
+        className=" bg-[#662390] md:mt-[100px] mt-[110px] md:mx-24 m-12 mx-4  p-8 md:p-12  rounded-[30px] relative overflow-hidden"
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text Section */}
@@ -25,15 +26,14 @@ export default function Home() {
             [@media(min-width:1920px)]:w-[55%] 
             flex-shrink-0"
           >
-          <h1
-  className="font-extrabold min-h-[80px]
+            <h1
+              className="font-extrabold min-h-[80px]
   text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl 
   [@media(min-width:1920px)]:text-7xl 
   flex flex-wrap items-center group transition-transform duration-300 hover:scale-105"
->
-  <span className="golden-gradient">Metallichamed</span>
-</h1>
-
+            >
+              <span className="golden-gradient">Metallichamed</span>
+            </h1>
 
             <p
               className="text-neutral-white text-base sm:text-lg md:text-xl  xl:text-xl 2xl:text-xl
@@ -81,16 +81,17 @@ export default function Home() {
         }
       `}</style>
 
-      <section className="px-4 md:px-14 py-8" id="about">
+      <section className=" md:mx-24 m-12 mx-4  py-8 " id="about">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-          <div className="w-full md:w-[40%]">
+          <div className="w-full md:w-[50%] m-auto" >
             <img
-              src={about}
-              className="block w-[70%] md:w-[70%] mx-auto"
+              src={hamed}
+              className="block w-[60%] mx-auto rounded-xl md:w-[100%] 2xl:w-[70%]
+              [@media(min-width:1920px)]:w-[60%] shadow-2xl transition-transform duration-300 hover:scale-105"
               alt="About"
             />
           </div>
-          <div className="w-full md:w-[70%] md:px-12 px-4">
+          <div className="w-full md:w-[80%] md:px-12 px-4">
             <h3
               className="text-gold text-2xl sm:text-3xl md:text-3xl  xl:text-4xl 2xl:text-4xl
               [@media(min-width:1920px)]:text-5xl font-bold "

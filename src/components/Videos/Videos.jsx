@@ -440,7 +440,7 @@ export default function Videos() {
   const [activeTab, setActiveTab] = useState("short");
 
   return (
-    <div className="min-h-screen bg-[#30054A] text-white p-6">
+    <div className="min-h-screen bg-[#30054A] text-white ">
       <div className="mb-20">
         <Navbar />
       </div>
@@ -461,7 +461,7 @@ export default function Videos() {
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="md:mx-24 mx-4 md:p-12 grid grid-cols-1 md:grid-cols-4 2xl:grid-cols-4
-            [@media(min-width:1920px)]:grid-cols-5 gap-6 bg-[#662390] p-8 rounded-[30px]"
+            [@media(min-width:1920px)]:grid-cols-5 gap-6 bg-[#662390] m-8 rounded-[30px] min-h-screen"
           >
             {cards.map((card) => (
               <div
@@ -582,6 +582,8 @@ export default function Videos() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <Footer></Footer>
     </div>
   );
 }
