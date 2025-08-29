@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="w-full md:w-[40%]  d-block m-auto flex justify-center items-center">
           <p
             className="text-3xl sm:text-4xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-4xl 
-            [@media(min-width:1920px)]:text-5xl font-medium text-gold align-center "
+            [@media(min-width:1920px)]:text-4xl font-medium text-gold align-center "
           >
             Let's make your content shine.
           </p>
