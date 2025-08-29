@@ -46,7 +46,7 @@ export default function ClientsCarousel() {
         <h3 className="text-2xl text-gold font-bold sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
             [@media(min-width:1920px)]:text-3xl ">Clients</h3>
         <NavLink
-          to="/metallichamed/clients"
+          to="/clients"
           className="btn text-sm [@media(min-width:1920px)]:text-lg ml-5 text-center font-bold  text-gold hover:text-white transition-colors"
         >
           more

@@ -1,0 +1,52 @@
+.btnview {
+ display: inline-block;
+ border-radius: 30px;
+ border: 2px solid #e1b2ff;
+ position: relative;
+ overflow: hidden;
+ transition: all 0.5s ease-in;
+ z-index: 1;
+ padding:5px 20px;
+}
+
+.btnview::before,
+.btnview::after {
+ content: '';
+ position: absolute;
+ top: 0;
+ width: 0;
+ height: 100%;
+ transform: skew(15deg);
+ transition: all 0.5s;
+ overflow: hidden;
+ z-index: -1;
+}
+
+.btnview::before {
+ left: -10px;
+ background: #30054A;
+}
+
+/* .btnview::after {
+ right: -10px;
+ background: #692395;
+} */
+
+.btnview:hover::before,
+.btnview:hover::after {
+ width: 58%;
+}
+
+.btnview:hover span {
+ color: #e0aaff;
+ transition: 0.3s;
+}
+
+.btnview span {
+ color: #e1b2ff;
+ font-size: 18px;
+ font-weight: 500;
+ transition: all 0.3s ease-in;
+
+
+}

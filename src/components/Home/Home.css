@@ -1,52 +1,6 @@
-/* Keep first letter static gold */
-/* Static gold for first letter */
-.static-gold {
-  color: #fddc5c;
-  text-shadow: 0 0 8px rgba(245, 191, 3, 0.85), 0 2px 4px rgba(120, 90, 0, 0.5);
-}
-
-/* Gradient gold for rest of letters */
-.shiny-word {
-  background: linear-gradient(
-    135deg,
-    #fddc5c 0%,
-    #f8d633 25%,
-    #fff5a1 50%,
-    #f8d633 75%,
-    #fddc5c 100%
-  );
-  background-size: 200% 100%;
-  background-position: 0% 50%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 8px rgba(245, 191, 3, 0.85), 0 2px 4px rgba(120, 90, 0, 0.5);
-  transition: background-position 1.5s ease-in-out;
+.shiny-text {
+  position: relative;
   display: inline-block;
-}
-
-/* Hover shine movement */
-.shiny-word:hover {
-  background-position: 100% 50%;
-}
-
-/* Caret style remains the same */
-.caret {
-  display: inline-block;
-  font-weight: 900;
-  margin-left: 1px;
-  user-select: none;
-  background: linear-gradient(90deg, #e1b2ff, #c58cff, #e1b2ff);
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: caretShine 3s ease-in-out infinite;
-}
-
-@keyframes caretShine {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-.golden-gradient {
   background: linear-gradient(
     90deg,
     #ddaa00,
@@ -57,14 +11,53 @@
     #f5bf03,
     #c29502
   );
-  background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-  white-space: nowrap;
-  transition: background-position 1.5s ease;
+  color: transparent;
+  overflow: hidden;
 }
 
-.golden-gradient:hover {
-  background-position: 100% 0;
+.shiny-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: skewX(-20deg);
+
+  animation: text-shine 6s ease-in-out infinite;
+  animation-delay: 1s;
+
+  /* ✨ CLIP shine to text */
+  -webkit-mask-image: linear-gradient(#fff 0 0);
+  -webkit-mask-clip: text;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-composite: source-in;
+
+  mask-image: linear-gradient(#fff 0 0);
+  mask-clip: text;
+  mask-repeat: no-repeat;
+  mask-composite: intersect;
+
+  pointer-events: none;
+}
+
+@keyframes text-shine {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
 }

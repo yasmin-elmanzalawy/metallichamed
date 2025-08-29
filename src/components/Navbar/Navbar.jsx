@@ -11,7 +11,7 @@ export default function Navbar() {
     { label: "Home", to: "/" },
     { label: "About", to: "/#about" },
     { label: "Videos", to: "/videos" },
-    { label: "Designs", to: "/#designs" },
+    { label: "Designs", to: "/design" },
     { label: "Clients", to: "/clients" },
     { label: "Endorsements", to: "/#endorsements" },
     { label: "Contact", to: "#" }, // scrolls to bottom

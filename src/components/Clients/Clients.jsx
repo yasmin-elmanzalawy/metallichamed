@@ -39,6 +39,7 @@ import MySalahMat from "../../assets/creators/MySalahMat.png";
 
 import Navbar from "../Navbar/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
+import Footer from "../Footer/Footer";
 
 const companies = [
   { id: 2, name: "Mazaj", image: mazag, link: "https://www.youtube.com/@mazajofficial" },
@@ -83,7 +84,10 @@ export default function Clients() {
   const clientsToShow = activeTab === "companies" ? companies : contentCreators;
 
   return (
-    <div className="min-h-screen  bg-[#30054A] text-white">
+    <div className=" bg-[#30054A] text-white">
+      <div className="min-h-[100vh] ">
+
+
       <Navbar />
 
       {/* Navigation Tabs */}
@@ -154,6 +158,8 @@ export default function Clients() {
           ))}
         </motion.div>
       </AnimatePresence>
-    </div>
+    </div>     
+    <Footer></Footer>
+     </div>
   );
 }

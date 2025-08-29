@@ -16,205 +16,208 @@ const cards = [
     image: gaming,
     shortVideos: [
       {
-        id: 1,
-        title: "Short Clip 1",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7406428579484962066",
-      },
-      {
-        id: 2,
-        title: "Short Clip 2",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7487579100622687506",
-      },
-      {
-        id: 3,
-        title: "Short Clip 3",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7480936598356430088",
-      },
-      {
-        id: 4,
-        title: "Short Clip 4",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7515494632373980434",
-      },
-      {
-        id: 5,
-        title: "Short Clip 5",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7495052280392174864",
-      },
-      {
-        id: 6,
-        title: "Short Clip 6",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7494317153022233872",
-      },
-      {
-        id: 7,
-        title: "Short Clip 7",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7492453335568551176",
-      },
-      {
-        id: 8,
-        title: "Short Clip 8",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7419333381978197255",
-      },
-      {
         id: 9,
-        title: "Short Clip 9",
+        title: "Call Of Duty Arabic",
         thumbnail: fea1,
         url: "https://www.tiktok.com/@callofdutyarabic/video/7385543871532453137",
       },
       {
-        id: 10,
-        title: "Short Clip 10",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@ubisoftme/video/7467235232014552327",
-      },
-      {
         id: 11,
-        title: "Short Clip 11",
+        title: "ubisoftme",
         thumbnail: fea1,
         url: "https://www.tiktok.com/@ubisoftme/video/7511355118864911623",
       },
+
       {
         id: 12,
-        title: "Short Clip 12",
+        title: "fortniteme",
         thumbnail: fea1,
         url: "https://www.tiktok.com/@fortniteme/video/7471292290670152968",
       },
       {
-        id: 13,
-        title: "Short Clip 13",
+        id: 4,
+        title: "Call Of Duty Arabic",
         thumbnail: fea1,
-        url: "https://www.tiktok.com/@fortniteme/video/7441964240275131655",
-      },
-      {
-        id: 14,
-        title: "Short Clip 14",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@fortniteme/video/7444613375721606418",
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7515494632373980434",
       },
       {
         id: 15,
-        title: "Short Clip 15",
+        title: "nvidiageforceme",
         thumbnail: fea1,
         url: "https://www.instagram.com/reel/DBMU9k6p9aA",
       },
       {
+        id: 1,
+        title: "Call Of Duty Arabic",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7406428579484962066",
+      },
+
+      {
+        id: 10,
+        title: "ubisoftme",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@ubisoftme/video/7467235232014552327",
+      },
+      {
+        id: 19,
+        title: "CoD Movement",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1bB4C_TbzZkX34au7igquq7TdCgKiXD5s/view",
+      },
+      {
+        id: 13,
+        title: "fortniteme",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@fortniteme/video/7441964240275131655",
+      },
+      {
+        id: 3,
+        title: "Call Of Duty Arabic",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7480936598356430088",
+      },
+      {
+        id: 14,
+        title: "fortniteme",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@fortniteme/video/7444613375721606418",
+      },
+
+      {
+        id: 5,
+        title: "Call Of Duty Arabic",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7495052280392174864",
+      },
+      {
         id: 16,
-        title: "Short Clip 16",
+        title: "arenaesportsae",
         thumbnail: fea1,
         url: "https://www.instagram.com/reel/CvAQQT2PzI5",
       },
       {
+        id: 7,
+        title: "Call Of Duty Arabic",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7492453335568551176",
+      },
+
+      {
         id: 17,
-        title: "Short Clip 17",
+        title: "arenaesportsae",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1r0L6OKEs96IyRvPA3njP97akSbuD-Kmx/view",
       },
       {
         id: 18,
-        title: "Short Clip 18",
+        title: "arenaesportsae",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1Fdvd_J_h1FjkHahvCEiTUUVUWkKUJm5q/view",
       },
       {
-        id: 19,
-        title: "Short Clip 19",
+        id: 6,
+        title: "Call Of Duty Arabic",
         thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1bB4C_TbzZkX34au7igquq7TdCgKiXD5s/view",
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7494317153022233872",
+      },
+
+      {
+        id: 2,
+        title: "Call Of Duty Arabic",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7487579100622687506",
       },
     ],
     longVideos: [
+       {
+        id: 4,
+        title: "Aziz - عزيز",
+        thumbnail: fea1,
+        url: "https://youtu.be/wokcf4Va6eg",
+      },
       {
         id: 1,
-        title: "الكشف عن تقييماتFC 25 : خمن البطاقة ",
+        title: "EA Middle East",
         thumbnail: fea1,
         url: "https://youtu.be/vytFscb7FV8",
       },
       {
         id: 2,
-        title: "أفشل لاعب في ببجي يعود| PUBG MOBILE",
+        title: "AboFlah",
         thumbnail: fea1,
         url: "https://youtu.be/pF-40SHydHM",
       },
-      {
-        id: 3,
-        title: "PICO PARK|مع فيرفول واوبلز وبندريتاالجزء الاول",
+   {
+        id: 13,
+        title: "B3shr",
         thumbnail: fea1,
-        url: "https://youtu.be/dmhMm7lmWRw",
+        url: "https://youtu.be/5ELjkeEKSlM",
       },
-      {
-        id: 4,
-        title: "PICO PARK|مع فيرفول واوبلز وبندريتاالجزء الثاني",
-        thumbnail: fea1,
-        url: "https://youtu.be/wokcf4Va6eg",
-      },
+     
       {
         id: 5,
-        title: "فيفا 22 شحنة ما تضر #18 .. قابلت ابو عبير في نهائي الدرافت ",
+        title: "Aziz - عزيز",
         thumbnail: fea1,
         url: "https://youtu.be/5UMnBG_eAYY",
       },
+          {
+        id: 14,
+        title: "Sofyan",
+        thumbnail: fea1,
+        url: "https://youtu.be/pCzfGtsK0xY",
+      },
       {
         id: 6,
-        title: "فيفا 22 شحنة ما تضر #18 .. قابلت ابو عبير في نهائي الدرافت ",
+        title: "Aziz - عزيز",
         thumbnail: fea1,
         url: "https://youtu.be/EgvX2qF2FCE",
       },
+        {
+        id: 11,
+        title: "B3shr",
+        thumbnail: fea1,
+        url: "https://youtu.be/lZ_Ho4fXVCg",
+      },
       {
         id: 7,
-        title: "فيفا 22 شحنة ما تضر #18 .. قابلت ابو عبير في نهائي الدرافت ",
+        title: "Aziz - عزيز",
         thumbnail: fea1,
         url: "https://youtu.be/HuqCoL5mKTw",
       },
       {
         id: 8,
-        title: "فيفا 22 شحنة ما تضر #18 .. قابلت ابو عبير في نهائي الدرافت ",
+        title: "Ahmed Show",
         thumbnail: fea1,
         url: "https://youtu.be/Lulc7ZQOg-U",
       },
       {
         id: 9,
-        title: "فيفا 22 شحنة ما تضر #18 .. قابلت ابو عبير في نهائي الدرافت ",
+        title: "Gamers React",
         thumbnail: fea1,
         url: "https://www.youtube.com/watch?v=4sfeqf4-LyM",
       },
+          {
+        id: 3,
+        title: "Aziz - عزيز",
+        thumbnail: fea1,
+        url: "https://youtu.be/dmhMm7lmWRw",
+      },
       {
         id: 10,
-        title: "فيفا 22 شحنة ما تضر #18 .. قابلت ابو عبير في نهائي الدرافت ",
+        title: "JellyPeanut",
         thumbnail: fea1,
         url: "https://www.youtube.com/watch?v=RtHFYeANEfY",
       },
-      {
-        id: 11,
-        title: "فيفا 22 شحنة ما تضر #18 .. قابلت ابو عبير في نهائي الدرافت ",
-        thumbnail: fea1,
-        url: "https://youtu.be/lZ_Ho4fXVCg",
-      },
+    
       {
         id: 12,
-        title: "فيفا 22 شحنة ما تضر #18 .. قابلت ابو عبير في نهائي الدرافت ",
+        title: "B3shr",
         thumbnail: fea1,
         url: "https://youtu.be/mlt3C716x_E",
       },
-      {
-        id: 13,
-        title: "فيفا 22 شحنة ما تضر #18 .. قابلت ابو عبير في نهائي الدرافت ",
-        thumbnail: fea1,
-        url: "https://youtu.be/5ELjkeEKSlM",
-      },
-      {
-        id: 14,
-        title: "فيفا 22 شحنة ما تضر #18 .. قابلت ابو عبير في نهائي الدرافت ",
-        thumbnail: fea1,
-        url: "https://youtu.be/pCzfGtsK0xY",
-      },
+     
+  
     ],
   },
   {
@@ -224,93 +227,97 @@ const cards = [
     shortVideos: [
       {
         id: 1,
-        title: "Short Clip 1",
+        title: "arenaesportsae",
         thumbnail: fea1,
         url: "https://www.instagram.com/reel/CwQb9xws5wm",
       },
       {
+        id: 4,
+        title: "colbymartel",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@colbymartel/video/7503329191841107246?lang=en",
+      },
+
+      {
         id: 2,
-        title: "Short Clip 2",
+        title: "endlessstudiosgames",
         thumbnail: fea1,
         url: "https://www.instagram.com/reel/DJ9negCh57B",
       },
       {
-        id: 3,
-        title: "Short Clip 3",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@egamena/video/7361725976633494802",
-      },
-      {
-        id: 4,
-        title: "Short Clip 4",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@colbymartel/video/7503329191841107246?lang=en",
-      },
-      {
         id: 5,
-        title: "Short Clip 5",
+        title: "colbymartel",
         thumbnail: fea1,
         url: "https://www.tiktok.com/@colbymartel/video/7502463977889418542?lang=en",
       },
       {
+        id: 3,
+        title: "egamena",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@egamena/video/7361725976633494802",
+      },
+
+      {
         id: 6,
-        title: "Short Clip 6",
+        title: "colbymartel",
         thumbnail: fea1,
         url: "https://www.tiktok.com/@colbymartel/video/7499572035417296158?lang=en",
       },
     ],
     longVideos: [
-      {
-        id: 1,
-        title: "Long Clip 1",
+        {
+        id: 5,
+        title: "CANCEL",
         thumbnail: fea1,
-        url: "https://youtu.be/RALnd4Tidz8",
+        url: "https://youtu.be/mVmMyYxPQW8",
       },
       {
         id: 2,
-        title: "Long Clip 2",
+        title: "Aziz - عزيز",
         thumbnail: fea1,
         url: "https://youtu.be/QvD2c0VwE2o",
       },
+    
       {
         id: 3,
-        title: "Long Clip 3",
-        thumbnail: fea1,
-        url: "https://youtu.be/QeUr8V8juxo",
-      },
-      {
-        id: 3,
-        title: "Long Clip 4",
+        title: "KingsMen ملوك التحدي",
         thumbnail: fea1,
         url: "https://youtu.be/yh80UCaubZc",
       },
       {
         id: 4,
-        title: "Long Clip 5",
+        title: "CANCEL",
         thumbnail: fea1,
         url: "https://youtu.be/OHMadHmc-eg",
       },
-      {
-        id: 5,
-        title: "Long Clip 5",
+         {
+        id: 1,
+        title: "Aziz - عزيز",
         thumbnail: fea1,
-        url: "https://youtu.be/mVmMyYxPQW8",
+        url: "https://youtu.be/RALnd4Tidz8",
       },
+ 
       {
         id: 6,
-        title: "Long Clip 6",
+        title: "CANCEL",
         thumbnail: fea1,
         url: "https://youtu.be/URdsD1OoRCk",
       },
       {
         id: 7,
-        title: "Long Clip 7",
+        title: "e-talkspodcast",
         thumbnail: fea1,
         url: "https://www.youtube.com/shorts/Y-jJkZfdf3U",
       },
+        {
+        id: 3,
+        title: "Aziz - عزيز",
+        thumbnail: fea1,
+        url: "https://youtu.be/QeUr8V8juxo",
+      },
       {
         id: 8,
-        title: "Long Clip 8",
+        title: "OFFSIDE__Football",
         thumbnail: fea1,
         url: "https://www.youtube.com/shorts/zADUh86ejKw",
       },
@@ -321,116 +328,123 @@ const cards = [
     name: "Ads",
     image: ads,
     shortVideos: [
+         {
+        id: 10,
+        title: "Ooredooez Showcase",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1kzf4VIJKe5FPpEKDECHRsCQgGSF3sTY_/view",
+      },
+  
       {
         id: 1,
-        title: "Clip 1",
+        title: "Swarmio Inc",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1MIZWPFwTJy5wVDp6APHUL4A8TSTxbIvz/view?usp=drive_link",
       },
       {
+        id: 7,
+        title: "Ooredooez",
+        thumbnail: fea1,
+        url: "https://www.instagram.com/reel/CuPERNroGjI",
+      },
+      {
         id: 2,
-        title: "Clip 2",
+        title: "arenaesportsae",
         thumbnail: fea1,
         url: "https://www.instagram.com/reel/CtMaoL8ANks",
       },
       {
+        id: 8,
+        title: "Ooredooez Sign Up",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1BXa_-DzL1ofcyvzzxPjAhszujFJJIZ2S/view",
+      },
+      {
         id: 3,
-        title: "Clip 3",
+        title: "Arenaesportsae Lan Ad",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1aZltlzmpiWD7PmgwvqBHHcwXixxNY8s_/view",
       },
       {
         id: 4,
-        title: "Clip 4",
+        title: "Arenaesportsae Store Ad",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1DYf-UURIOUPIC7iL1OmKfyVX4lWQAmI8/view",
       },
+          {
+        id: 9,
+        title: "Ooredooez Register & Verify",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1d-QuSUlNlQaRgf546c2P6IBbu2kQaI15/view",
+      },
       {
         id: 5,
-        title: "Clip 5",
+        title: "Arenaesportsae Trio Ad",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1gX5Y1FcGMkkzX0OD_F0eyqthRhv-6PnW/view",
       },
       {
         id: 6,
-        title: "Clip 6",
+        title: "Globe Gamer Grounds Platform Default Ad",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1fU5GyLYgGpMOQ70-G3b2xF70EhgsznE8/view",
       },
     ],
     longVideos: [
-      {
-        id: 1,
-        title: " Clip 1",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1Nkg1M0EpqfLYB0E0Fizdv1p0ApmApTJ0/view",
-      },
-      {
-        id: 2,
-        title: " Clip 2",
-        thumbnail: fea1,
-        url: "https://www.instagram.com/reel/CuPERNroGjI",
-      },
-      {
+      
+          {
         id: 3,
-        title: " Clip 3",
-        thumbnail: fea1,
-        url: "https://www.instagram.com/reel/CuwlXfpIbjh",
-      },
-      {
-        id: 3,
-        title: " Clip 4",
+        title: "ooredooez",
         thumbnail: fea1,
         url: "https://www.instagram.com/reel/CztZVB4tIav",
       },
+
       {
-        id: 4,
-        title: " Clip 5",
+        id: 1,
+        title: "360games General Ad",
         thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1BXa_-DzL1ofcyvzzxPjAhszujFJJIZ2S/view",
+        url: "https://drive.google.com/file/d/1Nkg1M0EpqfLYB0E0Fizdv1p0ApmApTJ0/view",
       },
+
+      {
+        id: 3,
+        title: "Ooredooez",
+        thumbnail: fea1,
+        url: "https://www.instagram.com/reel/CuwlXfpIbjh",
+      },
+  
       {
         id: 5,
-        title: " Clip 5",
+        title: "CANCEL",
         thumbnail: fea1,
         url: "https://youtu.be/mVmMyYxPQW8",
       },
-      {
-        id: 6,
-        title: " Clip 6",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1kzf4VIJKe5FPpEKDECHRsCQgGSF3sTY_/view",
-      },
-      {
-        id: 7,
-        title: " Clip 7",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1d-QuSUlNlQaRgf546c2P6IBbu2kQaI15/view",
-      },
+   
       {
         id: 8,
-        title: " Clip 8",
+        title: "ooredooez PPC Ad",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1BbW24LVpLmqPcCTU2bh1ViCkcq7mzARA/view",
       },
+         {
+        id: 11,
+        title: "predatorgamingme",
+        thumbnail: fea1,
+        url: "https://www.instagram.com/reel/DEPzs39PiWu",
+      },
       {
         id: 9,
-        title: " Clip 8",
+        title: "Ooredooez Platform Default Ad",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1wcEKtdASyGBn9jDAWwaf7td6SMduW_wA/view",
       },
       {
         id: 10,
-        title: " Clip 8",
+        title: "CANCEL",
         thumbnail: fea1,
         url: "https://x.com/aldaejam/status/1594017369403248640",
       },
-      {
-        id: 11,
-        title: " Clip 8",
-        thumbnail: fea1,
-        url: "https://www.instagram.com/reel/DEPzs39PiWu",
-      },
+   
     ],
   },
 ];
@@ -441,18 +455,13 @@ export default function Videos() {
 
   return (
     <div className="min-h-screen bg-[#30054A] text-white ">
-      <div className="mb-20">
+      <div className="mb-28">
         <Navbar />
       </div>
 
       <AnimatePresence mode="wait">
-        <div>
-          {" "}
-      
-        </div>
-        {!selectedCard ? (
 
-          
+        {!selectedCard ? (
           // === Cards Grid ===
           <motion.div
             key="cards"
@@ -460,7 +469,7 @@ export default function Videos() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="md:mx-24 mx-4 md:p-12 grid grid-cols-1 md:grid-cols-4 2xl:grid-cols-4
+            className="md:mx-24 px-5 py-12 mx-4 md:p-12 grid grid-cols-1 md:grid-cols-4 2xl:grid-cols-4
             [@media(min-width:1920px)]:grid-cols-5 gap-6 bg-[#662390] m-8 rounded-[30px] min-h-screen"
           >
             {cards.map((card) => (

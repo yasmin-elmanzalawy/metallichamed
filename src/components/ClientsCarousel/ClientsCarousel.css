@@ -1,13 +1,12 @@
 .btn {
  display: inline-block;
- width: 80px;
- height: 30px;
  border-radius: 30px;
  border: 2px solid #e1b2ff;
  position: relative;
  overflow: hidden;
  transition: all 0.5s ease-in;
  z-index: 1;
+ padding:0 15px;
 }
 
 .btn::before,
@@ -28,10 +27,10 @@
  background: #30054A;
 }
 
-.btn::after {
+/* .btn::after {
  right: -10px;
  background: #692395;
-}
+} */
 
 .btn:hover::before,
 .btn:hover::after {

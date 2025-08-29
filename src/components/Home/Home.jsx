@@ -3,36 +3,39 @@ import "./Home.css";
 import Navbar from "../Navbar/Navbar";
 import Dashboard from "../Dashboard/Dashboard";
 import Featured from "../Featured/Featured";
-import about from "../../assets/about.png";
+import gaming from "../../assets/icons/gamingicon.png";
 import hamed from "../../assets/hamed.png";
 import ClientsCarousel from "../ClientsCarousel/ClientsCarousel";
 import Footer from "../Footer/Footer";
+import Services from "../Services/Services";
 
 export default function Home() {
   return (
-    <div id="hero">
-      <Navbar />
+    <div className="pt-2" id="hero">
+      <div className="mb-28">
+        <Navbar />
+      </div>
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className=" bg-[#662390] md:mt-[100px] mt-[110px] md:mx-24 m-12 mx-4  p-8 md:p-12  rounded-[30px] relative overflow-hidden"
+        className=" bg-[#662390] md:mt-[100px] mt-[110px] md:mx-24 m-12 mx-4 pb-20 p-8 md:p-12  rounded-[30px] relative overflow-hidden"
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text Section */}
           <div
             className="w-full
-            lg:w-[50%]  2xl:w-[60%] 
-            [@media(min-width:1920px)]:w-[55%] 
+            lg:w-[40%]  2xl:w-[50%] 
+            [@media(min-width:1920px)]:w-[50%] 
             flex-shrink-0"
           >
             <h1
               className="font-extrabold min-h-[80px]
-  text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl 
-  [@media(min-width:1920px)]:text-7xl 
-  flex flex-wrap items-center group transition-transform duration-300 hover:scale-105"
+    text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl 
+    [@media(min-width:1920px)]:text-7xl 
+    flex flex-wrap items-center group "
             >
-              <span className="golden-gradient">Metallichamed</span>
+              <span className="shiny-text">Metallichamed</span>
             </h1>
 
             <p
@@ -80,10 +83,10 @@ export default function Home() {
           background-position: 100% 0;
         }
       `}</style>
-
-      <section className=" md:mx-24 m-12 mx-4  py-8 " id="about">
+      {/* about */}
+      <section className=" md:mx-24 m-12 mx-4 py-8 " id="about">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-          <div className="w-full md:w-[50%] m-auto" >
+          <div className="w-full md:w-[50%] m-auto">
             <img
               src={hamed}
               className="block w-[60%] mx-auto rounded-xl md:w-[100%] 2xl:w-[70%]
@@ -114,6 +117,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* services */}
+      <Services></Services>
+
       <Footer></Footer>
     </div>
   );

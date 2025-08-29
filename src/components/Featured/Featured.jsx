@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -29,9 +31,12 @@ export default function Featured() {
       <div className="flex items-center mb-5 ">
         <h3 className="text-2xl text-gold font-bold  sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
             [@media(min-width:1920px)]:text-3xl ">Featured Videos</h3>
-        <button className="btn text-sm [@media(min-width:1920px)]:text-lg ml-5  font-bold text-gold hover:text-white transition-colors ">
+        <NavLink
+          to="/videos"
+          className="btn text-sm [@media(min-width:1920px)]:text-lg ml-5 text-center font-bold  text-gold hover:text-white transition-colors"
+        >
           more
-        </button>
+        </NavLink>
       </div>
 
       {/* Custom arrows */}
