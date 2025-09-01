@@ -1,40 +1,39 @@
 import React, { useState } from "react";
-import mazag from "../../assets/companies/mazag.png";
-import itp from "../../assets/companies/itp.png";
-import spartan from "../../assets/companies/spartan.png";
-import callofduty from "../../assets/companies/callofduty.png";
-import ubisoft from "../../assets/companies/ubisoft.png";
-import fortnite from "../../assets/companies/fortnite.png";
-import ea from "../../assets/companies/ea.png";
-import acer from "../../assets/companies/acer.png";
-import nvidia from "../../assets/companies/nvidia.png";
-import claritine from "../../assets/companies/claritine.png";
-import ulta from "../../assets/companies/ulta.png";
-import swarmio from "../../assets/companies/swarmio.png";
-import arena from "../../assets/companies/arena.png";
-import tundra from "../../assets/companies/tundra.png";
-import ooredo from "../../assets/companies/ooredoo.png";
+import mazag from "../../assets/companies/mazag.avif";
+import itp from "../../assets/companies/itp.avif";
+import spartan from "../../assets/companies/spartan.avif";
+import callofduty from "../../assets/companies/callofduty.avif";
+import ubisoft from "../../assets/companies/ubisoft.avif";
+import fortnite from "../../assets/companies/fortnite.avif";
+import ea from "../../assets/companies/ea.avif";
+import acer from "../../assets/companies/acer.avif";
+import nvidia from "../../assets/companies/nvidia.avif";
+import claritine from "../../assets/companies/claritine.avif";
+import ulta from "../../assets/companies/ulta.avif";
+import swarmio from "../../assets/companies/swarmio.avif";
+import arena from "../../assets/companies/arena.avif";
+import tundra from "../../assets/companies/tundra.avif";
+import ooredo from "../../assets/companies/ooredoo.avif";
 import { NavLink } from "react-router-dom";
 
 // creators
-import aboflah from "../../assets/creators/AboFlah.jpg";
-import ahmedshow from "../../assets/creators/AhmedShow3.jpg";
-import aziz from "../../assets/creators/Aziz.jpg";
-import B3shr from "../../assets/creators/B3shr.jpg";
-import AmrElhady from "../../assets/creators/AmrElhady.jpg";
-import cancel from "../../assets/creators/CANCEL.jpg";
-import GamersReact from "../../assets/creators/GamersReact.jpg";
+import aboflah from "../../assets/creators/AboFlah.avif";
+import ahmedshow from "../../assets/creators/AhmedShow3.avif";
+import aziz from "../../assets/creators/Aziz.avif";
+import B3shr from "../../assets/creators/B3shr.avif";
+import AmrElhady from "../../assets/creators/AmrElhady.avif";
+import cancel from "../../assets/creators/CANCEL.avif";
+import GamersReact from "../../assets/creators/GamersReact.avif";
 import JellyPeanut from "../../assets/creators/JellyPeanut.png";
-import MrMarvelTV from "../../assets/creators/MrMarvelTV.jpg";
-import LeoNoHero from "../../assets/creators/LeoNoHero.jpg";
-import i6arba5 from "../../assets/creators/i6arba5.jpg";
-import Sofyan from "../../assets/creators/Sofyan.jpg";
-import ColbyMartel from "../../assets/creators/ColbyMartel.jpg";
-import offside from "../../assets/creators/OFFSIDE.jpg";
-import golazo from "../../assets/creators/golazo.jpg";
+import MrMarvelTV from "../../assets/creators/MrMarvelTV.avif";
+import LeoNoHero from "../../assets/creators/LeoNoHero.avif";
+import i6arba5 from "../../assets/creators/i6arba5.avif";
+import Sofyan from "../../assets/creators/Sofyan.avif";
+import ColbyMartel from "../../assets/creators/ColbyMartel.avif";
+import offside from "../../assets/creators/OFFSIDE.avif";
+import golazo from "../../assets/creators/golazo.avif";
 import VoltechFPS from "../../assets/creators/VoltechFPS.png";
 import TheReengineeredClub from "../../assets/creators/TheReengineeredClub.png";
-import NourKhan from "../../assets/creators/NourKhan.jpg";
 import MySalahMat from "../../assets/creators/MySalahMat.png";
 
 import Navbar from "../Navbar/Navbar";
@@ -57,6 +56,8 @@ const companies = [
   { id: 13, name: "Arena Esports", image: arena, link: "https://arenaesports.ae" },
   { id: 14, name: "Tundra Esports", image: tundra, link: "https://www.tiktok.com/@tundraesports" },
   { id: 15, name: "OoredooEz", image: ooredo, link: "https://www.facebook.com/OoredooEZ" },
+  { id: 17, name: "MySalahMat", image: MySalahMat, link: "https://www.mysalahmat.com" },
+
 ];
 
 const contentCreators = [
@@ -76,7 +77,6 @@ const contentCreators = [
   { id: 14, name: "Golazo", image: golazo, subscribers: 65000, link: " https://www.youtube.com/@goolazo" },
   { id: 15, name: "VoltechFPS", image: VoltechFPS, subscribers: 22000, link: " https://www.instagram.com/voltech.fps" },
   { id: 16, name: "The Re-engineered Club", image: TheReengineeredClub, subscribers: 6200, link: "https://www.youtube.com/@reengineeredclub" },
-  { id: 17, name: "MySalahMat", image: MySalahMat, subscribers: 0, link: "https://www.mysalahmat.com" },
 ];
 
 export default function Clients() {
@@ -91,9 +91,9 @@ export default function Clients() {
       <Navbar />
 
       {/* Navigation Tabs */}
-      <div className="flex gap-5 md:mt-[100px] mt-[110px] mb-6 max-w-md mx-auto rounded-md overflow-hidden">
+      <div className="flex gap-5 md:mt-[100px] mt-[110px] mb-6 max-w-lg mx-auto rounded-md overflow-hidden">
         <button
-          className={`btn flex-1 text-center font-semibold transition-colors duration-300 ${
+          className={`btn flex-1 txt-size text-center font-semibold transition-colors duration-300 ${
             activeTab === "companies" ? "bg-[#662390] text-gold" : "bg-[#30054A] text-white"
           }`}
           onClick={() => setActiveTab("companies")}
@@ -101,7 +101,7 @@ export default function Clients() {
           Companies
         </button>
         <button
-          className={`btn flex-1 text-center font-semibold transition-colors duration-300 ${
+          className={`btn flex-1 txt-size text-center font-semibold transition-colors duration-300 ${
             activeTab === "contentCreators" ? "bg-[#662390] text-gold" : "bg-[#30054A] text-white"
           }`}
           onClick={() => setActiveTab("contentCreators")}
@@ -140,7 +140,7 @@ export default function Clients() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gold font-semibold hover:underline text-center
-                  text-sm sm:text-lg mt-2"
+                  txt-size mt-2"
               >
                 {name}
               </a>
@@ -148,10 +148,10 @@ export default function Clients() {
               {/* Show subscribers only for content creators */}
               {activeTab === "contentCreators" && subscribers !== undefined && (
                 <>
-                  <span className="text-[#E8CCF9] text-xs sm:text-base">
+                  <span className="text-[#E8CCF9] text-xs sm:text-lg">
                     {subscribers.toLocaleString()}
                   </span>
-                  <p className="text-[#E8CCF9] text-xs sm:text-base">subscribers</p>
+                  <p className="text-[#E8CCF9] text-sm sm:text-lg">subscribers</p>
                 </>
               )}
             </div>

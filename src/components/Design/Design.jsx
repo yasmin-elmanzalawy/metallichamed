@@ -3,15 +3,15 @@ import Navbar from "../Navbar/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../Footer/Footer";
 import { X } from "lucide-react"; // X icon
-import AWA1 from "../../assets/design/AWA1.png";
-import AWA2 from "../../assets/design/AWA2.png";
-import AWA3 from "../../assets/design/AWA3.png";
-import AWA4 from "../../assets/design/AWA4.png";
-import Fortnite1 from "../../assets/design/Fortnite1.png";
-import Fortnite2 from "../../assets/design/Fortnite2.png";
-import Fortnite3 from "../../assets/design/Fortnite3.png";
-import PlayStation from "../../assets/design/PlayStation.jpg";
-import VoltechFPS from "../../assets/design/VoltechFPS.png";
+import AWA1 from "../../assets/design/AWA1.avif";
+import AWA2 from "../../assets/design/AWA2.avif";
+import AWA3 from "../../assets/design/AWA3.avif";
+import AWA4 from "../../assets/design/AWA4.avif";
+import Fortnite1 from "../../assets/design/Fortnite1.avif";
+import Fortnite2 from "../../assets/design/Fortnite2.avif";
+import Fortnite3 from "../../assets/design/Fortnite3.avif";
+import PlayStation from "../../assets/design/PlayStation.avif";
+import VoltechFPS from "../../assets/design/VoltechFPS.avif";
 
 // Arrays for each section
 const awaImages = [AWA1, AWA2, AWA3, AWA4];

@@ -99,7 +99,7 @@ export default function Services() {
                 alt={`${service.label} icon`}
               />
             </div>
-            <p className="text-gold text-sm sm:text-base md:text-lg xl:text-xl [@media(min-width:1920px)]:text-2xl">
+            <p className="text-gold txt-size">
               {service.label}
             </p>
           </motion.div>

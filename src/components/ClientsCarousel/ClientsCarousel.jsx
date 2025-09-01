@@ -6,19 +6,19 @@ import "swiper/css/navigation";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-import mazag from "../../assets/companies/mazag.png";
-import itp from "../../assets/companies/itp.png";
-import spartan from "../../assets/companies/spartan.png";
-import callofduty from "../../assets/companies/callofduty.png";
-import ubisoft from "../../assets/companies/ubisoft.png";
-import fortnite from "../../assets/companies/fortnite.png";
-import ea from "../../assets/companies/ea.png";
-import nvidia from "../../assets/companies/nvidia.png";
-import claritine from "../../assets/companies/claritine.png";
+import mazag from "../../assets/companies/mazag.avif";
+import itp from "../../assets/companies/itp.avif";
+import spartan from "../../assets/companies/spartan.avif";
+import callofduty from "../../assets/companies/callofduty.avif";
+import ubisoft from "../../assets/companies/ubisoft.avif";
+import fortnite from "../../assets/companies/fortnite.avif";
+import ea from "../../assets/companies/ea.avif";
+import nvidia from "../../assets/companies/nvidia.avif";
+import claritine from "../../assets/companies/claritine.avif";
 
-import aboflah from "../../assets/creators/AboFlah.jpg";
-import aziz from "../../assets/creators/Aziz.jpg";
-import ahmedshow from "../../assets/creators/AhmedShow3.jpg";
+import aboflah from "../../assets/creators/AboFlah.avif";
+import aziz from "../../assets/creators/Aziz.avif";
+import ahmedshow from "../../assets/creators/AhmedShow3.avif";
 
 import "./ClientsCarousel.css";
 import { NavLink } from "react-router-dom";
@@ -112,7 +112,7 @@ export default function ClientsCarousel() {
               </div>
 
               <div className="client-text-container">
-                <p className="client-name">{name}</p>
+                <p className="client-name txt-size">{name}</p>
               </div>
             </a>
           </SwiperSlide>

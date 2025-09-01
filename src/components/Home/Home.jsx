@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import Dashboard from "../Dashboard/Dashboard";
 import Featured from "../Featured/Featured";
 import gaming from "../../assets/icons/gamingicon.png";
-import hamed from "../../assets/hamed.png";
+import hamed from "../../assets/hamed.avif";
 import ClientsCarousel from "../ClientsCarousel/ClientsCarousel";
 import Footer from "../Footer/Footer";
 import Services from "../Services/Services";
@@ -39,8 +39,7 @@ export default function Home() {
             </h1>
 
             <p
-              className="text-neutral-white text-base sm:text-lg md:text-xl  xl:text-xl 2xl:text-xl
-              [@media(min-width:1920px)]:text-2xl "
+              className="text-neutral-white text-base txt-size "
             >
               Transforming raw footage into captivating visual experiences that
               inspire and connect.
@@ -102,8 +101,7 @@ export default function Home() {
               A Senior Video Editor
             </h3>
             <p
-              className=" md:text-left text-neutral-white text-base sm:text-lg md:text-xl  xl:text-lg 2xl:text-lg
-              [@media(min-width:1920px)]:text-xl"
+              className=" md:text-left text-neutral-white text-base txt-size"
             >
               <br />
               With +6 years of experience delivering exceptional results for
@@ -119,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* services */}
-      <Services></Services>
+      {/* <Services></Services> */}
 
       <Footer></Footer>
     </div>

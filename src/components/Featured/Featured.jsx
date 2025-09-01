@@ -94,8 +94,7 @@ export default function Featured() {
                     alt="Author"
                     className="w-10 h-10 rounded-full border-2 border-gold-dark"
                   />
-                  <p className="text-[#FEF7E4] text-sm leading-snug  sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
-            [@media(min-width:1920px)]:text-2xl">{video.desc}</p>
+                  <p className="text-[#FEF7E4] leading-snug  txt-size">{video.desc}</p>
                 </div>
               </a>
             </div>

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Example card images and thumbnails
 import gaming from "../../assets/thumbnails/Gaming.png";
-import vlog from "../../assets/thumbnails/vlogs.png";
+import vlog from "../../assets/thumbnails/irl.png";
 import fea1 from "../../assets/thumbnails/dum.jpg";
 import ads from "../../assets/thumbnails/ads.png";
 import Footer from "../Footer/Footer";
@@ -12,7 +12,6 @@ import Footer from "../Footer/Footer";
 const cards = [
   {
     id: 1,
-    name: "Gaming",
     image: gaming,
     shortVideos: [
       {
@@ -130,7 +129,7 @@ const cards = [
       },
     ],
     longVideos: [
-       {
+      {
         id: 4,
         title: "Aziz - عزيز",
         thumbnail: fea1,
@@ -148,20 +147,20 @@ const cards = [
         thumbnail: fea1,
         url: "https://youtu.be/pF-40SHydHM",
       },
-   {
+      {
         id: 13,
         title: "B3shr",
         thumbnail: fea1,
         url: "https://youtu.be/5ELjkeEKSlM",
       },
-     
+
       {
         id: 5,
         title: "Aziz - عزيز",
         thumbnail: fea1,
         url: "https://youtu.be/5UMnBG_eAYY",
       },
-          {
+      {
         id: 14,
         title: "Sofyan",
         thumbnail: fea1,
@@ -173,7 +172,7 @@ const cards = [
         thumbnail: fea1,
         url: "https://youtu.be/EgvX2qF2FCE",
       },
-        {
+      {
         id: 11,
         title: "B3shr",
         thumbnail: fea1,
@@ -197,7 +196,7 @@ const cards = [
         thumbnail: fea1,
         url: "https://www.youtube.com/watch?v=4sfeqf4-LyM",
       },
-          {
+      {
         id: 3,
         title: "Aziz - عزيز",
         thumbnail: fea1,
@@ -209,20 +208,18 @@ const cards = [
         thumbnail: fea1,
         url: "https://www.youtube.com/watch?v=RtHFYeANEfY",
       },
-    
+
       {
         id: 12,
         title: "B3shr",
         thumbnail: fea1,
         url: "https://youtu.be/mlt3C716x_E",
       },
-     
-  
     ],
   },
   {
     id: 2,
-    name: "IRL / Vlogs",
+    // name: "IRL / Vlogs",
     image: vlog,
     shortVideos: [
       {
@@ -263,9 +260,15 @@ const cards = [
         thumbnail: fea1,
         url: "https://www.tiktok.com/@colbymartel/video/7499572035417296158?lang=en",
       },
+      {
+        id: 8,
+        title: "OFFSIDE__Football",
+        thumbnail: fea1,
+        url: "https://www.youtube.com/shorts/zADUh86ejKw",
+      },
     ],
     longVideos: [
-        {
+      {
         id: 5,
         title: "CANCEL",
         thumbnail: fea1,
@@ -277,7 +280,7 @@ const cards = [
         thumbnail: fea1,
         url: "https://youtu.be/QvD2c0VwE2o",
       },
-    
+
       {
         id: 3,
         title: "KingsMen ملوك التحدي",
@@ -290,13 +293,13 @@ const cards = [
         thumbnail: fea1,
         url: "https://youtu.be/OHMadHmc-eg",
       },
-         {
+      {
         id: 1,
         title: "Aziz - عزيز",
         thumbnail: fea1,
         url: "https://youtu.be/RALnd4Tidz8",
       },
- 
+
       {
         id: 6,
         title: "CANCEL",
@@ -309,17 +312,11 @@ const cards = [
         thumbnail: fea1,
         url: "https://www.youtube.com/shorts/Y-jJkZfdf3U",
       },
-        {
+      {
         id: 3,
         title: "Aziz - عزيز",
         thumbnail: fea1,
         url: "https://youtu.be/QeUr8V8juxo",
-      },
-      {
-        id: 8,
-        title: "OFFSIDE__Football",
-        thumbnail: fea1,
-        url: "https://www.youtube.com/shorts/zADUh86ejKw",
       },
     ],
   },
@@ -328,13 +325,13 @@ const cards = [
     name: "Ads",
     image: ads,
     shortVideos: [
-         {
+      {
         id: 10,
         title: "Ooredooez Showcase",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1kzf4VIJKe5FPpEKDECHRsCQgGSF3sTY_/view",
       },
-  
+
       {
         id: 1,
         title: "Swarmio Inc",
@@ -371,7 +368,7 @@ const cards = [
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1DYf-UURIOUPIC7iL1OmKfyVX4lWQAmI8/view",
       },
-          {
+      {
         id: 9,
         title: "Ooredooez Register & Verify",
         thumbnail: fea1,
@@ -391,8 +388,7 @@ const cards = [
       },
     ],
     longVideos: [
-      
-          {
+      {
         id: 3,
         title: "ooredooez",
         thumbnail: fea1,
@@ -412,21 +408,21 @@ const cards = [
         thumbnail: fea1,
         url: "https://www.instagram.com/reel/CuwlXfpIbjh",
       },
-  
+
       {
         id: 5,
         title: "CANCEL",
         thumbnail: fea1,
         url: "https://youtu.be/mVmMyYxPQW8",
       },
-   
+
       {
         id: 8,
         title: "ooredooez PPC Ad",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1BbW24LVpLmqPcCTU2bh1ViCkcq7mzARA/view",
       },
-         {
+      {
         id: 11,
         title: "predatorgamingme",
         thumbnail: fea1,
@@ -444,8 +440,327 @@ const cards = [
         thumbnail: fea1,
         url: "https://x.com/aldaejam/status/1594017369403248640",
       },
-   
     ],
+  },
+  {
+    id: 4,
+    name: "Podcast",
+    image: fea1,
+    shortVideos: [
+      {
+        id: 1,
+        title: "Amados Strategies",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@amados.strategies/video/7522954106890161416",
+      },
+      {
+        id: 2,
+        title: "Amados Strategies",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@amados.strategies/video/7521756129647430919",
+      },
+    ],
+    longVideos: [
+      {
+        id: 1,
+        title: "Amados Strategies",
+        thumbnail: fea1,
+        url: "https://youtu.be/Q2m8f8n-vKs",
+      },
+      {
+        id: 2,
+        title: "Amados Strategies",
+        thumbnail: fea1,
+        url: "https://youtu.be/pQ1boyotNns",
+      },
+      {
+        id: 3,
+        title: "e-Talks",
+        thumbnail: fea1,
+        url: "https://youtu.be/qZn0HEBTXuY",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    name: "Documentary",
+    image: fea1,
+    shortVideos: [
+      {
+        id: 2,
+        title: "GAZA Genocide Film Documentary",
+        thumbnail: fea1,
+        url: "https://youtu.be/I4GOsT57mDA",
+      },
+    ],
+    longVideos: [
+      {
+        id: 1,
+        title: "The Re-engineered Hope ",
+        thumbnail: fea1,
+        url: "https://youtu.be/jGtL8l7NjCA",
+      },
+    ],
+  },
+
+  {
+    id: 6,
+    image: fea1,
+    name: "UGC",
+    shortVideos: [
+      {
+        id: 1,
+        title: "DL Media Test 1",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1bZhVpL0ovO3cXcRzP_SPLZ-C87TWzRQk/view?usp=sharing",
+      },
+      {
+        id: 2,
+        title: "Adjustable Glasses",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1WuD9t_vd8YHg6Qk6Y-XWyQrokwN1DmyN/view?usp=sharing&t=1",
+      },
+      {
+        id: 3,
+        title: "DL Media Test 2",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1_hhxZm4ZJ6_4ct3YvcZ4-bkWA_eytMx7/view?usp=sharing",
+      },
+      {
+        id: 4,
+        title: "Head Flashlight",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1wXJx6zrkR8qaW_rCQ5lb00T0ZEvaZ0AR/view?usp=sharing",
+      },
+      {
+        id: 5,
+        title: "Heater",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/12-LP9tfzuGyQT9gsopfrmNEVDjr3J7oP/view?usp=sharing",
+      },
+      {
+        id: 6,
+        title: "Iconic Air Purifier",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1NDUWJdPoyFtaNAOuFuJ6mYPN1xF7tdTF/view?usp=sharing",
+      },
+      {
+        id: 7,
+        title: "Mini Magnet Flashlight",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1mkgB0cgpt00PtSmbzIRFOzHfrzJCy7hi/view?usp=sharing",
+      },
+      {
+        id: 8,
+        title: "Mini Wifi Camera",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1rfpAjXx7IsAoKcaF-lfkhB065MmizJMC/view?usp=sharing",
+      },
+      {
+        id: 9,
+        title: "Nano Spray",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1FwQnUlQX3v4lERy0Oy7idCSS649OiFvJ/view?usp=sharing",
+      },
+      {
+        id: 10,
+        title: "TV Antenna",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1dpkrHfACrJvk9_0Ks-U288CZJ_kLJCnb/view?usp=sharing",
+      },
+      {
+        id: 11,
+        title: "USB Backup Stick",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1rFScTOpCFA_g9hjcclYSzSRl0cx36dIS/view?usp=sharing",
+      },
+    ],
+    longVideos: [], // 👈 leave empty if you only want them short form
+  },
+
+  {
+    id: 7,
+    name: "Other",
+    image: fea1,
+    shortVideos: [
+      {
+        id: 1,
+        title: "Arena Esports",
+        thumbnail: fea1,
+        url: "https://www.instagram.com/reel/CtcL9cyRR-c",
+      },
+      {
+        id: 2,
+        title: "The Ultimates",
+        thumbnail: fea1,
+        url: "https://x.com/TheUltimatesgg/status/1654913920849829888",
+      },
+      {
+        id: 3,
+        title: "AboFlah",
+        thumbnail: fea1,
+        url: "https://www.youtube.com/watch?v=1KJaZoZgTvw",
+      },
+
+      {
+        id: 8,
+        title: "Claritine Arabia",
+        thumbnail: fea1,
+        url: "https://www.facebook.com/reel/1435410481075856",
+      },
+ 
+    ],
+    longVideos: [
+      {
+        id: 4,
+        title: "B3shr",
+        thumbnail: fea1,
+        url: "https://youtu.be/N0dkH7sx4LU",
+      },
+      {
+        id: 5,
+        title: "B3shr",
+        thumbnail: fea1,
+        url: "https://youtu.be/QiL6CgvH_rU",
+      },
+      {
+        id: 6,
+        title: "OFFSIDE",
+        thumbnail: fea1,
+        url: "https://www.youtube.com/watch?v=o12FbYlg8Fw",
+      },
+      {
+        id: 7,
+        title: "Golazo",
+        thumbnail: fea1,
+        url: "https://youtu.be/dMjK6BbLmqE",
+      },
+           {
+        id: 9,
+        title: "Ulta Beauty V3 Energetic",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/11buqEQnX5GMZUWAxgbRuPiJDdJ5QHRWZ/view?usp=sharing",
+      },
+      {
+        id: 10,
+        title: "Ulta Beauty V3 Stylish",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/11buqEQnX5GMZUWAxgbRuPiJDdJ5QHRWZ/view?usp=sharing",
+      },
+    ],
+  },
+
+  {
+    id: 8,
+    name: "Highlights",
+    image: fea1,
+    shortVideos: [
+      {
+        id: 1,
+        title: "Arena Esports",
+        thumbnail: fea1,
+        url: "https://www.instagram.com/reel/Cvm7Wx1vxZQ",
+      },
+      {
+        id: 2,
+        title: "Gamer Grounds Philippines",
+        thumbnail: fea1,
+        url: "https://www.facebook.com/reel/1202619947281518",
+      },
+      {
+        id: 3,
+        title: "ZainEsports",
+        thumbnail: fea1,
+        url: "https://www.instagram.com/reel/DAd49Q9oUI8",
+      },
+      {
+        id: 4,
+        title: "OoredooEZ",
+        thumbnail: fea1,
+        url: "https://www.instagram.com/reel/CnhjV7-J3Ty",
+      },
+     
+     
+ 
+    ],
+    longVideos: [
+       {
+        id: 5,
+        title: "(OoredooEZ) Community Highlights",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/15mPHuBRUAp4qVrD-H23z3U-4IWvcvM5i/view",
+      },
+       {
+        id: 6,
+        title: "Frenzy",
+        thumbnail: fea1,
+        url: "https://www.facebook.com/watch/?v=3733447676883448",
+      },
+           {
+        id: 7,
+        title: "PUBG: BATTLEGROUNDS",
+        thumbnail: fea1,
+        url: "https://www.facebook.com/watch/?v=1025731131162862",
+      },
+    ],
+  },
+
+  {
+    id: 9,
+    name: "Memes",
+    image: fea1,
+    shortVideos: [
+      {
+        id: 1,
+        title: "Arabian League Stream Moment",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1NtQLYnsNyjnj8-vueycTVkNmSsMRhMEn/view",
+      },
+      {
+        id: 2,
+        title: "Arena Esports",
+        thumbnail: fea1,
+        url: "https://www.instagram.com/reel/CuFCPfZIO7C",
+      },
+      {
+        id: 3,
+        title: "Arena Esports",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@tundraesports/video/7462308222754426144",
+      },
+    ],
+    longVideos: [],
+  },
+
+  {
+    id: 10,
+    // name: "Tests",
+    image: fea1,
+    shortVideos: [
+      // {
+      //   id: 1,
+      //   title: "Tests Folder",
+      //   thumbnail: fea1,
+      //   url: "https://drive.google.com/drive/folders/1Upu9XfKK7sXC4OVFwZE-gmx02S7-mHlE?usp=drive_link",
+      // },
+    ],
+    longVideos: [],
+  },
+
+  {
+    id: 11,
+    // name: "DESIGNS",
+    image: fea1,
+    shortVideos: [
+      // {
+      //   id: 1,
+      //   title: "Designs Folder",
+      //   thumbnail: fea1,
+      //   url: "https://drive.google.com/drive/folders/1rt7jCHGsod9rdzrvCbdE6hIr3aZi2zx5?usp=drive_link",
+      // },
+    ],
+    longVideos: [],
   },
 ];
 
@@ -460,7 +775,6 @@ export default function Videos() {
       </div>
 
       <AnimatePresence mode="wait">
-
         {!selectedCard ? (
           // === Cards Grid ===
           <motion.div
@@ -503,40 +817,43 @@ export default function Videos() {
                 setSelectedCard(null);
                 setActiveTab("short");
               }}
-              className="mb-6 px-4 py-2 bg-gold text-black rounded-lg hover:bg-yellow-400 transition"
+              className="mb-6 px-4 py-2 bg-gold text-black txt-size rounded-lg hover:bg-yellow-400 transition"
             >
               ← Back
             </button>
 
-            <h2 className="text-2xl font-bold text-gold mb-6">
+            {/* <h2 className="text-2xl font-bold text-gold mb-6">
               {selectedCard.name} Edits
-            </h2>
+            </h2> */}
 
             {/* Tabs (hide for Ads card) */}
-            {selectedCard.name !== "Ads" && (
-              <div className="flex gap-5 md:mt-[20px] mt-[20px] mb-6 max-w-md mx-auto rounded-md overflow-hidden">
-                <button
-                  className={`btn flex-1 text-center font-semibold transition-colors duration-300 ${
-                    activeTab === "short"
-                      ? "bg-[#30054A] text-gold"
-                      : "bg-[#662390] text-white"
-                  }`}
-                  onClick={() => setActiveTab("short")}
-                >
-                  Short Form
-                </button>
-                <button
-                  className={`btn flex-1 text-center font-semibold transition-colors duration-300 ${
-                    activeTab === "long"
-                      ? "bg-[#30054A] text-gold"
-                      : "bg-[#662390] text-white"
-                  }`}
-                  onClick={() => setActiveTab("long")}
-                >
-                  Long Form
-                </button>
-              </div>
-            )}
+            {selectedCard.name !== "Ads" &&
+              selectedCard.name !== "Documentary" &&
+              selectedCard.name !== "UGC" &&
+              selectedCard.name !== "Memes" && (
+                <div className="flex gap-5 md:mt-[20px] mt-[20px] mb-6 max-w-md mx-auto rounded-md overflow-hidden">
+                  <button
+                    className={`btn txt-size flex-1 text-center font-semibold transition-colors duration-300 ${
+                      activeTab === "short"
+                        ? "bg-[#30054A] text-gold"
+                        : "bg-[#662390] text-white"
+                    }`}
+                    onClick={() => setActiveTab("short")}
+                  >
+                    Short Form
+                  </button>
+                  <button
+                    className={`btn txt-size flex-1 text-center font-semibold transition-colors duration-300 ${
+                      activeTab === "long"
+                        ? "bg-[#30054A] text-gold"
+                        : "bg-[#662390] text-white"
+                    }`}
+                    onClick={() => setActiveTab("long")}
+                  >
+                    Long Form
+                  </button>
+                </div>
+              )}
 
             {/* Videos Grid with animation */}
             <AnimatePresence mode="wait">
@@ -547,14 +864,18 @@ export default function Videos() {
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
                 className={`grid gap-6 ${
-                  selectedCard.name === "Ads"
+                  selectedCard.name === "Ads" ||
+                  selectedCard.name === "Documentary" ||
+                  selectedCard.name === "UGC" || selectedCard.name === "Memes"
                     ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
                     : activeTab === "short"
                     ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
                     : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
                 }`}
               >
-                {(selectedCard.name === "Ads"
+                {(selectedCard.name === "Ads" ||
+                selectedCard.name === "Documentary" ||
+                selectedCard.name === "UGC" || selectedCard.name === "Memes"
                   ? [...selectedCard.shortVideos, ...selectedCard.longVideos]
                   : activeTab === "short"
                   ? selectedCard.shortVideos
@@ -573,14 +894,16 @@ export default function Videos() {
                         src={video.thumbnail}
                         alt={video.title}
                         className={`w-full rounded-xl object-cover ${
-                          selectedCard.name === "Ads"
+                          selectedCard.name === "Ads" ||
+                          selectedCard.name === "Documentary" ||
+                          selectedCard.name === "UGC" 
                             ? "aspect-video"
                             : activeTab === "short"
                             ? "aspect-[2/3]"
                             : "aspect-video"
                         }`}
                       />
-                      <p className="text-[#E5D4D6] font-semibold text-center py-2">
+                      <p className="text-[#E5D4D6] txt-size font-semibold text-center py-2">
                         {video.title}
                       </p>
                     </a>
@@ -592,7 +915,6 @@ export default function Videos() {
         )}
       </AnimatePresence>
 
-      <Footer></Footer>
     </div>
   );
 }

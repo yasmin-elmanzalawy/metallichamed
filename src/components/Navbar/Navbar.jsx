@@ -9,12 +9,13 @@ export default function Navbar() {
 
   const linkedNavItems = [
     { label: "Home", to: "/" },
-    { label: "About", to: "/#about" },
+
     { label: "Videos", to: "/videos" },
     { label: "Designs", to: "/design" },
     { label: "Clients", to: "/clients" },
     { label: "Endorsements", to: "/#endorsements" },
-    { label: "Contact", to: "#" }, // scrolls to bottom
+    { label: "About", to: "/#about" },
+    { label: "Contact", to: "#" },
   ];
 
   useEffect(() => {
@@ -58,18 +59,7 @@ export default function Navbar() {
       ref={navRef}
       className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-[#30054A] py-4 text-gold"
     >
-      <div className="md:mx-24 mx-18 px-8 md:px-4 flex justify-between items-center h-14">
-        {/* Logo */}
-        <div className="cursor-pointer select-none">
-          <Link to="/" className="inline-block">
-            <span className="text-2xl font-extrabold tracking-wide text-neutral-white">M</span>
-            <span className="text-2xl font-extrabold tracking-wide text-neutral-white">H</span>
-          </Link>
-          <p className="text-neutral-white opacity-75 text-sm mt-1 lg:inline-block lg:mt-0 lg:px-2">
-            Video editor.
-          </p>
-        </div>
-
+      <div className="md:mx-24 mx-18 px-8 md:px-4 flex justify-end items-center h-14">
         {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-6 font-semibold tracking-wide items-center">
           {linkedNavItems.map(({ label, to }) => (
@@ -77,7 +67,7 @@ export default function Navbar() {
               {label === "Contact" ? (
                 <button
                   onClick={() => handleScrollLink(label)}
-                  className="px-4 py-1.5 rounded-full bg-[#FED03B] text-[#4B0082] hover:bg-[#e6c22f] transition-colors duration-300"
+                  className="px-4 py-1.5 rounded-full bg-[#FED03B] text-[#4B0082] hover:bg-[#e6c22f] transition-colors duration-300 [@media(min-width:1920px)]:text-xl"
                 >
                   {label}
                 </button>
@@ -91,7 +81,7 @@ export default function Navbar() {
                     }
                     setIsOpen(false);
                   }}
-                  className="px-4 py-1.5 rounded-full bg-purple-500/20 hover:bg-purple-500/40 text-[#E8CCF9] transition-colors duration-300"
+                  className="px-4 py-1.5 rounded-full bg-purple-500/20 hover:bg-purple-500/40 text-[#E8CCF9] transition-colors duration-300  [@media(min-width:1920px)]:text-xl"
                 >
                   {label}
                 </Link>
