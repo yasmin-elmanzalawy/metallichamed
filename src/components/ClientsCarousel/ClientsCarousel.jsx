@@ -112,7 +112,7 @@ export default function ClientsCarousel() {
               </div>
 
               <div className="client-text-container">
-                <p className="text-[#FEF7E4] client-name txt-size">{name}</p>
+                <p className="text-[#FEF7E4] client-name md:text-xl">{name}</p>
               </div>
             </a>
           </SwiperSlide>
