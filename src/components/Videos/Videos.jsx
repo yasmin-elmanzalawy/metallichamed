@@ -578,7 +578,6 @@ const cards = [
     ],
     longVideos: [], // 👈 leave empty if you only want them short form
   },
-
   {
     id: 7,
     name: "Other",
@@ -650,7 +649,6 @@ const cards = [
       },
     ],
   },
-
   {
     id: 8,
     name: "Highlights",
@@ -705,7 +703,6 @@ const cards = [
       },
     ],
   },
-
   {
     id: 9,
     name: "Memes",
@@ -732,36 +729,81 @@ const cards = [
     ],
     longVideos: [],
   },
-
   {
-    id: 10,
-    // name: "Tests",
-    image: fea1,
-    shortVideos: [
-      // {
-      //   id: 1,
-      //   title: "Tests Folder",
-      //   thumbnail: fea1,
-      //   url: "https://drive.google.com/drive/folders/1Upu9XfKK7sXC4OVFwZE-gmx02S7-mHlE?usp=drive_link",
-      // },
-    ],
-    longVideos: [],
-  },
+  id: 10,
+  image: fea1,
+  name: "Tests",
+  shortVideos: [
+    {
+      id: 1,
+      title: "Airrack",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1QLQJm1ADKItRVdk8jjuZRXVirtD20Lkn/view?usp=sharing",
+    },
+    {
+      id: 2,
+      title: "Amados Strategies",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1eJa35pQRdnC9j1rShO4b0qCG-kqEcyry/view?usp=sharing&t=1",
+    },
+    {
+      id: 3,
+      title: "CommerceCore Hook 1",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1HC3Vev0pK8bMWrFbTV9EUv8dA4CFn8rW/view?usp=sharing",
+    },
+    {
+      id: 4,
+      title: "CommerceCore Hook 2",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1c6UZ_iJFpH-kwOsoYpCddFvZHSP_DQLL/view?usp=sharing",
+    },
+    {
+      id: 5,
+      title: "CommerceCore Hook 3",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1gTWyvPFSgG7Sl1EGgCozFNSQ6d4FWYZF/view?usp=sharing",
+    },
+    {
+      id: 6,
+      title: "DailyFuelUp",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1h_g9pkCq1--TsQnrMHJcijBRxTFK4SN-/view?usp=sharing",
+    },
+    {
+      id: 7,
+      title: "KFM",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1jh9W12z3gadjg_bCoJnE2sqyd_2JxGj8/view?usp=sharing",
+    },
+    {
+      id: 8,
+      title: "Maxian Football",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1aeIhtt_llI3fDf8wc_Cu1HgIIRjR_mgC/view?usp=sharing",
+    },
+    {
+      id: 9,
+      title: "Pasynsoft",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1ilMR8bIA1LZz83c7LGzsDt73_IZouyO_/view?usp=sharing",
+    },
+    {
+      id: 10,
+      title: "Saatchi & Saatchi Qatar",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1bRsAc1vHtU0Elf-HALDOtIfORDHYBKpx/view?usp=sharing",
+    },
+    {
+      id: 11,
+      title: "VCL 25",
+      thumbnail: fea1,
+      url: "https://drive.google.com/file/d/1zj6G4cBdJgFzuYvwUVV-dPWL4kmvulGy/view?usp=sharing",
+    },
+  ],
+  longVideos: [],
+},
 
-  {
-    id: 11,
-    // name: "DESIGNS",
-    image: fea1,
-    shortVideos: [
-      // {
-      //   id: 1,
-      //   title: "Designs Folder",
-      //   thumbnail: fea1,
-      //   url: "https://drive.google.com/drive/folders/1rt7jCHGsod9rdzrvCbdE6hIr3aZi2zx5?usp=drive_link",
-      // },
-    ],
-    longVideos: [],
-  },
 ];
 
 export default function Videos() {
@@ -830,7 +872,8 @@ export default function Videos() {
             {selectedCard.name !== "Ads" &&
               selectedCard.name !== "Documentary" &&
               selectedCard.name !== "UGC" &&
-              selectedCard.name !== "Memes" && (
+              selectedCard.name !== "Memes" && selectedCard.name !== "Tests" 
+              && (
                 <div className="flex gap-5 md:mt-[20px] mt-[20px] mb-6 max-w-md mx-auto rounded-md overflow-hidden">
                   <button
                     className={`btn txt-size flex-1 text-center font-semibold transition-colors duration-300 ${
@@ -866,7 +909,7 @@ export default function Videos() {
                 className={`grid gap-6 ${
                   selectedCard.name === "Ads" ||
                   selectedCard.name === "Documentary" ||
-                  selectedCard.name === "UGC" || selectedCard.name === "Memes"
+                  selectedCard.name === "UGC" || selectedCard.name === "Memes" || selectedCard.name === "Tests" 
                     ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
                     : activeTab === "short"
                     ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
@@ -875,7 +918,7 @@ export default function Videos() {
               >
                 {(selectedCard.name === "Ads" ||
                 selectedCard.name === "Documentary" ||
-                selectedCard.name === "UGC" || selectedCard.name === "Memes"
+                selectedCard.name === "UGC" || selectedCard.name === "Memes" ||selectedCard.name === "Tests"  
                   ? [...selectedCard.shortVideos, ...selectedCard.longVideos]
                   : activeTab === "short"
                   ? selectedCard.shortVideos
@@ -896,7 +939,8 @@ export default function Videos() {
                         className={`w-full rounded-xl object-cover ${
                           selectedCard.name === "Ads" ||
                           selectedCard.name === "Documentary" ||
-                          selectedCard.name === "UGC" 
+                          selectedCard.name === "UGC" ||
+                          selectedCard.name === "Tests" 
                             ? "aspect-video"
                             : activeTab === "short"
                             ? "aspect-[2/3]"

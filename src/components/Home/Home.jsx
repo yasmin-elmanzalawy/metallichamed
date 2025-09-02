@@ -39,7 +39,7 @@ export default function Home() {
             </h1>
 
             <p
-              className="text-neutral-white text-base txt-size "
+              className="text-[#FEF7E4] text-base txt-size "
             >
               Transforming raw footage into captivating visual experiences that
               inspire and connect.
