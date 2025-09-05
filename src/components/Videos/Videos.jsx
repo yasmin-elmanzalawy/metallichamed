@@ -3,44 +3,61 @@ import Navbar from "../Navbar/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Example card images and thumbnails
-import gaming from "../../assets/thumbnails/Gaming.png";
-import vlog from "../../assets/thumbnails/irl.png";
+import gaming from "../../assets/thumbnails/Gaming2.png";
+import vlog from "../../assets/thumbnails/vlogs.png";
 import fea1 from "../../assets/thumbnails/dum.jpg";
 import ads from "../../assets/thumbnails/ads.png";
-import gl1 from "../../assets/thumbnails/gaming/long/1.avif";
-import gl2 from "../../assets/thumbnails/gaming/long/2.avif";
-import gl3 from "../../assets/thumbnails/gaming/long/3.avif";
-import gl4 from "../../assets/thumbnails/gaming/long/4.avif";
-import gl5 from "../../assets/thumbnails/gaming/long/5.avif";
-import gl6 from "../../assets/thumbnails/gaming/long/6.avif";
-import gl7 from "../../assets/thumbnails/gaming/long/7.avif";
-import gl8 from "../../assets/thumbnails/gaming/long/8.avif";
-import gl9 from "../../assets/thumbnails/gaming/long/9.avif";
-import gl10 from "../../assets/thumbnails/gaming/long/10.avif";
-import gl11 from "../../assets/thumbnails/gaming/long/11.avif";
-import gl12 from "../../assets/thumbnails/gaming/long/12.avif";
-import gl13 from "../../assets/thumbnails/gaming/long/13.avif";
-import gl14 from "../../assets/thumbnails/gaming/long/14.avif";
-import gs1 from "../../assets/thumbnails/gaming/short/1.avif";
-import gs2 from "../../assets/thumbnails/gaming/short/2.avif";
-import gs3 from "../../assets/thumbnails/gaming/short/3.avif";
-import gs4 from "../../assets/thumbnails/gaming/short/4.avif";
-import gs5 from "../../assets/thumbnails/gaming/short/5.avif";
-import gs6 from "../../assets/thumbnails/gaming/short/6.avif";
-import gs7 from "../../assets/thumbnails/gaming/short/7.avif";
-import gs8 from "../../assets/thumbnails/gaming/short/8.avif";
-import gs9 from "../../assets/thumbnails/gaming/short/9.avif";
-import gs10 from "../../assets/thumbnails/gaming/short/10.avif";
-import gs11 from "../../assets/thumbnails/gaming/short/11.avif";
-import gs12 from "../../assets/thumbnails/gaming/short/12.avif";
-import gs13 from "../../assets/thumbnails/gaming/short/13.avif";
-import gs14 from "../../assets/thumbnails/gaming/short/14.avif";
-import gs15 from "../../assets/thumbnails/gaming/short/15.avif";
-import gs16 from "../../assets/thumbnails/gaming/short/16.avif";
-import gs17 from "../../assets/thumbnails/gaming/short/17.avif";
-import gs18 from "../../assets/thumbnails/gaming/short/18.avif";
+import mazag from "../../assets/thumbnails/bestof/3.avif";
+
+
 
 import Footer from "../Footer/Footer";
+
+
+// Gaming
+const gamingLong = import.meta.glob(
+  "../../assets/thumbnails/gaming/long/*.avif",
+  { eager: true }
+);
+const gamingShort = import.meta.glob(
+  "../../assets/thumbnails/gaming/short/*.avif",
+  { eager: true }
+);
+
+// IRL
+const irlLong = import.meta.glob(
+  "../../assets/thumbnails/irl/long/*.avif",
+  { eager: true }
+);
+const irlShort = import.meta.glob(
+  "../../assets/thumbnails/irl/short/*.avif",
+  { eager: true }
+);
+// IRL
+const adsLong = import.meta.glob(
+  "../../assets/thumbnails/ads/*.avif",
+  { eager: true }
+);
+
+
+// === Helper function to turn object → sorted array
+const toArray = (obj) =>
+  Object.keys(obj)
+    .sort((a, b) => {
+      const getNum = (str) => parseInt(str.match(/(\d+)/)?.[0] ?? 0, 10);
+      return getNum(a) - getNum(b);
+    })
+    .map((key) => obj[key].default);
+
+
+// Arrays ready to use
+const gl = toArray(gamingLong);
+const gs = toArray(gamingShort);
+const il = toArray(irlLong);
+const is = toArray(irlShort);
+const ad = toArray(adsLong);
+
+
 
 const cards = [
   {
@@ -48,204 +65,204 @@ const cards = [
     image: gaming,
     shortVideos: [
       {
-        id: 9,
+        id: 1,
         title: "Call Of Duty Arabic",
-        thumbnail: gs1,
+        thumbnail: gs[0],
         url: "https://www.tiktok.com/@callofdutyarabic/video/7385543871532453137",
       },
       {
-        id: 11,
+        id: 2,
         title: "ubisoftme",
-        thumbnail: gs2,
+        thumbnail: gs[1],
         url: "https://www.tiktok.com/@ubisoftme/video/7511355118864911623",
       },
 
       {
-        id: 12,
+        id: 3,
         title: "fortniteme",
-        thumbnail: gs3,
+        thumbnail: gs[2],
         url: "https://www.tiktok.com/@fortniteme/video/7471292290670152968",
       },
       {
         id: 4,
         title: "Call Of Duty Arabic",
-        thumbnail: gs4,
+        thumbnail: gs[3],
         url: "https://www.tiktok.com/@callofdutyarabic/video/7515494632373980434",
       },
       {
-        id: 15,
-        title: "nvidiageforceme",
-        thumbnail: gs5,
-        url: "https://www.instagram.com/reel/DBMU9k6p9aA",
-      },
-      {
-        id: 1,
-        title: "Call Of Duty Arabic",
-        thumbnail: gs6,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7406428579484962066",
-      },
-
-      {
-        id: 10,
-        title: "ubisoftme",
-        thumbnail: gs7,
-        url: "https://www.tiktok.com/@ubisoftme/video/7467235232014552327",
-      },
-      {
-        id: 19,
-        title: "CoD Movement",
-        thumbnail: gs8,
-        url: "https://drive.google.com/file/d/1bB4C_TbzZkX34au7igquq7TdCgKiXD5s/view",
-      },
-      {
-        id: 13,
-        title: "fortniteme",
-        thumbnail: gs9,
-        url: "https://www.tiktok.com/@fortniteme/video/7441964240275131655",
-      },
-      {
-        id: 3,
-        title: "Call Of Duty Arabic",
-        thumbnail: gs10,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7480936598356430088",
-      },
-      {
-        id: 14,
-        title: "fortniteme",
-        thumbnail: gs11,
-        url: "https://www.tiktok.com/@fortniteme/video/7444613375721606418",
-      },
-
-      {
         id: 5,
-        title: "Call Of Duty Arabic",
-        thumbnail: gs12,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7495052280392174864",
-      },
-      {
-        id: 16,
-        title: "arenaesportsae",
-        thumbnail: gs13,
-        url: "https://www.instagram.com/reel/CvAQQT2PzI5",
-      },
-      {
-        id: 7,
-        title: "Call Of Duty Arabic",
-        thumbnail: gs14,
-        url: "https://www.tiktok.com/@callofdutyarabic/video/7492453335568551176",
-      },
-
-      {
-        id: 17,
-        title: "arenaesportsae",
-        thumbnail: gs15,
-        url: "https://drive.google.com/file/d/1r0L6OKEs96IyRvPA3njP97akSbuD-Kmx/view",
-      },
-      {
-        id: 18,
-        title: "arenaesportsae",
-        thumbnail: gs16,
-        url: "https://drive.google.com/file/d/1Fdvd_J_h1FjkHahvCEiTUUVUWkKUJm5q/view",
+        title: "nvidiageforceme",
+        thumbnail: gs[4],
+        url: "https://www.instagram.com/reel/DBMU9k6p9aA",
       },
       {
         id: 6,
         title: "Call Of Duty Arabic",
-        thumbnail: gs17,
+        thumbnail: gs[5],
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7406428579484962066",
+      },
+
+      {
+        id: 7,
+        title: "ubisoftme",
+        thumbnail: gs[6],
+        url: "https://www.tiktok.com/@ubisoftme/video/7467235232014552327",
+      },
+      {
+        id: 8,
+        title: "CoD Movement",
+        thumbnail: gs[7],
+        url: "https://drive.google.com/file/d/1bB4C_TbzZkX34au7igquq7TdCgKiXD5s/view",
+      },
+      {
+        id: 9,
+        title: "fortniteme",
+        thumbnail: gs[8],
+        url: "https://www.tiktok.com/@fortniteme/video/7441964240275131655",
+      },
+      {
+        id: 10,
+        title: "Call Of Duty Arabic",
+        thumbnail: gs[9],
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7480936598356430088",
+      },
+      {
+        id: 11,
+        title: "fortniteme",
+        thumbnail: gs[10],
+        url: "https://www.tiktok.com/@fortniteme/video/7444613375721606418",
+      },
+
+      {
+        id: 12,
+        title: "Call Of Duty Arabic",
+        thumbnail: gs[11],
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7495052280392174864",
+      },
+      {
+        id: 13,
+        title: "arenaesportsae",
+        thumbnail: gs[14],
+        url: "https://www.instagram.com/reel/CvAQQT2PzI5",
+      },
+      {
+        id: 14,
+        title: "Call Of Duty Arabic",
+        thumbnail: gs[13],
+        url: "https://www.tiktok.com/@callofdutyarabic/video/7492453335568551176",
+      },
+
+      {
+        id: 15,
+        title: "arenaesportsae",
+        thumbnail: gs[14],
+        url: "https://drive.google.com/file/d/1r0L6OKEs96IyRvPA3njP97akSbuD-Kmx/view",
+      },
+      {
+        id: 16,
+        title: "arenaesportsae",
+        thumbnail: gs[15],
+        url: "https://drive.google.com/file/d/1Fdvd_J_h1FjkHahvCEiTUUVUWkKUJm5q/view",
+      },
+      {
+        id: 17,
+        title: "Call Of Duty Arabic",
+        thumbnail: gs[16],
         url: "https://www.tiktok.com/@callofdutyarabic/video/7494317153022233872",
       },
 
       {
-        id: 2,
+        id: 18,
         title: "Call Of Duty Arabic",
-        thumbnail: gs18,
+        thumbnail: gs[17],
         url: "https://www.tiktok.com/@callofdutyarabic/video/7487579100622687506",
       },
     ],
     longVideos: [
       {
-        id: 4,
+        id: 1,
         title: "Aziz - عزيز",
-        thumbnail: gl1,
+        thumbnail: gl[0],
         url: "https://youtu.be/wokcf4Va6eg",
       },
       {
-        id: 1,
+        id: 2,
         title: "EA Middle East",
-        thumbnail: gl2,
+        thumbnail: gl[1],
         url: "https://youtu.be/vytFscb7FV8",
       },
       {
-        id: 2,
+        id: 3,
         title: "AboFlah",
-        thumbnail: gl3,
+        thumbnail: gl[2],
         url: "https://youtu.be/pF-40SHydHM",
       },
       {
-        id: 13,
+        id: 4,
         title: "B3shr",
-        thumbnail: gl4,
+        thumbnail: gl[3],
         url: "https://youtu.be/5ELjkeEKSlM",
       },
 
       {
         id: 5,
         title: "Aziz - عزيز",
-        thumbnail: gl5,
+        thumbnail: gl[4],
         url: "https://youtu.be/5UMnBG_eAYY",
       },
       {
-        id: 14,
-        title: "Sofyan",
-        thumbnail: gl6,
-        url: "https://youtu.be/pCzfGtsK0xY",
-      },
-      {
         id: 6,
-        title: "Aziz - عزيز",
-        thumbnail: gl7,
-        url: "https://youtu.be/EgvX2qF2FCE",
-      },
-      {
-        id: 11,
-        title: "B3shr",
-        thumbnail: gl8,
-        url: "https://youtu.be/lZ_Ho4fXVCg",
+        title: "Sofyan",
+        thumbnail: gl[5],
+        url: "https://youtu.be/pCzfGtsK0xY",
       },
       {
         id: 7,
         title: "Aziz - عزيز",
-        thumbnail: gl9,
-        url: "https://youtu.be/HuqCoL5mKTw",
+        thumbnail: gl[6],
+        url: "https://youtu.be/EgvX2qF2FCE",
       },
       {
         id: 8,
-        title: "Ahmed Show",
-        thumbnail: gl10,
-        url: "https://youtu.be/Lulc7ZQOg-U",
+        title: "B3shr",
+        thumbnail: gl[7],
+        url: "https://youtu.be/lZ_Ho4fXVCg",
       },
       {
         id: 9,
-        title: "Gamers React",
-        thumbnail: gl11,
-        url: "https://www.youtube.com/watch?v=4sfeqf4-LyM",
-      },
-      {
-        id: 3,
         title: "Aziz - عزيز",
-        thumbnail: gl12,
-        url: "https://youtu.be/dmhMm7lmWRw",
+        thumbnail: gl[8],
+        url: "https://youtu.be/HuqCoL5mKTw",
       },
       {
         id: 10,
+        title: "Ahmed Show",
+        thumbnail: gl[9],
+        url: "https://youtu.be/Lulc7ZQOg-U",
+      },
+      {
+        id: 11,
+        title: "Gamers React",
+        thumbnail: gl[10],
+        url: "https://www.youtube.com/watch?v=4sfeqf4-LyM",
+      },
+      {
+        id: 12,
+        title: "Aziz - عزيز",
+        thumbnail: gl[11],
+        url: "https://youtu.be/dmhMm7lmWRw",
+      },
+      {
+        id: 13,
         title: "JellyPeanut",
-        thumbnail: gl13,
+        thumbnail: gl[12],
         url: "https://www.youtube.com/watch?v=RtHFYeANEfY",
       },
 
       {
-        id: 12,
+        id: 14,
         title: "B3shr",
-        thumbnail: gl14,
+        thumbnail: gl[13],
         url: "https://youtu.be/mlt3C716x_E",
       },
     ],
@@ -258,216 +275,223 @@ const cards = [
       {
         id: 1,
         title: "arenaesportsae",
-        thumbnail: fea1,
+        thumbnail: is[0],
         url: "https://www.instagram.com/reel/CwQb9xws5wm",
       },
       {
-        id: 4,
+        id: 2,
         title: "colbymartel",
-        thumbnail: fea1,
+        thumbnail: is[1],
         url: "https://www.tiktok.com/@colbymartel/video/7503329191841107246?lang=en",
       },
 
       {
-        id: 2,
+        id: 3,
         title: "endlessstudiosgames",
-        thumbnail: fea1,
+        thumbnail: is[2],
         url: "https://www.instagram.com/reel/DJ9negCh57B",
       },
       {
-        id: 5,
+        id: 4,
         title: "colbymartel",
-        thumbnail: fea1,
+        thumbnail: is[3],
         url: "https://www.tiktok.com/@colbymartel/video/7502463977889418542?lang=en",
       },
       {
-        id: 3,
+        id: 5,
         title: "egamena",
-        thumbnail: fea1,
+        thumbnail: is[4],
         url: "https://www.tiktok.com/@egamena/video/7361725976633494802",
       },
 
       {
         id: 6,
         title: "colbymartel",
-        thumbnail: fea1,
+        thumbnail: is[5],
         url: "https://www.tiktok.com/@colbymartel/video/7499572035417296158?lang=en",
       },
       {
-        id: 8,
+        id: 7,
         title: "OFFSIDE__Football",
-        thumbnail: fea1,
+        thumbnail: is[6],
         url: "https://www.youtube.com/shorts/zADUh86ejKw",
       },
     ],
     longVideos: [
       {
-        id: 5,
+        id: 1,
         title: "CANCEL",
-        thumbnail: fea1,
+        thumbnail: il[0],
         url: "https://youtu.be/mVmMyYxPQW8",
       },
       {
         id: 2,
         title: "Aziz - عزيز",
-        thumbnail: fea1,
+        thumbnail: il[1],
         url: "https://youtu.be/QvD2c0VwE2o",
       },
 
       {
         id: 3,
         title: "KingsMen ملوك التحدي",
-        thumbnail: fea1,
+        thumbnail: il[2],
         url: "https://youtu.be/yh80UCaubZc",
       },
       {
         id: 4,
         title: "CANCEL",
-        thumbnail: fea1,
+        thumbnail: il[3],
         url: "https://youtu.be/OHMadHmc-eg",
       },
       {
-        id: 1,
+        id: 5,
         title: "Aziz - عزيز",
-        thumbnail: fea1,
+        thumbnail: il[4],
         url: "https://youtu.be/RALnd4Tidz8",
       },
 
       {
         id: 6,
         title: "CANCEL",
-        thumbnail: fea1,
+        thumbnail: il[5],
         url: "https://youtu.be/URdsD1OoRCk",
       },
    
       {
-        id: 3,
+        id: 7,
         title: "Aziz - عزيز",
-        thumbnail: fea1,
+        thumbnail: il[6],
         url: "https://youtu.be/QeUr8V8juxo",
       },
+            {
+        id: 8,
+        title: "CANCEL",
+        thumbnail: il[7],
+        url: "https://youtu.be/zuaFGp5EhQM",
+      },
+            {
+        id: 9,
+        title: "Mazaj - مزاج",
+        thumbnail: mazag,
+        url: "https://youtu.be/F08cBZDa4WM",
+      },
+
     ],
   },
   {
-    id: 3,
+    id: 1,
     name: "Ads",
     image: ads,
     shortVideos: [
       {
-        id: 10,
+        id: 1,
         title: "Ooredooez Showcase",
-        thumbnail: fea1,
+        thumbnail: ad[0],
         url: "https://drive.google.com/file/d/1kzf4VIJKe5FPpEKDECHRsCQgGSF3sTY_/view",
       },
 
       {
-        id: 1,
+        id: 2,
         title: "Swarmio Inc",
-        thumbnail: fea1,
+        thumbnail: ad[1],
         url: "https://drive.google.com/file/d/1MIZWPFwTJy5wVDp6APHUL4A8TSTxbIvz/view?usp=drive_link",
       },
       {
-        id: 7,
+        id: 3,
         title: "Ooredooez",
-        thumbnail: fea1,
+        thumbnail: ad[2],
         url: "https://www.instagram.com/reel/CuPERNroGjI",
       },
       {
-        id: 2,
+        id: 4,
         title: "arenaesportsae",
-        thumbnail: fea1,
+        thumbnail: ad[3],
         url: "https://www.instagram.com/reel/CtMaoL8ANks",
       },
       {
-        id: 8,
+        id: 5,
         title: "Ooredooez Sign Up",
-        thumbnail: fea1,
+        thumbnail: ad[4],
         url: "https://drive.google.com/file/d/1BXa_-DzL1ofcyvzzxPjAhszujFJJIZ2S/view",
       },
       {
-        id: 3,
+        id: 6,
         title: "Arenaesportsae Lan Ad",
-        thumbnail: fea1,
+        thumbnail: ad[5],
         url: "https://drive.google.com/file/d/1aZltlzmpiWD7PmgwvqBHHcwXixxNY8s_/view",
       },
       {
-        id: 4,
+        id: 7,
         title: "Arenaesportsae Store Ad",
-        thumbnail: fea1,
+        thumbnail: ad[6],
         url: "https://drive.google.com/file/d/1DYf-UURIOUPIC7iL1OmKfyVX4lWQAmI8/view",
       },
       {
-        id: 9,
+        id: 8,
         title: "Ooredooez Register & Verify",
-        thumbnail: fea1,
+        thumbnail: ad[7],
         url: "https://drive.google.com/file/d/1d-QuSUlNlQaRgf546c2P6IBbu2kQaI15/view",
       },
       {
-        id: 5,
+        id: 9,
         title: "Arenaesportsae Trio Ad",
-        thumbnail: fea1,
+        thumbnail: ad[8],
         url: "https://drive.google.com/file/d/1gX5Y1FcGMkkzX0OD_F0eyqthRhv-6PnW/view",
       },
       {
-        id: 6,
+        id: 10,
         title: "Globe Gamer Grounds Platform Default Ad",
-        thumbnail: fea1,
+        thumbnail: ad[9],
         url: "https://drive.google.com/file/d/1fU5GyLYgGpMOQ70-G3b2xF70EhgsznE8/view",
       },
-    ],
-    longVideos: [
-      {
-        id: 3,
+       {
+        id: 11,
         title: "ooredooez",
-        thumbnail: fea1,
+        thumbnail: ad[10],
         url: "https://www.instagram.com/reel/CztZVB4tIav",
       },
 
       {
-        id: 1,
+        id: 12,
         title: "360games General Ad",
-        thumbnail: fea1,
+        thumbnail: ad[11],
         url: "https://drive.google.com/file/d/1Nkg1M0EpqfLYB0E0Fizdv1p0ApmApTJ0/view",
       },
 
       {
-        id: 3,
+        id: 13,
         title: "Ooredooez",
-        thumbnail: fea1,
+        thumbnail: ad[12],
         url: "https://www.instagram.com/reel/CuwlXfpIbjh",
       },
 
       {
-        id: 5,
-        title: "CANCEL",
-        thumbnail: fea1,
-        url: "https://youtu.be/mVmMyYxPQW8",
-      },
-
-      {
-        id: 8,
+        id: 14,
         title: "ooredooez PPC Ad",
-        thumbnail: fea1,
+        thumbnail: ad[13],
         url: "https://drive.google.com/file/d/1BbW24LVpLmqPcCTU2bh1ViCkcq7mzARA/view",
       },
       {
-        id: 11,
+        id: 15,
         title: "predatorgamingme",
-        thumbnail: fea1,
+        thumbnail: ad[14],
         url: "https://www.instagram.com/reel/DEPzs39PiWu",
       },
       {
-        id: 9,
+        id: 16,
         title: "Ooredooez Platform Default Ad",
-        thumbnail: fea1,
+        thumbnail: ad[15],
         url: "https://drive.google.com/file/d/1wcEKtdASyGBn9jDAWwaf7td6SMduW_wA/view",
       },
       {
-        id: 10,
+        id: 17,
         title: "CANCEL",
-        thumbnail: fea1,
+        thumbnail: ad[16],  
         url: "https://x.com/aldaejam/status/1594017369403248640",
-      },
+      },  
+    ],
+    longVideos: [
+     
     ],
   },
   {
@@ -509,7 +533,6 @@ const cards = [
       },
     ],
   },
-
   {
     id: 5,
     name: "Documentary",
@@ -531,7 +554,6 @@ const cards = [
       },
     ],
   },
-
   {
     id: 6,
     image: fea1,
@@ -860,12 +882,12 @@ export default function Videos() {
               <div
                 key={card.id}
                 onClick={() => setSelectedCard(card)}
-                className="cursor-pointer flex flex-col items-center hover:scale-105 transition-transform"
+                className="cursor-pointer flex flex-col items-center transition-transform"
               >
                 <img
                   src={card.image}
                   alt={card.name}
-                  className="object-cover rounded-lg border border-transparent hover:border-gold"
+                  className="object-cover rounded-lg border border-transparent transition-transform duration-300 hover:scale-105 hover:border-gold"
                 />
                 <p className="mt-2 text-gold font-semibold">{card.name}</p>
               </div>
@@ -934,7 +956,7 @@ export default function Videos() {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className={`grid gap-6 ${
+                className={` grid gap-6 ${
                   selectedCard.name === "Ads" ||
                   selectedCard.name === "Documentary" ||
                   selectedCard.name === "UGC" || selectedCard.name === "Memes" || selectedCard.name === "Tests" 

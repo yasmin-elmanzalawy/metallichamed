@@ -5,42 +5,46 @@ import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
-import fea1 from "../../assets/fea1.png";
+import bo1 from "../../assets/thumbnails/bestof/1.avif";
+import bo2 from "../../assets/thumbnails/bestof/2.avif";
+import bo3 from "../../assets/thumbnails/bestof/3.avif";
+import bo4 from "../../assets/thumbnails/bestof/4.avif";
+import bo5 from "../../assets/thumbnails/bestof/5.avif";
 import dummyProfile from "../../assets/fea1.png";
 import "./Featured.css";
 
 const featuredVideos = [
   {
     id: 1,
-    img: fea1,
+    img: bo1,
     desc: "AboFlah",
     authorImg: dummyProfile,
     link: "https://youtu.be/1KJaZoZgTvw?si=ucX0TLjgVQ6Bj2Tb",
   },
   {
     id: 2,
-    img: fea1,
+    img: bo2,
     desc: "EA Middle East",
     authorImg: dummyProfile,
-    link: "https://youtu.be/1KJaZoZgTvw?si=ucX0TLjgVQ6Bj2Tb",
+    link: "https://youtu.be/vytFscb7FV8?si=AR99_sdcXHxuVwKl",
   },
   {
     id: 3,
-    img: fea1,
+    img: bo3,
     desc: "Mazaj - مزاج",
     authorImg: dummyProfile,
     link: "https://youtu.be/F08cBZDa4WM?si=58-1bOsTpjSqrKml",
   },
   {
     id: 4,
-    img: fea1,
+    img: bo4,
     desc: "My Showreel",
     authorImg: dummyProfile,
     link: "https://youtu.be/onM-cnX5sj0?si=jxkz_j59emXZf4im",
   },
   {
     id: 5,
-    img: fea1,
+    img: bo5,
     desc: "Endless Studios",
     authorImg: dummyProfile,
     link: "https://www.instagram.com/reel/DJ9negCh57B",
