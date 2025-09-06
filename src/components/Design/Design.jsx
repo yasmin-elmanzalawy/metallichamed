@@ -95,7 +95,7 @@ export default function Design() {
 
           {/* PlayStation + Voltech Section */}
           <div className="mt-16 flex flex-col items-center">
-            <div className="flex flex-wrap justify-center gap-0 w-full">
+            <div className="flex flex-wrap justify-center gap-8 w-full">
               {/* PlayStation */}
               <div className="flex flex-col items-center max-w-[400px] flex-1 min-w-[280px]">
                 <h3
