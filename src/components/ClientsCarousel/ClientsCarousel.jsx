@@ -6,19 +6,19 @@ import "swiper/css/navigation";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-import mazag from "../../assets/companies/mazag.avif";
-import itp from "../../assets/companies/itp.avif";
-import spartan from "../../assets/companies/spartan.avif";
-import callofduty from "../../assets/companies/callofduty.avif";
-import ubisoft from "../../assets/companies/ubisoft.avif";
-import fortnite from "../../assets/companies/fortnite.avif";
-import ea from "../../assets/companies/ea.avif";
-import nvidia from "../../assets/companies/nvidia.avif";
-import claritine from "../../assets/companies/claritine.avif";
+import mazag from "../../assets/companies/1.avif";
+import itp from "../../assets/companies/2.avif";
+import spartan from "../../assets/companies/3.avif";
+import callofduty from "../../assets/companies/4.avif";
+import ubisoft from "../../assets/companies/5.avif";
+import fortnite from "../../assets/companies/6.avif";
+import ea from "../../assets/companies/7.avif";
+import nvidia from "../../assets/companies/9.avif";
+import claritine from "../../assets/companies/10.avif";
 
-import aboflah from "../../assets/creators/AboFlah.avif";
-import aziz from "../../assets/creators/Aziz.avif";
-import ahmedshow from "../../assets/creators/AhmedShow3.avif";
+import aboflah from "../../assets/creators/1.avif";
+import aziz from "../../assets/creators/2.avif";
+import ahmedshow from "../../assets/creators/3.avif";
 
 import "./ClientsCarousel.css";
 import { NavLink } from "react-router-dom";
@@ -44,10 +44,10 @@ export default function ClientsCarousel() {
     <div className="relative mt-5 clients-carousel-container">
       <div className="flex items-center mb-5">
         <h3 className="text-2xl text-gold font-bold sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
-            [@media(min-width:1920px)]:text-3xl ">Clients</h3>
+            [@media(min-width:1920px)]:text-4xl ">Clients</h3>
         <NavLink
           to="/clients"
-          className="btn text-sm [@media(min-width:1920px)]:text-lg ml-5 text-center font-bold  text-gold hover:text-white transition-colors"
+          className="btn text-sm [@media(min-width:1920px)]:text-xl ml-5 text-center font-bold  text-gold hover:text-white transition-colors"
         >
           more
         </NavLink>
@@ -97,25 +97,30 @@ export default function ClientsCarousel() {
       >
         {clients.map(({ id, name, image, link }) => (
           <SwiperSlide key={id}>
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="client-slide group"
-            >
-              <div className="client-image-container">
-                <img
-                  src={image}
-                  alt={name}
-                  className="client-image group-hover:scale-[1.05] rounded-xl"
-                />
-              </div>
+  <a
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="client-slide group flex flex-col items-center"
+  >
+    {/* Image */}
+    <div className="client-image-container w-[130px] md:w-[180px] 2xl:w-[200px] flex-shrink-0">
+      <img
+        src={image}
+        alt={name}
+        className="client-image group-hover:scale-[1.05] d-block rounded-xl mx-auto hover:border hover:border-gold"
+      />
+    </div>
 
-              <div className="client-text-container">
-                <p className="text-[#FEF7E4] client-name md:text-xl">{name}</p>
-              </div>
-            </a>
-          </SwiperSlide>
+    {/* Text */}
+    <div className="client-text-container text-center mt-2 w-full">
+      <p className="text-[#FEF7E4] client-name md:text-xl break-words">
+        {name}
+      </p>
+    </div>
+  </a>
+</SwiperSlide>
+
         ))}
       </Swiper>
     </div>

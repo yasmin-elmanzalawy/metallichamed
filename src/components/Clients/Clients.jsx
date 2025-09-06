@@ -1,82 +1,91 @@
 import React, { useState } from "react";
-import mazag from "../../assets/companies/mazag.avif";
-import itp from "../../assets/companies/itp.avif";
-import spartan from "../../assets/companies/spartan.avif";
-import callofduty from "../../assets/companies/callofduty.avif";
-import ubisoft from "../../assets/companies/ubisoft.avif";
-import fortnite from "../../assets/companies/fortnite.avif";
-import ea from "../../assets/companies/ea.avif";
-import acer from "../../assets/companies/acer.avif";
-import nvidia from "../../assets/companies/nvidia.avif";
-import claritine from "../../assets/companies/claritine.avif";
-import ulta from "../../assets/companies/ulta.avif";
-import swarmio from "../../assets/companies/swarmio.avif";
-import arena from "../../assets/companies/arena.avif";
-import tundra from "../../assets/companies/tundra.avif";
-import ooredo from "../../assets/companies/ooredoo.avif";
-import { NavLink } from "react-router-dom";
 
-// creators
-import aboflah from "../../assets/creators/AboFlah.avif";
-import ahmedshow from "../../assets/creators/AhmedShow3.avif";
-import aziz from "../../assets/creators/Aziz.avif";
-import B3shr from "../../assets/creators/B3shr.avif";
-import AmrElhady from "../../assets/creators/AmrElhady.avif";
-import cancel from "../../assets/creators/CANCEL.avif";
-import GamersReact from "../../assets/creators/GamersReact.avif";
-import JellyPeanut from "../../assets/creators/JellyPeanut.png";
-import MrMarvelTV from "../../assets/creators/MrMarvelTV.avif";
-import LeoNoHero from "../../assets/creators/LeoNoHero.avif";
-import i6arba5 from "../../assets/creators/i6arba5.avif";
-import Sofyan from "../../assets/creators/Sofyan.avif";
-import ColbyMartel from "../../assets/creators/ColbyMartel.avif";
-import offside from "../../assets/creators/OFFSIDE.avif";
-import golazo from "../../assets/creators/golazo.avif";
-import VoltechFPS from "../../assets/creators/VoltechFPS.png";
-import TheReengineeredClub from "../../assets/creators/TheReengineeredClub.png";
-import MySalahMat from "../../assets/creators/MySalahMat.png";
+const creatorsImg = import.meta.glob(
+  "../../assets/creators/*.avif",
+  { eager: true }
+);
+
+const companiesImg = import.meta.glob(
+  "../../assets/companies/*.avif",
+  { eager: true }
+);
+
+// === Helper function to turn object → sorted array
+const toArray = (obj) =>
+  Object.keys(obj)
+    .sort((a, b) => {
+      const getNum = (str) => parseInt(str.match(/(\d+)/)?.[0] ?? 0, 10);
+      return getNum(a) - getNum(b);
+    })
+    .map((key) => obj[key].default);
+
+
+// Arrays ready to use
+const creator = toArray(creatorsImg);
+const company = toArray(companiesImg);
+
 
 import Navbar from "../Navbar/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../Footer/Footer";
 
 const companies = [
-  { id: 2, name: "Mazaj", image: mazag, link: "https://www.youtube.com/@mazajofficial" },
-  { id: 3, name: "ITP Media Group", image: itp, link: "https://www.itp.com" },
-  { id: 4, name: "Spartan Middle East", image: spartan, link: "https://www.instagram.com/spartanmiddleeast" },
-  { id: 5, name: "Call of Duty Arabic", image: callofduty, link: "https://www.tiktok.com/@callofdutyarabic" },
-  { id: 6, name: "Ubisoft Arabic", image: ubisoft, link: "https://www.tiktok.com/@ubisoftme" },
-  { id: 7, name: "Fortnite Arabic", image: fortnite, link: "https://www.tiktok.com/@fortniteme" },
-  { id: 8, name: "EA Middle East", image: ea, link: "https://www.youtube.com/@ElectronicArtsME" },
-  { id: 1, name: "Acer", image: acer, link: "https://www.instagram.com/acermiddleeast" },
-  { id: 9, name: "NVIDIA GeForce Middle East", image: nvidia, link: "https://www.instagram.com/nvidiageforceme" },
-  { id: 10, name: "Claritin Arabia", image: claritine, link: "https://www.facebook.com/ClaritineArabia" },
-  { id: 11, name: "Ulta Beauty", image: ulta, link: "https://www.ulta.com" },
-  { id: 12, name: "Swarmio Media", image: swarmio, link: "https://swarmio.inc" },
-  { id: 13, name: "Arena Esports", image: arena, link: "https://arenaesports.ae" },
-  { id: 14, name: "Tundra Esports", image: tundra, link: "https://www.tiktok.com/@tundraesports" },
-  { id: 15, name: "OoredooEz", image: ooredo, link: "https://www.facebook.com/OoredooEZ" },
-  { id: 17, name: "MySalahMat", image: MySalahMat, link: "https://www.mysalahmat.com" },
+  { id: 2, name: "Mazaj", image: company[0], link: "https://www.youtube.com/@mazajofficial" },
+  { id: 3, name: "ITP Media Group", image: company[1], link: "https://www.itp.com" },
+  { id: 4, name: "Spartan Middle East", image: company[2], link: "https://www.instagram.com/spartanmiddleeast" },
+  { id: 5, name: "Call of Duty Arabic", image: company[3], link: "https://www.tiktok.com/@callofdutyarabic" },
+  { id: 6, name: "Ubisoft Arabic", image: company[4], link: "https://www.tiktok.com/@ubisoftme" },
+  { id: 7, name: "Fortnite Arabic", image: company[5], link: "https://www.tiktok.com/@fortniteme" },
+  { id: 8, name: "EA Middle East", image: company[6], link: "https://www.youtube.com/@ElectronicArtsME" },
+  { id: 1, name: "Acer", image: company[7], link: "https://www.instagram.com/acermiddleeast" },
+  { id: 9, name: "NVIDIA GeForce Middle East", image: company[8], link: "https://www.instagram.com/nvidiageforceme" },
+  { id: 10, name: "Claritin Arabia", image: company[9], link: "https://www.facebook.com/ClaritineArabia" },
+  { id: 11, name: "Ulta Beauty", image: company[10], link: "https://www.ulta.com" },
+  { id: 12, name: "Swarmio Media", image: company[11], link: "https://swarmio.inc" },
+  { id: 13, name: "Arena Esports", image: company[12], link: "https://arenaesports.ae" },
+  { id: 14, name: "Tundra Esports", image: company[13], link: "https://www.tiktok.com/@tundraesports" },
+  { id: 15, name: "OoredooEz", image: company[14], link: "https://www.facebook.com/OoredooEZ" },
+  { id: 16, name: "MySalahMat", image: company[15], link: "https://www.mysalahmat.com" },
+  { id: 17, name: "Globe Gamer Grounds", image: company[16], link: "https://gamergrounds.ph" },
+  { id: 18, name: "Zain Esports", image: company[17], link: "https://zainesports.com" },
+  { id: 19, name: "Endless Studios", image: company[18], link: "https://www.endlessstudios.com" },
+  { id: 20, name: "CommerceCore", image: company[19], link: "https://commercecore.com" },
+  { id: 21, name: "365games", image: company[20], link: "https://www.linkedin.com/company/365games" },
+  { id: 22, name: "Amadòs Strategies", image: company[21], link: "https://amadosstrategies.com" },
+  { id: 23, name: "The Esports & Gaming Agency - Middle East", image: company[22], link: "https://www.egamena.com" },
+  { id: 24, name: "Frenzy", image: company[23], link: "https://www.frenzyarena.com" },
+  { id: 25, name: "The Ultimates", image: company[24], link: "https://www.youtube.com/@TheUltimatesGG" },
+  { id: 26, name: "PUBG Arabic", image: company[25], link: "https://www.facebook.com/pubg.battlegrounds.mena" },
+  { id: 27, name: "All Week Entertainment", image: company[26], link: "https://www.facebook.com/AWE.platform" },
+  { id: 28, name: "audi Tourism Authority", image: company[27], link: "https://www.sta.gov.sa/en/home" },
+  { id: 29, name: "MSI Gaming", image: company[28], link: "https://www.msi.com" },
+  { id: 30, name: "Burger King KSA", image: company[29], link: "https://x.com/BURGERKINGKSA" },
+  { id: 31, name: "PlayStation Arabia", image: company[30], link: "https://www.youtube.com/@PlayStationArabia" },
+  { id: 32, name: "Arab Woman Awards", image: company[31], link: "https://www.itp.events/ArabWomanAwards" },
+  { id: 33, name: "Predator Middle East", image: company[32], link: "https://www.instagram.com/predatorgamingme" },
+  { id: 34, name: "Ra'ad", image: company[33], link: "https://raad.gg" },
 
 ];
 
 const contentCreators = [
-  { id: 1, name: "AboFlah", image: aboflah, subscribers: 46800000, link: "https://www.youtube.com/@AboFlah" },
-  { id: 2, name: "Aziz", image: aziz, subscribers: 3100000, link: "https://www.youtube.com/@Aziz14" },
-  { id: 3, name: "Ahmed Show", image: ahmedshow, subscribers: 5500000, link: " https://www.youtube.com/@Ahmedowsari" },
-  { id: 4, name: "B3shr", image: B3shr, subscribers: 1400000, link: " https://www.youtube.com/@B3shr" },
-  { id: 5, name: "Amr El hady", image: AmrElhady, subscribers: 2000000, link: " https://www.tiktok.com/@amrelhady" },
-  { id: 6, name: "CANCEL", image: cancel, subscribers: 3100000, link: "https://www.youtube.com/@GamersReact" },
-  { id: 7, name: "JellyPeanut", image: JellyPeanut, subscribers: 130000, link: "https://www.twitch.tv/jellypeanut" },
-  { id: 8, name: "MrMarvelTV", image: MrMarvelTV, subscribers: 3990000, link: "https://www.youtube.com/c/MrMarvelTV" },
-  { id: 9, name: "LeoNoHero", image: LeoNoHero, subscribers: 152000, link: "https://www.youtube.com/@LeoNoHero" },
-  { id: 10, name: "i6arba5", image: i6arba5, subscribers: 2100000, link: "https://www.youtube.com/@i6rba5" },
-  { id: 11, name: "Sofyan", image: Sofyan, subscribers: 1100000, link: "https://www.youtube.com/@SofyanBN" },
-  { id: 12, name: "Colby Martel", image: ColbyMartel, subscribers: 226000, link: "https://www.tiktok.com/@colbymartel" },
-  { id: 13, name: "OFFSIDE", image: offside, subscribers: 198000, link: "https://www.youtube.com/@OFFSIDE__Football" },
-  { id: 14, name: "Golazo", image: golazo, subscribers: 65000, link: " https://www.youtube.com/@goolazo" },
-  { id: 15, name: "VoltechFPS", image: VoltechFPS, subscribers: 22000, link: " https://www.instagram.com/voltech.fps" },
-  { id: 16, name: "The Re-engineered Club", image: TheReengineeredClub, subscribers: 6200, link: "https://www.youtube.com/@reengineeredclub" },
+  { id: 1, name: "AboFlah", image: creator[0], subscribers: 46800000, link: "https://www.youtube.com/@AboFlah" },
+  { id: 2, name: "Aziz", image: creator[1], subscribers: 3100000, link: "https://www.youtube.com/@Aziz14" },
+  { id: 3, name: "Ahmed Show", image: creator[2], subscribers: 5500000, link: " https://www.youtube.com/@Ahmedowsari" },
+  { id: 4, name: "B3shr", image: creator[3], subscribers: 1400000, link: " https://www.youtube.com/@B3shr" },
+  { id: 5, name: "Amr El hady", image: creator[4], subscribers: 2000000, link: " https://www.tiktok.com/@amrelhady" },
+  { id: 6, name: "CANCEL", image: creator[5], subscribers: 3100000, link: "https://www.youtube.com/@GamersReact" },
+  { id: 7, name: "JellyPeanut", image: creator[6], subscribers: 130000, link: "https://www.twitch.tv/jellypeanut" },
+  { id: 8, name: "MrMarvelTV", image: creator[7], subscribers: 3990000, link: "https://www.youtube.com/c/MrMarvelTV" },
+  { id: 9, name: "LeoNoHero", image: creator[8], subscribers: 152000, link: "https://www.youtube.com/@LeoNoHero" },
+  { id: 10, name: "i6arba5", image: creator[9], subscribers: 2100000, link: "https://www.youtube.com/@i6rba5" },
+  { id: 11, name: "Sofyan", image: creator[10], subscribers: 1100000, link: "https://www.youtube.com/@SofyanBN" },
+  { id: 12, name: "Colby Martel", image: creator[11], subscribers: 226000, link: "https://www.tiktok.com/@colbymartel" },
+  { id: 13, name: "OFFSIDE", image: creator[12], subscribers: 198000, link: "https://www.youtube.com/@OFFSIDE__Football" },
+  { id: 14, name: "Golazo", image: creator[13], subscribers: 65000, link: " https://www.youtube.com/@goolazo" },
+  { id: 15, name: "VoltechFPS", image: creator[14], subscribers: 22000, link: " https://www.instagram.com/voltech.fps" },
+  { id: 16, name: "The Re-engineered Club", image: creator[15], subscribers: 6200, link: "https://www.youtube.com/@reengineeredclub" },
+  { id: 16, name: "Gamers React", image: creator[16], subscribers: 3100000, link: " https://www.youtube.com/@GamersReact" },
+  { id: 16, name: "Gamers React", image: creator[17], subscribers: 885, link: " https://www.youtube.com/@e-talkspodcast" },
 ];
 
 export default function Clients() {
@@ -91,7 +100,7 @@ export default function Clients() {
       <Navbar />
 
       {/* Navigation Tabs */}
-      <div className="flex gap-5 md:mt-[100px] mt-[110px] mb-6 max-w-lg mx-auto rounded-md overflow-hidden">
+      <div className="flex gap-5 md:mt-[120px] mt-[110px] mb-6 max-w-lg mx-auto rounded-md overflow-hidden">
         <button
           className={`btn flex-1 txt-size text-center font-semibold transition-colors duration-300 ${
             activeTab === "companies" ? "bg-[#662390] text-gold" : "bg-[#30054A] text-white"

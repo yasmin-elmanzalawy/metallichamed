@@ -13,14 +13,14 @@ export default function Dashboard() {
   return (
     <>
       {/* Desktop & Tablet */}
-      <div className="hidden sm:flex p-10 gap-6 justify-center items-center flex-nowrap overflow-x-auto">
+      <div className="hidden sm:flex p-5 gap-6 justify-center items-center flex-nowrap overflow-x-auto">
         {stats.map((item) => (
           <GlassCard key={item.id} {...item} />
         ))}
       </div>
 
       {/* Mobile */}
-      <div className="sm:hidden flex gap-6 p-4 justify-center items-center flex-nowrap overflow-x-auto">
+      <div className="sm:hidden flex gap-3 p- justify-center items-center flex-nowrap overflow-x-auto">
         {stats
           .filter(({ id }) => mobileVisible.includes(id))
           .map((item) => (
@@ -51,21 +51,26 @@ function GlassCard({ icon: Icon, target, prefix = "", suffix = "" }) {
   }, [target]);
 
   return (
-    <div
-      className="inline-flex flex-col items-center justify-center px-6 py-6 rounded-xl shadow-lg text-gold
-        relative overflow-hidden backdrop-blur-md
-        bg-gradient-to-br from-[#330c4a] via-[#5d0991] to-[#330c4a]
-        transition-all duration-700 ease-out
-        bg-[length:400%_400%] bg-[position:0%_0%]
-        hover:bg-[position:100%_100%] hover:scale-105 w-[70px] md:w-[110px] lg:W-[200px] xl:w-[150px] 2xl:w-[160px] [@media(min-width:1920px)]:w-[200px] shrink-0"
-    >
-      {/* Icon */}
-      <Icon className="mb-2 text-2xl md:text-3xl 2xl:text-5xl text-gold" />
+<div
+  className="inline-flex flex-col items-center justify-center px-6 py-6 
+    rounded-xl shadow-lg text-gold
+    relative overflow-hidden backdrop-blur-md
+    bg-gradient-to-br from-[#330c4a] via-[#5d0991] to-[#330c4a]
+    transition-all duration-700 ease-out
+    bg-[length:400%_400%] bg-[position:0%_0%]
+    hover:bg-[position:100%_100%] hover:scale-105
+    w-[150px] md:w-[150px] lg:w-[120px] xl:w-[150px] 2xl:w-[160px] [@media(min-width:1920px)]:w-[200px]
+    shrink"
+>
+  {/* Icon */}
+  <Icon className="mb-2 text-2xl md:text-3xl 2xl:text-5xl text-gold" />
 
-      {/* Counter */}
-      <p className="mt-1 font-semibold text-neutral-white txt-size text-center">
-        {prefix}{count.toLocaleString()}{suffix}
-      </p>
-    </div>
+  {/* Counter */}
+  <p className="mt-1 font-semibold text-neutral-white txt-size text-center">
+    {prefix}{count.toLocaleString()}{suffix}
+  </p>
+</div>
+
+
   );
 }

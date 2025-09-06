@@ -1,7 +1,7 @@
 .btn {
  display: inline-block;
  border-radius: 30px;
- border: 2px solid #e1b2ff;
+ border: 3px solid #e1b2ff;
  position: relative;
  overflow: hidden;
  transition: all 0.5s ease-in;
@@ -98,8 +98,8 @@
 .client-image-container {
   background-color: #662390;
   border-radius: 20px;
-  width: 150px;
-  height: 130px; /* Fixed height for image container */
+  /* width: 150px;
+  height: 130px; */
   display: flex;
   justify-content: center; /* horizontally center */
   align-items: center;     /* vertically center */

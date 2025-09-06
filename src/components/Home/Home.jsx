@@ -19,7 +19,7 @@ export default function Home() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className=" bg-[#662390] md:mt-[100px] mt-[110px] md:mx-24 m-12 mx-4 pb-20 p-8 md:p-12  rounded-[30px] relative overflow-hidden"
+        className=" bg-[#662390] md:mt-[100px] mt-[-30px] md:mx-24 m-12 mx-4 pb-20 p-8 md:p-12  rounded-[30px] relative overflow-hidden"
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text Section */}
@@ -29,20 +29,18 @@ export default function Home() {
             [@media(min-width:1920px)]:w-[50%] 
             flex-shrink-0"
           >
-            <h1
-              className="font-extrabold min-h-[80px]
+
+
+            <h1 className=" shine-text font-extrabold min-h-[80px]
     text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl 
-    [@media(min-width:1920px)]:text-7xl 
-    flex flex-wrap items-center group "
-            >
-              <span className="shiny-text">Metallichamed</span>
-            </h1>
+    [@media(min-width:1920px)]:text-7xl">MetallicHamed</h1>
+
 
             <p
               className="text-[#FEF7E4] text-base txt-size "
             >
               Transforming raw footage into captivating visual experiences that
-              inspire and connect.
+              inspire and connect. 
             </p>
           </div>
 

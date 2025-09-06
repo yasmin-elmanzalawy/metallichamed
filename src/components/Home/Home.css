@@ -1,63 +1,30 @@
-.shiny-text {
+.shine-text {
   position: relative;
+  font-size: 5rem;
+  font-weight: 800;
+  color: #ffc812; /* base golden */
   display: inline-block;
+
+  /* Gradient shine layer */
   background: linear-gradient(
     90deg,
-    #ddaa00,
-    #f5bf03,
-    #ffd13d,
-    #ffe07a,
-    #ffc812,
-    #f5bf03,
-    #c29502
+    #ffc812 0%,
+    #ffe797 45%,
+    #ffc812 50%,
+    #ffc812 55%,
+    #ffc812 100%
   );
+  background-size: 300% 100%;
+  background-position: 100% 0; /* start from the right */
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
-  overflow: hidden;
+
+  /* Smooth transition (not looping) */
+  transition: background-position 1s linear;
 }
 
-.shiny-text::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  transform: skewX(-20deg);
-
-  animation: text-shine 6s ease-in-out infinite;
-  animation-delay: 1s;
-
-  /* ✨ CLIP shine to text */
-  -webkit-mask-image: linear-gradient(#fff 0 0);
-  -webkit-mask-clip: text;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-composite: source-in;
-
-  mask-image: linear-gradient(#fff 0 0);
-  mask-clip: text;
-  mask-repeat: no-repeat;
-  mask-composite: intersect;
-
-  pointer-events: none;
-}
-
-@keyframes text-shine {
-  0% {
-    left: -100%;
-  }
-  20% {
-    left: 100%;
-  }
-  100% {
-    left: 100%;
-  }
+/* Shine only while hovering */
+.shine-text:hover {
+  background-position: 0% 0; /* move to the left */
 }

@@ -38,15 +38,16 @@ export default function Design() {
           className="md:mx-24 mx-4 md:p-12 px-5 py-12 bg-[#662390] m-8 rounded-[30px] min-h-screen"
         >
           {/* Arab Woman Awards Section */}
-          <div>
+          <div className="flex flex-col items-center">
             <h3
-              className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
+              className="h-[60px] flex items-center justify-center text-gold 
+              text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
               [@media(min-width:1920px)]:text-3xl font-bold my-6 text-center"
             >
               Arab Woman Awards 2025 Event
             </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 my-4 m-auto">
+            <div className="flex flex-wrap justify-center gap-8 my-4">
               {awaImages.map((img, index) => (
                 <motion.div
                   key={index}
@@ -55,7 +56,7 @@ export default function Design() {
                   onClick={() => setSelectedImage(img)}
                 >
                   <img
-                    className="rounded-md w-full object-cover"
+                    className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px]  object-cover rounded-md"
                     src={img}
                     alt={`Arab Woman Awards 2025 Event pic ${index + 1}`}
                   />
@@ -65,94 +66,89 @@ export default function Design() {
           </div>
 
           {/* Fortnite Section */}
-         <div className="mt-16">
-  <h3
-    className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
-    [@media(min-width:1920px)]:text-3xl font-bold my-6 text-center"
-  >
-    Fortnite Middle East
-  </h3>
+          <div className="mt-16 flex flex-col items-center">
+            <h3
+              className="h-[60px] flex items-center justify-center text-gold 
+              text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
+              [@media(min-width:1920px)]:text-3xl font-bold my-6 text-center"
+            >
+              Fortnite Middle East
+            </h3>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 my-4 ">
-    {fortniteImages.map((img, index) => (
-      <motion.div
-        key={index}
-        whileHover={{ scale: 1.05 }}
-        className="cursor-pointer flex justify-center"
-        onClick={() => setSelectedImage(img)}
-      >
-        <div className="m-auto max-w-[400px]">
-          <img
-          className="rounded-md max-w-full h-auto object-cover"
-          src={img}
-          alt={`Fortnite project ${index + 1}`}
-        />
-        </div>
-      </motion.div>
-    ))}
-  </div>
-</div>
+            <div className="flex flex-wrap justify-center gap-8 my-4">
+              {fortniteImages.map((img, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.05 }}
+                  className="cursor-pointer"
+                  onClick={() => setSelectedImage(img)}
+                >
+                  <img
+                    className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px]  object-cover rounded-md"
+                    src={img}
+                    alt={`Fortnite project ${index + 1}`}
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
 
+          {/* PlayStation + Voltech Section */}
+          <div className="mt-16 flex flex-col items-center">
+            <div className="flex flex-wrap justify-center gap-0 w-full">
+              {/* PlayStation */}
+              <div className="flex flex-col items-center max-w-[400px] flex-1 min-w-[280px]">
+                <h3
+                  className="h-[60px] flex items-center justify-center text-gold 
+                  text-2xl sm:text-3xl md:text-lg xl:text-3xl 2xl:text-3xl
+                  [@media(min-width:1920px)]:text-3xl font-bold my-6 text-center"
+                >
+                  PlayStation Arabic Thumbnails
+                </h3>
 
-         {/* PlayStation + Voltech side by side in a responsive grid */}
-<div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
-  {/* PlayStation Section */}
-  <div>
-    <h3
-      className="text-gold text-2xl sm:text-3xl md:text-lg xl:text-3xl 2xl:text-3xl
-      [@media(min-width:1920px)]:text-3xl font-bold my-6 text-center"
-    >
-      PlayStation Arabic Thumbnails
-    </h3>
+                {playStationImages.map((img, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    className="cursor-pointer"
+                    onClick={() => setSelectedImage(img)}
+                  >
+                    <img
+                      className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px]  object-cover rounded-md"
+                      src={img}
+                      alt={`PlayStation thumbnail ${index + 1}`}
+                    />
+                  </motion.div>
+                ))}
+              </div>
 
-    <div className="my-4">
-      {playStationImages.map((img, index) => (
-        <motion.div
-          key={index}
-          whileHover={{ scale: 1.05 }}
-          className="cursor-pointer"
-          onClick={() => setSelectedImage(img)}
-        >
-        <div className="m-auto max-w-[400px]">
-            <img
-            className="d-block rounded-md w-full object-cover"
-            src={img}
-            alt={`PlayStation thumbnail ${index + 1}`}
-          />
-        </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
+              {/* Voltech */}
+              <div className="flex flex-col items-center max-w-[400px] flex-1 min-w-[280px]">
+                <h3
+                  className="h-[60px] flex items-center justify-center text-gold 
+                  text-2xl sm:text-3xl md:text-lg xl:text-3xl 2xl:text-3xl
+                  [@media(min-width:1920px)]:text-3xl font-bold my-6 text-center"
+                >
+                  VoltechFPS
+                </h3>
 
-  {/* Voltech Section */}
-  <div>
-    <h3
-      className="text-gold text-2xl sm:text-3xl md:text-lg xl:text-3xl 2xl:text-3xl
-      [@media(min-width:1920px)]:text-3xl font-bold my-6 text-center"
-    >
-      VoltechFPS
-    </h3>
-
-    <div className=" my-4 max-w-[400px] m-auto">
-      {voltechFPSImages.map((img, index) => (
-        <motion.div
-          key={index}
-          whileHover={{ scale: 1.05 }}
-          className="cursor-pointer"
-          onClick={() => setSelectedImage(img)}
-        >
-          <img
-            className="rounded-md w-full object-cover"
-            src={img}
-            alt={`VoltechFPS project ${index + 1}`}
-          />
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</div>
-
+                {voltechFPSImages.map((img, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    className="cursor-pointer"
+                    onClick={() => setSelectedImage(img)}
+                  >
+                    <img
+                      className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px]  object-cover rounded-md"
+                      src={img}
+                      alt={`VoltechFPS project ${index + 1}`}
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
 

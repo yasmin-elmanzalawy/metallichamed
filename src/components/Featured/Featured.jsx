@@ -10,7 +10,14 @@ import bo2 from "../../assets/thumbnails/bestof/2.avif";
 import bo3 from "../../assets/thumbnails/bestof/3.avif";
 import bo4 from "../../assets/thumbnails/bestof/4.avif";
 import bo5 from "../../assets/thumbnails/bestof/5.avif";
-import dummyProfile from "../../assets/fea1.png";
+import bo6 from "../../assets/thumbnails/bestof/6.avif";
+import bo7 from "../../assets/thumbnails/bestof/7.avif";
+import bo8 from "../../assets/thumbnails/bestof/8.avif";
+import bo9 from "../../assets/thumbnails/bestof/9.avif";
+import bo10 from "../../assets/thumbnails/bestof/10.avif";
+import bo11 from "../../assets/thumbnails/bestof/11.avif";
+import bo12 from "../../assets/thumbnails/bestof/12.avif";
+
 import "./Featured.css";
 
 const featuredVideos = [
@@ -18,36 +25,73 @@ const featuredVideos = [
     id: 1,
     img: bo1,
     desc: "AboFlah",
-    authorImg: dummyProfile,
     link: "https://youtu.be/1KJaZoZgTvw?si=ucX0TLjgVQ6Bj2Tb",
   },
   {
     id: 2,
     img: bo2,
     desc: "EA Middle East",
-    authorImg: dummyProfile,
     link: "https://youtu.be/vytFscb7FV8?si=AR99_sdcXHxuVwKl",
   },
   {
     id: 3,
     img: bo3,
     desc: "Mazaj - مزاج",
-    authorImg: dummyProfile,
     link: "https://youtu.be/F08cBZDa4WM?si=58-1bOsTpjSqrKml",
   },
   {
     id: 4,
     img: bo4,
     desc: "My Showreel",
-    authorImg: dummyProfile,
     link: "https://youtu.be/onM-cnX5sj0?si=jxkz_j59emXZf4im",
   },
   {
     id: 5,
     img: bo5,
     desc: "Endless Studios",
-    authorImg: dummyProfile,
     link: "https://www.instagram.com/reel/DJ9negCh57B",
+  },
+  {
+    id: 6,
+    img: bo6,
+    desc: "Aziz - عزيز",
+    link: "https://youtu.be/dmhMm7lmWRw",
+  },
+  {
+    id: 7,
+    img: bo7,
+    desc: "Sofyan",
+    link: "https://youtu.be/o12FbYlg8Fw",
+  },
+  {
+    id: 8,
+    img: bo8,
+    desc: "OFFSIDE",
+    link: "https://youtu.be/o12FbYlg8Fw",
+  },
+  {
+    id: 9,
+    img: bo9,
+    desc: "Call Of Duty",
+    link: "https://www.tiktok.com/@callofdutyarabic/video/7406428579484962066",
+  },
+  {
+    id: 10,
+    img: bo10,
+    desc: "Arena Esports",
+    link: "https://www.instagram.com/reel/CvAQQT2PzI5",
+  },
+  {
+    id: 11,
+    img: bo11,
+    desc: "Arena Es-Momo vs Lyapop",
+    link: "https://drive.google.com/file/d/1r0L6OKEs96IyRvPA3njP97akSbuD-Kmx/view",
+  },
+  {
+    id: 12,
+    img: bo12,
+    desc: "JellyPeanut ",
+    link: "https://www.youtube.com/watch?v=RtHFYeANEfY",
   },
 ];
 
@@ -58,12 +102,12 @@ export default function Featured() {
   return (
     <div className="relative mt-5">
       <div className="flex items-center mb-5 ">
-        <h3 className="text-2xl text-gold font-bold sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl [@media(min-width:1920px)]:text-3xl ">
+        <h3 className="text-2xl text-gold font-bold sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl [@media(min-width:1920px)]:text-4xl ">
           Featured Videos
         </h3>
         <NavLink
           to="/videos"
-          className="btn text-sm [@media(min-width:1920px)]:text-lg ml-5 text-center font-bold text-gold hover:text-white transition-colors"
+          className="btn text-sm [@media(min-width:1920px)]:text-xl ml-5 text-center font-bold text-gold hover:text-white transition-colors"
         >
           more
         </NavLink>
@@ -111,16 +155,16 @@ export default function Featured() {
                 href={video.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group"
+                className="block group "
               >
-                <div className="relative w-full h-40 rounded-[20px] p-[3px] transition-transform duration-300 group-hover:scale-[1.03]">
+                <div className="relative w-full [@media(min-width:1920px)]:h-[200px] h-[150px] rounded-[20px] p-[3px] transition-transform duration-300 group-hover:scale-[1.03]">
                   <img
                     src={video.img}
                     alt={video.desc}
-                    className="w-full h-full object-cover rounded-[17px]"
+                    className="w-full hover:border border border-transparent hover:border-gold h-full object-cover rounded-[17px]"
                   />
                   <FaStar
-                    className="absolute top-2 right-2"
+                    className="absolute top-4 right-4"
                     size={20}
                     color="#f5bf03"
                   />

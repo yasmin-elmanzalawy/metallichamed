@@ -9,10 +9,7 @@ import fea1 from "../../assets/thumbnails/dum.jpg";
 import ads from "../../assets/thumbnails/ads.png";
 import mazag from "../../assets/thumbnails/bestof/3.avif";
 
-
-
 import Footer from "../Footer/Footer";
-
 
 // Gaming
 const gamingLong = import.meta.glob(
@@ -25,20 +22,16 @@ const gamingShort = import.meta.glob(
 );
 
 // IRL
-const irlLong = import.meta.glob(
-  "../../assets/thumbnails/irl/long/*.avif",
-  { eager: true }
-);
-const irlShort = import.meta.glob(
-  "../../assets/thumbnails/irl/short/*.avif",
-  { eager: true }
-);
+const irlLong = import.meta.glob("../../assets/thumbnails/irl/long/*.avif", {
+  eager: true,
+});
+const irlShort = import.meta.glob("../../assets/thumbnails/irl/short/*.avif", {
+  eager: true,
+});
 // IRL
-const adsLong = import.meta.glob(
-  "../../assets/thumbnails/ads/*.avif",
-  { eager: true }
-);
-
+const adsLong = import.meta.glob("../../assets/thumbnails/ads/*.avif", {
+  eager: true,
+});
 
 // === Helper function to turn object → sorted array
 const toArray = (obj) =>
@@ -49,15 +42,12 @@ const toArray = (obj) =>
     })
     .map((key) => obj[key].default);
 
-
 // Arrays ready to use
 const gl = toArray(gamingLong);
 const gs = toArray(gamingShort);
 const il = toArray(irlLong);
 const is = toArray(irlShort);
 const ad = toArray(adsLong);
-
-
 
 const cards = [
   {
@@ -142,7 +132,7 @@ const cards = [
       {
         id: 13,
         title: "arenaesportsae",
-        thumbnail: gs[14],
+        thumbnail: gs[12],
         url: "https://www.instagram.com/reel/CvAQQT2PzI5",
       },
       {
@@ -356,26 +346,25 @@ const cards = [
         thumbnail: il[5],
         url: "https://youtu.be/URdsD1OoRCk",
       },
-   
+
       {
         id: 7,
         title: "Aziz - عزيز",
         thumbnail: il[6],
         url: "https://youtu.be/QeUr8V8juxo",
       },
-            {
+      {
         id: 8,
         title: "CANCEL",
         thumbnail: il[7],
         url: "https://youtu.be/zuaFGp5EhQM",
       },
-            {
+      {
         id: 9,
         title: "Mazaj - مزاج",
         thumbnail: mazag,
         url: "https://youtu.be/F08cBZDa4WM",
       },
-
     ],
   },
   {
@@ -444,7 +433,7 @@ const cards = [
         thumbnail: ad[9],
         url: "https://drive.google.com/file/d/1fU5GyLYgGpMOQ70-G3b2xF70EhgsznE8/view",
       },
-       {
+      {
         id: 11,
         title: "ooredooez",
         thumbnail: ad[10],
@@ -486,13 +475,11 @@ const cards = [
       {
         id: 17,
         title: "CANCEL",
-        thumbnail: ad[16],  
+        thumbnail: ad[16],
         url: "https://x.com/aldaejam/status/1594017369403248640",
-      },  
+      },
     ],
-    longVideos: [
-     
-    ],
+    longVideos: [],
   },
   {
     id: 4,
@@ -571,59 +558,30 @@ const cards = [
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1WuD9t_vd8YHg6Qk6Y-XWyQrokwN1DmyN/view?usp=sharing&t=1",
       },
+
       {
         id: 3,
-        title: "DL Media Test 2",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1_hhxZm4ZJ6_4ct3YvcZ4-bkWA_eytMx7/view?usp=sharing",
-      },
-      {
-        id: 4,
         title: "Head Flashlight",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1wXJx6zrkR8qaW_rCQ5lb00T0ZEvaZ0AR/view?usp=sharing",
       },
       {
-        id: 5,
+        id: 4,
         title: "Heater",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/12-LP9tfzuGyQT9gsopfrmNEVDjr3J7oP/view?usp=sharing",
       },
       {
-        id: 6,
+        id: 5,
         title: "Iconic Air Purifier",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1NDUWJdPoyFtaNAOuFuJ6mYPN1xF7tdTF/view?usp=sharing",
       },
       {
-        id: 7,
+        id: 6,
         title: "Mini Magnet Flashlight",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1mkgB0cgpt00PtSmbzIRFOzHfrzJCy7hi/view?usp=sharing",
-      },
-      {
-        id: 8,
-        title: "Mini Wifi Camera",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1rfpAjXx7IsAoKcaF-lfkhB065MmizJMC/view?usp=sharing",
-      },
-      {
-        id: 9,
-        title: "Nano Spray",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1FwQnUlQX3v4lERy0Oy7idCSS649OiFvJ/view?usp=sharing",
-      },
-      {
-        id: 10,
-        title: "TV Antenna",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1dpkrHfACrJvk9_0Ks-U288CZJ_kLJCnb/view?usp=sharing",
-      },
-      {
-        id: 11,
-        title: "USB Backup Stick",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1rFScTOpCFA_g9hjcclYSzSRl0cx36dIS/view?usp=sharing",
       },
     ],
     longVideos: [], // 👈 leave empty if you only want them short form
@@ -658,7 +616,6 @@ const cards = [
         thumbnail: fea1,
         url: "https://www.facebook.com/reel/1435410481075856",
       },
- 
     ],
     longVideos: [
       {
@@ -685,7 +642,7 @@ const cards = [
         thumbnail: fea1,
         url: "https://youtu.be/dMjK6BbLmqE",
       },
-           {
+      {
         id: 9,
         title: "Ulta Beauty V3 Energetic",
         thumbnail: fea1,
@@ -728,24 +685,21 @@ const cards = [
         thumbnail: fea1,
         url: "https://www.instagram.com/reel/CnhjV7-J3Ty",
       },
-     
-     
- 
     ],
     longVideos: [
-       {
+      {
         id: 5,
         title: "(OoredooEZ) Community Highlights",
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/15mPHuBRUAp4qVrD-H23z3U-4IWvcvM5i/view",
       },
-       {
+      {
         id: 6,
         title: "Frenzy",
         thumbnail: fea1,
         url: "https://www.facebook.com/watch/?v=3733447676883448",
       },
-           {
+      {
         id: 7,
         title: "PUBG: BATTLEGROUNDS",
         thumbnail: fea1,
@@ -780,80 +734,79 @@ const cards = [
     longVideos: [],
   },
   {
-  id: 10,
-  image: fea1,
-  name: "Tests",
-  shortVideos: [
-    {
-      id: 1,
-      title: "Airrack",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1QLQJm1ADKItRVdk8jjuZRXVirtD20Lkn/view?usp=sharing",
-    },
-    {
-      id: 2,
-      title: "Amados Strategies",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1eJa35pQRdnC9j1rShO4b0qCG-kqEcyry/view?usp=sharing&t=1",
-    },
-    {
-      id: 3,
-      title: "CommerceCore Hook 1",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1HC3Vev0pK8bMWrFbTV9EUv8dA4CFn8rW/view?usp=sharing",
-    },
-    {
-      id: 4,
-      title: "CommerceCore Hook 2",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1c6UZ_iJFpH-kwOsoYpCddFvZHSP_DQLL/view?usp=sharing",
-    },
-    {
-      id: 5,
-      title: "CommerceCore Hook 3",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1gTWyvPFSgG7Sl1EGgCozFNSQ6d4FWYZF/view?usp=sharing",
-    },
-    {
-      id: 6,
-      title: "DailyFuelUp",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1h_g9pkCq1--TsQnrMHJcijBRxTFK4SN-/view?usp=sharing",
-    },
-    {
-      id: 7,
-      title: "KFM",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1jh9W12z3gadjg_bCoJnE2sqyd_2JxGj8/view?usp=sharing",
-    },
-    {
-      id: 8,
-      title: "Maxian Football",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1aeIhtt_llI3fDf8wc_Cu1HgIIRjR_mgC/view?usp=sharing",
-    },
-    {
-      id: 9,
-      title: "Pasynsoft",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1ilMR8bIA1LZz83c7LGzsDt73_IZouyO_/view?usp=sharing",
-    },
-    {
-      id: 10,
-      title: "Saatchi & Saatchi Qatar",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1bRsAc1vHtU0Elf-HALDOtIfORDHYBKpx/view?usp=sharing",
-    },
-    {
-      id: 11,
-      title: "VCL 25",
-      thumbnail: fea1,
-      url: "https://drive.google.com/file/d/1zj6G4cBdJgFzuYvwUVV-dPWL4kmvulGy/view?usp=sharing",
-    },
-  ],
-  longVideos: [],
-},
-
+    id: 10,
+    image: fea1,
+    name: "Tests",
+    shortVideos: [
+      {
+        id: 1,
+        title: "Airrack",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1QLQJm1ADKItRVdk8jjuZRXVirtD20Lkn/view?usp=sharing",
+      },
+      {
+        id: 2,
+        title: "Amados Strategies",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1eJa35pQRdnC9j1rShO4b0qCG-kqEcyry/view?usp=sharing&t=1",
+      },
+      {
+        id: 3,
+        title: "CommerceCore Hook 1",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1HC3Vev0pK8bMWrFbTV9EUv8dA4CFn8rW/view?usp=sharing",
+      },
+      {
+        id: 4,
+        title: "CommerceCore Hook 2",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1c6UZ_iJFpH-kwOsoYpCddFvZHSP_DQLL/view?usp=sharing",
+      },
+      {
+        id: 5,
+        title: "CommerceCore Hook 3",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1gTWyvPFSgG7Sl1EGgCozFNSQ6d4FWYZF/view?usp=sharing",
+      },
+      {
+        id: 6,
+        title: "DailyFuelUp",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1h_g9pkCq1--TsQnrMHJcijBRxTFK4SN-/view?usp=sharing",
+      },
+      {
+        id: 7,
+        title: "KFM",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1jh9W12z3gadjg_bCoJnE2sqyd_2JxGj8/view?usp=sharing",
+      },
+      {
+        id: 8,
+        title: "Maxian Football",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1aeIhtt_llI3fDf8wc_Cu1HgIIRjR_mgC/view?usp=sharing",
+      },
+      {
+        id: 9,
+        title: "Pasynsoft",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1ilMR8bIA1LZz83c7LGzsDt73_IZouyO_/view?usp=sharing",
+      },
+      {
+        id: 10,
+        title: "Saatchi & Saatchi Qatar",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1bRsAc1vHtU0Elf-HALDOtIfORDHYBKpx/view?usp=sharing",
+      },
+      {
+        id: 11,
+        title: "VCL 25",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1zj6G4cBdJgFzuYvwUVV-dPWL4kmvulGy/view?usp=sharing",
+      },
+    ],
+    longVideos: [],
+  },
 ];
 
 export default function Videos() {
@@ -922,8 +875,8 @@ export default function Videos() {
             {selectedCard.name !== "Ads" &&
               selectedCard.name !== "Documentary" &&
               selectedCard.name !== "UGC" &&
-              selectedCard.name !== "Memes" && selectedCard.name !== "Tests" 
-              && (
+              selectedCard.name !== "Memes" &&
+              selectedCard.name !== "Tests" && (
                 <div className="flex gap-5 md:mt-[20px] mt-[20px] mb-6 max-w-md mx-auto rounded-md overflow-hidden">
                   <button
                     className={`btn txt-size flex-1 text-center font-semibold transition-colors duration-300 ${
@@ -959,7 +912,9 @@ export default function Videos() {
                 className={` grid gap-6 ${
                   selectedCard.name === "Ads" ||
                   selectedCard.name === "Documentary" ||
-                  selectedCard.name === "UGC" || selectedCard.name === "Memes" || selectedCard.name === "Tests" 
+                  selectedCard.name === "UGC" ||
+                  selectedCard.name === "Memes" ||
+                  selectedCard.name === "Tests"
                     ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
                     : activeTab === "short"
                     ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
@@ -968,54 +923,55 @@ export default function Videos() {
               >
                 {(selectedCard.name === "Ads" ||
                 selectedCard.name === "Documentary" ||
-                selectedCard.name === "UGC" || selectedCard.name === "Memes" ||selectedCard.name === "Tests"  
+                selectedCard.name === "UGC" ||
+                selectedCard.name === "Memes" ||
+                selectedCard.name === "Tests"
                   ? [...selectedCard.shortVideos, ...selectedCard.longVideos]
                   : activeTab === "short"
                   ? selectedCard.shortVideos
                   : selectedCard.longVideos
                 ).map((video) => (
-                 <div
-  key={video.id}
-  className="overflow-hidden hover:scale-105 transition-transform duration-300 relative rounded-xl"
->
-  <a
-    href={video.url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block"
-  >
-    <div className="relative">
-      <img
-        src={video.thumbnail}
-        alt={video.title}
-        className={`w-full rounded-xl object-cover shadow-sm hover:shadow-lg transition-shadow duration-300
-          ${selectedCard.name === "Ads" ||
-          selectedCard.name === "Documentary" ||
-          selectedCard.name === "UGC" ||
-          selectedCard.name === "Tests"
-            ? "aspect-video"
-            : activeTab === "short"
-            ? "aspect-[2/3]"
-            : "aspect-video"
-        }`}
-      />
-      {/* Dark overlay on hover */}
-      <div className="absolute inset-0 rounded-xl bg-black/0 hover:bg-black/20 transition-colors duration-300"></div>
-    </div>
+                  <div
+                    key={video.id}
+                    className="overflow-hidden hover:scale-105 transition-transform duration-300 relative rounded-xl"
+                  >
+                    <a
+                      href={video.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div className="relative">
+                        <img
+                          src={video.thumbnail}
+                          alt={video.title}
+                          className={`w-full rounded-xl object-cover shadow-sm hover:shadow-lg transition-shadow duration-300
+          ${
+            selectedCard.name === "Ads" ||
+            selectedCard.name === "Documentary" ||
+            selectedCard.name === "UGC" ||
+            selectedCard.name === "Tests"
+              ? "aspect-video"
+              : activeTab === "short"
+              ? "aspect-[2/3]"
+              : "aspect-video"
+          }`}
+                        />
+                        {/* Dark overlay on hover */}
+                        <div className="absolute inset-0 rounded-xl bg-black/0 hover:bg-black/20 transition-colors duration-300"></div>
+                      </div>
 
-    <p className="text-[#E5D4D6] txt-size font-semibold text-center py-2">
-      {video.title}
-    </p>
-  </a>
-</div>
-
+                      <p className="text-[#E5D4D6] txt-size font-semibold text-center py-2">
+                        {video.title}
+                      </p>
+                    </a>
+                  </div>
                 ))}
               </motion.div>
             </AnimatePresence>
           </motion.div>
         )}
       </AnimatePresence>
-
     </div>
   );
 }

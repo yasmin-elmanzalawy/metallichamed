@@ -7,14 +7,17 @@ export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Base URL ("/" in dev, "/metallichamed/" in production)
+  const baseURL = import.meta.env.BASE_URL;
+
   const linkedNavItems = [
     { label: "Home", to: "/" },
-
     { label: "Videos", to: "/videos" },
     { label: "Designs", to: "/design" },
     { label: "Clients", to: "/clients" },
     { label: "Endorsements", to: "/#endorsements" },
     { label: "About", to: "/#about" },
+    { label: "CV", to: `${baseURL}Mohamed-Hamed-Resume.pdf`, download: true }, // ✅ fixed
     { label: "Contact", to: "#" },
   ];
 
@@ -57,20 +60,28 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-[#30054A] py-4 text-gold"
+      className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg py-4 [@media(min-width:1920px)]:py-8 2xl:py-6 bg-[#30054A] text-gold"
     >
       <div className="md:mx-24 mx-18 px-8 md:px-4 flex justify-end items-center h-14">
         {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-6 font-semibold tracking-wide items-center">
-          {linkedNavItems.map(({ label, to }) => (
+          {linkedNavItems.map(({ label, to, download }) => (
             <li key={label}>
               {label === "Contact" ? (
                 <button
                   onClick={() => handleScrollLink(label)}
-                  className="px-4 py-1.5 rounded-full bg-[#FED03B] text-[#4B0082] hover:bg-[#e6c22f] transition-colors duration-300 [@media(min-width:1920px)]:text-xl"
+                  className="px-4 py-1.5 rounded-full bg-[#FED03B] text-[#4B0082] hover:bg-[#ffcc00] transition-colors duration-300 [@media(min-width:1920px)]:text-xl"
                 >
                   {label}
                 </button>
+              ) : download ? (
+                <a
+                  href={to}
+                  download="Mohamed_Hamed_CV.pdf"
+                  className="px-4 py-1.5 rounded-full  border-[3px] border-[#FED03B] text-[#FED03B] hover:bg-[#e6c12d] hover:text-[#4B0082] transition-colors duration-300 [@media(min-width:1920px)]:text-xl"
+                >
+                  {label}
+                </a>
               ) : (
                 <Link
                   to={to}
@@ -81,7 +92,7 @@ export default function Navbar() {
                     }
                     setIsOpen(false);
                   }}
-                  className="px-4 py-1.5 rounded-full bg-purple-500/20 hover:bg-purple-500/40 text-[#E8CCF9] transition-colors duration-300  [@media(min-width:1920px)]:text-xl"
+                  className="px-4 py-1.5 rounded-full bg-purple-500/20 hover:bg-purple-500/40 text-[#E8CCF9] transition-colors duration-300 [@media(min-width:1920px)]:text-xl"
                 >
                   {label}
                 </Link>
@@ -121,7 +132,7 @@ export default function Navbar() {
         }`}
       >
         <ul className="flex flex-col space-y-4 px-8 font-semibold text-[#E8CCF9]">
-          {linkedNavItems.map(({ label, to }) => (
+          {linkedNavItems.map(({ label, to, download }) => (
             <li key={label} className="cursor-pointer">
               {label === "Contact" ? (
                 <button
@@ -130,6 +141,14 @@ export default function Navbar() {
                 >
                   {label}
                 </button>
+              ) : download ? (
+                <a
+                  href={to}
+                  download="Mohamed_Hamed_CV.pdf"
+                  className="px-4 py-1.5 rounded-full border border-[#FED03B] text-[#FED03B] hover:bg-[#fed03b1a] transition-colors duration-300 block text-center w-full"
+                >
+                  {label}
+                </a>
               ) : (
                 <Link
                   to={to}
