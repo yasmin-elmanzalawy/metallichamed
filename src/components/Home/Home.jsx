@@ -115,7 +115,7 @@ export default function Home() {
       </section>
 
       {/* services */}
-      {/* <Services></Services> */}
+      <Services></Services>
 
       <Footer></Footer>
     </div>

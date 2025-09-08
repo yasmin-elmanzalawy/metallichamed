@@ -38,7 +38,7 @@ export default function Design() {
           className="md:mx-24 mx-4 md:p-12 px-5 py-12 bg-[#662390] m-8 rounded-[30px] min-h-screen"
         >
           {/* Arab Woman Awards Section */}
-          <div className="flex flex-col items-center">
+          <div className="mt-16 flex flex-col items-center pb-12 mb-12">
             <h3
               className="h-[60px] flex items-center justify-center text-gold 
               text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
@@ -56,7 +56,9 @@ export default function Design() {
                   onClick={() => setSelectedImage(img)}
                 >
                   <img
-                    className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px]  object-cover rounded-md"
+                    className="2xl:w-[250px] [@media(min-width:1920px)]:w-[450px] [@media(min-width:1920px)]:h-[450px] w-[200px] 2xl:h-[250px] object-cover rounded-md 
+                    shadow-[0_4px_15px_#FED03B]/50" // golden glow
+                    // shadow-lg shadow-black/40   // neutral alternative
                     src={img}
                     alt={`Arab Woman Awards 2025 Event pic ${index + 1}`}
                   />
@@ -65,8 +67,10 @@ export default function Design() {
             </div>
           </div>
 
+          <div className="w-[70%] h-[2px] mx-auto bg-gradient-to-r from-transparent via-[#FED03B] to-transparent"></div>
+
           {/* Fortnite Section */}
-          <div className="mt-16 flex flex-col items-center">
+          <div className="mt-16 flex flex-col items-center pb-12 mb-12">
             <h3
               className="h-[60px] flex items-center justify-center text-gold 
               text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
@@ -84,7 +88,8 @@ export default function Design() {
                   onClick={() => setSelectedImage(img)}
                 >
                   <img
-                    className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px]  object-cover rounded-md"
+                    className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px] object-cover rounded-md 
+                    shadow-[0_4px_15px_#FED03B]/50"
                     src={img}
                     alt={`Fortnite project ${index + 1}`}
                   />
@@ -92,6 +97,8 @@ export default function Design() {
               ))}
             </div>
           </div>
+
+          <div className="w-[70%] h-[2px] mx-auto bg-gradient-to-r from-transparent via-[#FED03B] to-transparent"></div>
 
           {/* PlayStation + Voltech Section */}
           <div className="mt-16 flex flex-col items-center">
@@ -114,7 +121,8 @@ export default function Design() {
                     onClick={() => setSelectedImage(img)}
                   >
                     <img
-                      className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px]  object-cover rounded-md"
+                      className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px] object-cover rounded-md 
+                      shadow-[0_4px_15px_#FED03B]/50"
                       src={img}
                       alt={`PlayStation thumbnail ${index + 1}`}
                     />
@@ -140,7 +148,8 @@ export default function Design() {
                     onClick={() => setSelectedImage(img)}
                   >
                     <img
-                      className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px]  object-cover rounded-md"
+                      className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px] object-cover rounded-md 
+                      shadow-[0_4px_15px_#FED03B]/50"
                       src={img}
                       alt={`VoltechFPS project ${index + 1}`}
                     />

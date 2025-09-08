@@ -4,31 +4,34 @@ import whatsApp from "../../assets/icons/whatsapp.png";
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-[#210434] text-white py-10 pd:mx-24 p-12 px-4 rounded-t-3xl">
-      <div className="container mx-auto px-2 flex flex-col md:flex-row items-center justify-between gap-6">
+    <footer
+      id="footer"
+      className="bg-[#210434] text-white py-10 p-6 sm:p-10 lg:px-12 rounded-t-3xl"
+    >
+      <div className="container mx-auto px-2 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-6">
         {/* Quote: 40% */}
-        <div className="w-full md:w-[40%]  d-block m-auto flex justify-center items-center">
+        <div className="w-full lg:w-[40%] flex justify-center items-center text-center">
           <p
-            className="text-3xl sm:text-4xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-4xl 
-            [@media(min-width:1920px)]:text-4xl font-medium text-gold align-center "
+            className="text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-4xl 
+            [@media(min-width:1920px)]:text-4xl font-medium text-gold"
           >
             Let's make your content shine.
           </p>
         </div>
 
         {/* Email: 30% */}
-        <div className="w-full md:w-[30%] flex justify-center items-center">
+        <div className="w-full lg:w-[30%] flex justify-center items-center text-center">
           <a
             href="mailto:metallichamed@gmail.com"
             className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors cursor-pointer text-base sm:text-lg md:text-xl xl:text-xl 2xl:text-2xl"
           >
-            <FaEnvelope className="text-xl" />
-            <span>metallichamed@gmail.com</span>
+            <FaEnvelope className="text-lg sm:text-xl" />
+            <span className="break-all">metallichamed@gmail.com</span>
           </a>
         </div>
 
         {/* Social Links: 30% */}
-        <div className="w-full md:w-[30%] flex justify-center  items-center gap-4">
+        <div className="w-full lg:w-[30%] flex justify-center items-center gap-6">
           {/* LinkedIn */}
           <div className="tooltip-container relative cursor-pointer">
             <a
@@ -37,12 +40,12 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex flex-col items-center text-white no-underline"
             >
-              <div className="layer w-12 h-12 relative transition-transform duration-300">
+              <div className="layer w-10 h-10 sm:w-12 sm:h-12 relative transition-transform duration-300">
                 <span className="absolute inset-0 border border-blue-500 rounded-md transition-all"></span>
                 <span className="absolute inset-0 border border-blue-500 rounded-md transition-all"></span>
                 <span className="absolute inset-0 border border-blue-500 rounded-md transition-all"></span>
                 <span className="absolute inset-0 border border-blue-500 rounded-md transition-all"></span>
-                <span className="absolute inset-0 flex items-center justify-center text-blue-500 text-2xl">
+                <span className="absolute inset-0 flex items-center justify-center text-blue-500 text-xl sm:text-2xl">
                   <svg
                     viewBox="0 0 448 512"
                     height="1em"
@@ -52,36 +55,37 @@ export default function Footer() {
                   </svg>
                 </span>
               </div>
-              <span className="mt-1 opacity-0 transition-all duration-300 tooltip-text">
+              <span className="mt-1 opacity-0 transition-all duration-300 tooltip-text text-sm">
                 LinkedIn
               </span>
             </a>
           </div>
 
           {/* WhatsApp */}
-          <div className="tooltip-container relative cursor-pointer">
+          <div className="tooltip-container relative cursor-pointer ">
             <a
               href="https://wa.me/201143100875"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center text-white no-underline"
             >
-              <div className="layer w-12 h-12 relative transition-transform duration-300">
+              <div className="layer w-10 h-10 sm:w-12 sm:h-12 relative transition-transform duration-300">
                 <span className="absolute inset-0 border border-green-500 rounded-md transition-all"></span>
                 <span className="absolute inset-0 border border-green-500 rounded-md transition-all"></span>
                 <span className="absolute inset-0 border border-green-500 rounded-md transition-all"></span>
                 <span className="absolute inset-0 border border-green-500 rounded-md transition-all"></span>
                 <span className="absolute inset-0 flex items-center justify-center">
-                  <img src={whatsApp} alt="WhatsApp" className="w-6 h-6" />
+                  <img src={whatsApp} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
                 </span>
               </div>
-              <span className="mt-1 opacity-0 transition-all duration-300 tooltip-text">
+              <span className="mt-1 opacity-0 transition-all duration-300 tooltip-text text-sm">
                 WhatsApp
               </span>
             </a>
           </div>
         </div>
       </div>
+    
 
       {/* Hover animation */}
       <style jsx>{`

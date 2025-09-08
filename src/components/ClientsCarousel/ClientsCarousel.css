@@ -90,7 +90,7 @@
   text-decoration: none;
   outline: none;
   color: inherit;
-  height: 230px; /* Fixed height to align images horizontally */
+  height: 250px; 
   justify-content: flex-start; /* Align content to the top */
   padding-bottom: 10px;
 }
@@ -98,8 +98,6 @@
 .client-image-container {
   background-color: #662390;
   border-radius: 20px;
-  /* width: 150px;
-  height: 130px; */
   display: flex;
   justify-content: center; /* horizontally center */
   align-items: center;     /* vertically center */
@@ -111,8 +109,8 @@
 }
 
 .client-image {
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 90%;
+  max-height: 90%;
   object-fit: contain;
   transition: transform 0.3s ease;
   will-change: transform;

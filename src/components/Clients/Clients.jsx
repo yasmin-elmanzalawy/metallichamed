@@ -48,7 +48,7 @@ const companies = [
   { id: 16, name: "MySalahMat", image: company[15], link: "https://www.mysalahmat.com" },
   { id: 17, name: "Globe Gamer Grounds", image: company[16], link: "https://gamergrounds.ph" },
   { id: 18, name: "Zain Esports", image: company[17], link: "https://zainesports.com" },
-  { id: 19, name: "Endless Studios", image: company[18], link: "https://www.endlessstudios.com" },
+  { id: 19, name: "Endless Studios", image: company[18], link: "https://www.endlessstudios.com" }, 
   { id: 20, name: "CommerceCore", image: company[19], link: "https://commercecore.com" },
   { id: 21, name: "365games", image: company[20], link: "https://www.linkedin.com/company/365games" },
   { id: 22, name: "Amadòs Strategies", image: company[21], link: "https://amadosstrategies.com" },
@@ -61,7 +61,7 @@ const companies = [
   { id: 29, name: "MSI Gaming", image: company[28], link: "https://www.msi.com" },
   { id: 30, name: "Burger King KSA", image: company[29], link: "https://x.com/BURGERKINGKSA" },
   { id: 31, name: "PlayStation Arabia", image: company[30], link: "https://www.youtube.com/@PlayStationArabia" },
-  { id: 32, name: "Arab Woman Awards", image: company[31], link: "https://www.itp.events/ArabWomanAwards" },
+  // { id: 32, name: "Arab Woman Awards", image: company[31], link: "https://www.itp.events/ArabWomanAwards" },
   { id: 33, name: "Predator Middle East", image: company[32], link: "https://www.instagram.com/predatorgamingme" },
   { id: 34, name: "Ra'ad", image: company[33], link: "https://raad.gg" },
 

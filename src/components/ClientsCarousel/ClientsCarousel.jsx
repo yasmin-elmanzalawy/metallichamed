@@ -24,16 +24,61 @@ import "./ClientsCarousel.css";
 import { NavLink } from "react-router-dom";
 
 const clients = [
-  { id: 1, name: "Mazaj", image: mazag, link: "https://www.youtube.com/@mazajofficial" },
-  { id: 2, name: "NVIDIA GeForce Middle East", image: nvidia, link: "https://www.instagram.com/nvidiageforceme" },
-  { id: 3, name: "Spartan Middle East", image: spartan, link: "https://www.instagram.com/spartanmiddleeast" },
-  { id: 4, name: "Call of Duty Arabic", image: callofduty, link: "https://www.tiktok.com/@callofdutyarabic" },
-  { id: 5, name: "Ubisoft Arabic", image: ubisoft, link: "https://www.tiktok.com/@ubisoftme" },
-  { id: 6, name: "Claritin Arabia", image: claritine, link: "https://www.facebook.com/ClaritineArabia" },
-  { id: 7, name: "EA Middle East", image: ea, link: "https://www.youtube.com/@ElectronicArtsME" },
-  { id: 8, name: "AboFlah", image: aboflah, link: "https://www.youtube.com/@AboFlah" },
+  {
+    id: 1,
+    name: "Mazaj",
+    image: mazag,
+    link: "https://www.youtube.com/@mazajofficial",
+  },
+  {
+    id: 2,
+    name: "NVIDIA GeForce Middle East",
+    image: nvidia,
+    link: "https://www.instagram.com/nvidiageforceme",
+  },
+  {
+    id: 3,
+    name: "Spartan Middle East",
+    image: spartan,
+    link: "https://www.instagram.com/spartanmiddleeast",
+  },
+  {
+    id: 4,
+    name: "Call of Duty Arabic",
+    image: callofduty,
+    link: "https://www.tiktok.com/@callofdutyarabic",
+  },
+  {
+    id: 5,
+    name: "Ubisoft Arabic",
+    image: ubisoft,
+    link: "https://www.tiktok.com/@ubisoftme",
+  },
+  {
+    id: 6,
+    name: "Claritin Arabia",
+    image: claritine,
+    link: "https://www.facebook.com/ClaritineArabia",
+  },
+  {
+    id: 7,
+    name: "EA Middle East",
+    image: ea,
+    link: "https://www.youtube.com/@ElectronicArtsME",
+  },
+  {
+    id: 8,
+    name: "AboFlah",
+    image: aboflah,
+    link: "https://www.youtube.com/@AboFlah",
+  },
   { id: 9, name: "Aziz", image: aziz, link: "https://www.youtube.com/@Aziz14" },
-  { id: 10, name: "Ahmed Show", image: ahmedshow, link: "https://www.youtube.com/@Ahmedowsari" },
+  {
+    id: 10,
+    name: "Ahmed Show",
+    image: ahmedshow,
+    link: "https://www.youtube.com/@Ahmedowsari",
+  },
 ];
 
 export default function ClientsCarousel() {
@@ -43,8 +88,12 @@ export default function ClientsCarousel() {
   return (
     <div className="relative mt-5 clients-carousel-container">
       <div className="flex items-center mb-5">
-        <h3 className="text-2xl text-gold font-bold sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
-            [@media(min-width:1920px)]:text-4xl ">Clients</h3>
+        <h3
+          className="text-2xl text-gold font-bold sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
+            [@media(min-width:1920px)]:text-4xl "
+        >
+          Clients
+        </h3>
         <NavLink
           to="/clients"
           className="btn text-sm [@media(min-width:1920px)]:text-xl ml-5 text-center font-bold  text-gold hover:text-white transition-colors"
@@ -71,13 +120,14 @@ export default function ClientsCarousel() {
 
       <Swiper
         modules={[Navigation, Autoplay]}
-        spaceBetween={20}
+        className=""
+        spaceBetween={15}
         slidesPerView={2}
         breakpoints={{
           640: { slidesPerView: 3 },
           768: { slidesPerView: 4 },
           1024: { slidesPerView: 5 },
-          1280: { slidesPerView: 7 },
+          1280: { slidesPerView: 8 },
           1880: { slidesPerView: 9 },
         }}
         navigation={{
@@ -97,30 +147,29 @@ export default function ClientsCarousel() {
       >
         {clients.map(({ id, name, image, link }) => (
           <SwiperSlide key={id}>
-  <a
-    href={link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="client-slide group flex flex-col items-center"
-  >
-    {/* Image */}
-    <div className="client-image-container w-[130px] md:w-[180px] 2xl:w-[200px] flex-shrink-0">
-      <img
-        src={image}
-        alt={name}
-        className="client-image group-hover:scale-[1.05] d-block rounded-xl mx-auto hover:border hover:border-gold"
-      />
-    </div>
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="client-slide group flex flex-col items-center "
+            >
+              {/* Image */}
+              <div className="client-image-container w-[100%] flex-shrink-0">
+                <img
+                  src={image}
+                  alt={name}
+                  className="client-image d-block rounded-xl mx-auto hover:border hover:border-gold"
+                />
+              </div>
 
-    {/* Text */}
-    <div className="client-text-container text-center mt-2 w-full">
-      <p className="text-[#FEF7E4] client-name md:text-xl break-words">
-        {name}
-      </p>
-    </div>
-  </a>
-</SwiperSlide>
-
+              {/* Text */}
+              <div className="client-text-container text-center  w-full">
+                <p className="text-[#FEF7E4] client-name md:text-xl break-words">
+                  {name}
+                </p>
+              </div>
+            </a>
+          </SwiperSlide>
         ))}
       </Swiper>
     </div>
