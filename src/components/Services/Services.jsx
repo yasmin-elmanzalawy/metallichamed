@@ -12,26 +12,10 @@ export default function Services() {
       title: "Video Editing",
       desc: "I've worked on the following types: Gaming, Vlogs, Podcasts/Shows, Documentaries, Ads, TikTok, UGC, Events Recaps, Medical, Stylish, Highlights, Trailers, Memes, Case Studies, Announcements, Q&A, Music Clips, Islamic, Football, Tests/Drafts, IRL Challenges.",
     },
-    {
-      icon: tiktok,
-      title: "Short-Form Content",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laborum magnam sunt, omnis dignissimos porro neque quibusdam veritatis sed distinctio sequi aliquam consectetur perspiciatis aut ut minus! Nisi, totam distinctio.",
-    },
-    {
-      icon: thumbnail,
-      title: "Thumbnails",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laborum magnam sunt, omnis dignissimos porro neque quibusdam veritatis sed distinctio sequi aliquam consectetur perspiciatis aut ut minus! Nisi, totam distinctio.",
-    },
-    {
-      icon: events,
-      title: "Event & Social Designs",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laborum magnam sunt, omnis dignissimos porro neque quibusdam veritatis sed distinctio sequi aliquam consectetur perspiciatis aut ut minus! Nisi, totam distinctio.",
-    },
-    {
-      icon: community,
-      title: "Community Management",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laborum magnam sunt, omnis dignissimos porro neque quibusdam veritatis sed distinctio sequi aliquam consectetur perspiciatis aut ut minus! Nisi, totam distinctio.",
-    },
+    { icon: tiktok, title: "Short-Form Content" },
+    { icon: thumbnail, title: "Thumbnails" },
+    { icon: events, title: "Event & Social Designs" },
+    { icon: community, title: "Community Management" },
   ];
 
   return (
@@ -42,30 +26,24 @@ export default function Services() {
         </h3>
       </div>
 
-      {/* First row */}
-      <div className="flex flex-wrap justify-center gap-8 mb-8">
-        {services.slice(0, 3).map((service, index) => (
-          <div
-            key={index}
-            className="p-6 rounded-2xl hover:shadow-xl txt-size hover:scale-105 transition duration-300 w-full lg:w-[30%] flex flex-col items-center text-center"
-          >
-            <img src={service.icon} alt={service.title} className="w-28 h-28 mb-4" />
-            <h4 className="font-semibold text-gold mb-2">{service.title}</h4>
-            <p className="text-neutral-white leading-relaxed">{service.desc}</p>
-          </div>
-        ))}
+      {/* Video Editing full row */}
+      <div className="flex justify-center mb-12">
+        <div className="p-6 rounded-2xl txt-size hover:scale-105 transition duration-300 w-full lg:w-[80%] flex flex-col items-center text-center">
+          <img src={services[0].icon} alt={services[0].title} className="w-28 h-28 mb-4" />
+          <h4 className="font-semibold text-gold mb-2">{services[0].title}</h4>
+          <p className="text-neutral-white leading-relaxed">{services[0].desc}</p>
+        </div>
       </div>
 
-      {/* Second row */}
+      {/* Other services (icons + titles only) */}
       <div className="flex flex-wrap justify-center gap-8">
-        {services.slice(3).map((service, index) => (
+        {services.slice(1).map((service, index) => (
           <div
             key={index}
-            className=" p-6 rounded-2xl  hover:shadow-xl hover:scale-105 txt-size transition duration-300 w-full lg:w-[30%] flex flex-col items-center text-center"
+            className="p-6 rounded-2xl txt-size hover:scale-105 transition duration-300 w-full sm:w-[80%] lg:w-[22%] flex flex-col items-center text-center"
           >
             <img src={service.icon} alt={service.title} className="w-28 h-28 mb-4" />
-            <h4 className="font-semibold text-gold mb-2">{service.title}</h4>
-            <p className="text-neutral-white leading-relaxed">{service.desc}</p>
+            <h4 className="font-semibold text-gold">{service.title}</h4>
           </div>
         ))}
       </div>
