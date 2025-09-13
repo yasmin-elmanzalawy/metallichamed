@@ -3,11 +3,11 @@ import Navbar from "../Navbar/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Example card images and thumbnails
-import gaming from "../../assets/thumbnails/Gaming2.png";
-import vlog from "../../assets/thumbnails/vlogs.png";
+import gaming from "../../assets/thumbnails/gaming.avif";
+import vlog from "../../assets/thumbnails/irl.avif";
 import fea1 from "../../assets/thumbnails/dum.jpg";
 import ads from "../../assets/thumbnails/ads.png";
-import mazag from "../../assets/thumbnails/bestof/3.avif";
+import mazag from "../../assets/thumbnails/bestof/3.avif"; 
 
 import Footer from "../Footer/Footer";
 
@@ -28,8 +28,23 @@ const irlLong = import.meta.glob("../../assets/thumbnails/irl/long/*.avif", {
 const irlShort = import.meta.glob("../../assets/thumbnails/irl/short/*.avif", {
   eager: true,
 });
-// IRL
+// ads
 const adsLong = import.meta.glob("../../assets/thumbnails/ads/*.avif", {
+  eager: true,
+});
+// Podcast
+const pocast = import.meta.glob("../../assets/thumbnails/podcast/*.avif", {
+  eager: true,
+});
+// Podcast
+const memes = import.meta.glob("../../assets/thumbnails/memes/*.avif", {
+  eager: true,
+});
+// others
+const otherslg = import.meta.glob("../../assets/thumbnails/others/long/*.avif", {
+  eager: true,
+});
+const otherssh = import.meta.glob("../../assets/thumbnails/others/short/*.avif", {
   eager: true,
 });
 
@@ -48,6 +63,10 @@ const gs = toArray(gamingShort);
 const il = toArray(irlLong);
 const is = toArray(irlShort);
 const ad = toArray(adsLong);
+const pc = toArray(pocast);
+const meme = toArray(memes);
+const otherlg = toArray(otherslg);
+const othersh = toArray(otherssh);
 
 const cards = [
   {
@@ -355,7 +374,7 @@ const cards = [
       },
       {
         id: 8,
-        title: "CANCEL",
+        title: "Mazaj - مزاج",
         thumbnail: il[7],
         url: "https://youtu.be/zuaFGp5EhQM",
       },
@@ -486,36 +505,37 @@ const cards = [
     name: "Podcast",
     image: fea1,
     shortVideos: [
-      {
-        id: 1,
-        title: "Amados Strategies",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@amados.strategies/video/7522954106890161416",
-      },
-      {
-        id: 2,
-        title: "Amados Strategies",
-        thumbnail: fea1,
-        url: "https://www.tiktok.com/@amados.strategies/video/7521756129647430919",
-      },
+      
     ],
     longVideos: [
       {
         id: 1,
         title: "Amados Strategies",
-        thumbnail: fea1,
-        url: "https://youtu.be/Q2m8f8n-vKs",
+        thumbnail: pc[0],
+        url: "https://www.tiktok.com/@amados.strategies/video/7522954106890161416",
       },
       {
         id: 2,
         title: "Amados Strategies",
-        thumbnail: fea1,
-        url: "https://youtu.be/pQ1boyotNns",
+        thumbnail: pc[1],
+        url: "https://www.tiktok.com/@amados.strategies/video/7521756129647430919",
       },
       {
         id: 3,
+        title: "Amados Strategies",
+        thumbnail:  pc[2],
+        url: "https://youtu.be/Q2m8f8n-vKs",
+      },
+      {
+        id: 4,
+        title: "Amados Strategies",
+        thumbnail:  pc[3],
+        url: "https://youtu.be/pQ1boyotNns",
+      },
+      {
+        id: 5,
         title: "e-Talks",
-        thumbnail: fea1,
+        thumbnail:  pc[4],
         url: "https://youtu.be/qZn0HEBTXuY",
       },
     ],
@@ -583,8 +603,9 @@ const cards = [
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1mkgB0cgpt00PtSmbzIRFOzHfrzJCy7hi/view?usp=sharing",
       },
+      
     ],
-    longVideos: [], // 👈 leave empty if you only want them short form
+    longVideos: [],
   },
   {
     id: 7,
@@ -594,66 +615,68 @@ const cards = [
       {
         id: 1,
         title: "Arena Esports",
-        thumbnail: fea1,
+        thumbnail: othersh[0],
         url: "https://www.instagram.com/reel/CtcL9cyRR-c",
       },
       {
         id: 2,
         title: "The Ultimates",
-        thumbnail: fea1,
+        thumbnail: othersh[1],
         url: "https://x.com/TheUltimatesgg/status/1654913920849829888",
       },
-      {
-        id: 3,
-        title: "AboFlah",
-        thumbnail: fea1,
-        url: "https://www.youtube.com/watch?v=1KJaZoZgTvw",
-      },
+   
 
       {
-        id: 8,
+        id: 3,
         title: "Claritine Arabia",
-        thumbnail: fea1,
+        thumbnail: othersh[2],
         url: "https://www.facebook.com/reel/1435410481075856",
       },
     ],
     longVideos: [
       {
-        id: 4,
+        id: 1,
         title: "B3shr",
-        thumbnail: fea1,
+        thumbnail: otherlg[0],
         url: "https://youtu.be/N0dkH7sx4LU",
       },
       {
-        id: 5,
+        id: 2,
         title: "B3shr",
-        thumbnail: fea1,
+        thumbnail: otherlg[1],
         url: "https://youtu.be/QiL6CgvH_rU",
       },
       {
-        id: 6,
+        id: 3,
         title: "OFFSIDE",
-        thumbnail: fea1,
+        thumbnail: otherlg[2],
         url: "https://www.youtube.com/watch?v=o12FbYlg8Fw",
       },
       {
         id: 7,
         title: "Golazo",
-        thumbnail: fea1,
+        thumbnail: otherlg[3],
         url: "https://youtu.be/dMjK6BbLmqE",
       },
+    
       {
         id: 9,
         title: "Ulta Beauty V3 Energetic",
-        thumbnail: fea1,
+        thumbnail: otherlg[4],
         url: "https://drive.google.com/file/d/11buqEQnX5GMZUWAxgbRuPiJDdJ5QHRWZ/view?usp=sharing",
       },
       {
         id: 10,
         title: "Ulta Beauty V3 Stylish",
-        thumbnail: fea1,
+        thumbnail: otherlg[4],
         url: "https://drive.google.com/file/d/11buqEQnX5GMZUWAxgbRuPiJDdJ5QHRWZ/view?usp=sharing",
       },
+           {
+        id: 3,
+        title: "AboFlah",
+        thumbnail: otherlg[5],
+        url: "https://www.youtube.com/watch?v=1KJaZoZgTvw",
+      }
     ],
   },
   {
@@ -715,19 +738,19 @@ const cards = [
       {
         id: 1,
         title: "Arabian League Stream Moment",
-        thumbnail: fea1,
+        thumbnail: meme[0],
         url: "https://drive.google.com/file/d/1NtQLYnsNyjnj8-vueycTVkNmSsMRhMEn/view",
       },
       {
         id: 2,
         title: "Arena Esports",
-        thumbnail: fea1,
+        thumbnail: meme[1],
         url: "https://www.instagram.com/reel/CuFCPfZIO7C",
       },
       {
         id: 3,
         title: "Arena Esports",
-        thumbnail: fea1,
+        thumbnail: meme[2],
         url: "https://www.tiktok.com/@tundraesports/video/7462308222754426144",
       },
     ],
@@ -735,6 +758,44 @@ const cards = [
   },
   {
     id: 10,
+    name: "Tiktoks",
+    image: fea1,
+    shortVideos: [
+      {
+        id: 1,
+        title: "Arabian League Stream Moment",
+        thumbnail:fea1,
+        url: "https://www.tiktok.com/@colbymartel/video/7503329191841107246?lang=en",
+      },
+      {
+        id: 2,
+        title: "Arena Esports",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@colbymartel/video/7502463977889418542?lang=en",
+      },
+      {
+        id: 3,
+        title: "Arena Esports",
+        thumbnail: fea1,
+        url: "https://www.tiktok.com/@colbymartel/video/7499572035417296158?lang=en",
+      },
+      {
+        id: 4,
+        title: "Arena Esports",
+        thumbnail: fea1,
+        url: "https://www.youtube.com/shorts/Y-jJkZfdf3U",
+      },
+      {
+        id: 3,
+        title: "Arena Esports",
+        thumbnail: fea1,
+        url: "https://www.youtube.com/shorts/zADUh86ejKw",
+      },
+    ],
+    longVideos: [],
+  },
+  {
+    id: 11,
     image: fea1,
     name: "Tests",
     shortVideos: [
@@ -804,6 +865,18 @@ const cards = [
         thumbnail: fea1,
         url: "https://drive.google.com/file/d/1zj6G4cBdJgFzuYvwUVV-dPWL4kmvulGy/view?usp=sharing",
       },
+      {
+        id: 12,
+        title: "MUDWTR Test Ad",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1K0eXS2QNO4M4sdjN4mPc_vD6CVrB3Pek/view?usp=sharing",
+      },
+      {
+        id: 13,
+        title: "SNAPR",
+        thumbnail: fea1,
+        url: "https://drive.google.com/file/d/1-_-O3EEXJQI9xmWGlM2f5Ryb2PiUCpGC/view?usp=drive_link",
+      },
     ],
     longVideos: [],
   },
@@ -872,10 +945,14 @@ export default function Videos() {
             </h2> */}
 
             {/* Tabs (hide for Ads card) */}
-            {selectedCard.name !== "Ads" &&
+            
+            {
+             selectedCard.name === "Podcast" ||
+             selectedCard.name !== "Ads" &&
               selectedCard.name !== "Documentary" &&
               selectedCard.name !== "UGC" &&
               selectedCard.name !== "Memes" &&
+              selectedCard.name !== "Tiktoks" &&
               selectedCard.name !== "Tests" && (
                 <div className="flex gap-5 md:mt-[20px] mt-[20px] mb-6 max-w-md mx-auto rounded-md overflow-hidden">
                   <button
@@ -910,10 +987,12 @@ export default function Videos() {
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
                 className={` grid gap-6 ${
+                  selectedCard.name === "Podcast" ||
                   selectedCard.name === "Ads" ||
                   selectedCard.name === "Documentary" ||
                   selectedCard.name === "UGC" ||
                   selectedCard.name === "Memes" ||
+                  selectedCard.name === "Tiktoks" ||
                   selectedCard.name === "Tests"
                     ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
                     : activeTab === "short"
@@ -921,10 +1000,12 @@ export default function Videos() {
                     : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
                 }`}
               >
-                {(selectedCard.name === "Ads" ||
+                {(
+                  selectedCard.name === "Podcast" ||
                 selectedCard.name === "Documentary" ||
                 selectedCard.name === "UGC" ||
                 selectedCard.name === "Memes" ||
+                selectedCard.name === "Tiktoks" ||
                 selectedCard.name === "Tests"
                   ? [...selectedCard.shortVideos, ...selectedCard.longVideos]
                   : activeTab === "short"
@@ -947,7 +1028,7 @@ export default function Videos() {
                           alt={video.title}
                           className={`w-full rounded-xl object-cover shadow-sm hover:shadow-lg transition-shadow duration-300
           ${
-            selectedCard.name === "Ads" ||
+            selectedCard.name === "Podcast" ||
             selectedCard.name === "Documentary" ||
             selectedCard.name === "UGC" ||
             selectedCard.name === "Tests"
