@@ -6,7 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import gaming from "../../assets/thumbnails/gaming.avif";
 import vlog from "../../assets/thumbnails/irl.avif";
 import fea1 from "../../assets/thumbnails/dum.jpg";
-import ads from "../../assets/thumbnails/ads.png";
+import ads from "../../assets/thumbnails/ads.avif";
+import podcast from "../../assets/thumbnails/podcast.avif";
+import tiktok from "../../assets/thumbnails/tiktok.avif";
+import doc from "../../assets/thumbnails/doc.avif";
 import mazag from "../../assets/thumbnails/bestof/3.avif"; 
 
 import Footer from "../Footer/Footer";
@@ -503,7 +506,7 @@ const cards = [
   {
     id: 4,
     name: "Podcast",
-    image: fea1,
+    image: podcast,
     shortVideos: [
       
     ],
@@ -543,7 +546,7 @@ const cards = [
   {
     id: 5,
     name: "Documentary",
-    image: fea1,
+    image: doc,
     shortVideos: [
       {
         id: 2,
@@ -759,7 +762,7 @@ const cards = [
   {
     id: 10,
     name: "Tiktoks",
-    image: fea1,
+    image: tiktok,
     shortVideos: [
       {
         id: 1,

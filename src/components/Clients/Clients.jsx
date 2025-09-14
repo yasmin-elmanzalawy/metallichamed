@@ -144,7 +144,7 @@ export default function Clients() {
                   className="object-cover w-full h-full rounded-lg"
                 />
               </a>
-              <a
+              {/* <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -152,7 +152,7 @@ export default function Clients() {
                   txt-size mt-2"
               >
                 {name}
-              </a>
+              </a> */}
 
               {/* Show subscribers only for content creators */}
               {activeTab === "contentCreators" && subscribers !== undefined && (
