@@ -135,7 +135,7 @@ export default function Endorsements() {
 
   return (
    <div>
-     <div className="min-h-[90vh] mt-28">
+     <div className="min-h-[90vh] mt-32">
       <motion.div
         key="cards"
         initial={{ scale: 0.9, opacity: 0 }}
