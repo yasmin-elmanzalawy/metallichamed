@@ -4,7 +4,8 @@ import whatsApp from "../../assets/icons/whatsapp.png";
 
 export default function Footer() {
   return (
-    <footer
+    <div>
+      <footer
       id="footer"
       className="bg-[#210434] text-white py-10 p-6 sm:p-10 lg:px-12 rounded-t-3xl"
     >
@@ -117,5 +118,9 @@ export default function Footer() {
         }
       `}</style>
     </footer>
+    {/* <div className=" px-12 py-2 text-neutral-50 bg-[#170324]">
+      © 2025 All Rights Reserved. Created by <span className="text-gold">Yarci.</span>
+    </div> */}
+    </div>
   );
 }

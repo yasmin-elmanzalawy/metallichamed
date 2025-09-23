@@ -8,6 +8,7 @@ import hamed from "../../assets/hamed.avif";
 import ClientsCarousel from "../ClientsCarousel/ClientsCarousel";
 import Footer from "../Footer/Footer";
 import Services from "../Services/Services";
+import Endorsement from "../Endorsement/Endorsement";
 
 export default function Home() {
   return (

@@ -7,6 +7,7 @@ import Clients from './components/Clients/Clients';
 import Videos from './components/Videos/Videos';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Design from './components/Design/Design';
+import Endorsements from './components/Endorsement/Endorsement';
 
 function App() {
   const [snap, setSnap] = useState(false);
@@ -28,6 +29,7 @@ function App() {
           <Route path="/clients" element={<Clients />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/design" element={<Design />} />
+          <Route path="/endorsements" element={<Endorsements></Endorsements>} />
         </Routes>
       </div>
     </>

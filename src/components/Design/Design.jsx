@@ -35,10 +35,10 @@ export default function Design() {
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="md:mx-24 mx-4 md:p-12 px-5 py-12 bg-[#662390] m-8 rounded-[30px] min-h-screen"
+          className="md:mx-24 mx-4  py-12 bg-[#662390] m-8 rounded-[30px] min-h-screen"
         >
           {/* Arab Woman Awards Section */}
-          <div className="mt-16 flex flex-col items-center pb-12 mb-12">
+          <div className="flex flex-col items-center pb-12 mb-12">
             <h3
               className="h-[60px] flex items-center justify-center text-gold 
               text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
@@ -67,10 +67,10 @@ export default function Design() {
             </div>
           </div>
 
-          <div className="w-[70%] h-[2px] mx-auto bg-gradient-to-r from-transparent via-[#FED03B] to-transparent"></div>
+          {/* <div className="w-[70%] h-[2px] mx-auto bg-gradient-to-r from-transparent via-[#FED03B] to-transparent"></div> */}
 
           {/* Fortnite Section */}
-          <div className="mt-16 flex flex-col items-center pb-12 mb-12">
+          <div className="mt-16 flex flex-col items-center pb-12 mb-12 w-[100%] py-12 bg-[#4f1b72]">
             <h3
               className="h-[60px] flex items-center justify-center text-gold 
               text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
@@ -98,7 +98,7 @@ export default function Design() {
             </div>
           </div>
 
-          <div className="w-[70%] h-[2px] mx-auto bg-gradient-to-r from-transparent via-[#FED03B] to-transparent"></div>
+          {/* <div className="w-[70%] h-[2px] mx-auto bg-gradient-to-r from-transparent via-[#FED03B] to-transparent"></div> */}
 
           {/* PlayStation + Voltech Section */}
           <div className="mt-16 flex flex-col items-center">

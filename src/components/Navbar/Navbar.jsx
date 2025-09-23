@@ -15,7 +15,7 @@ export default function Navbar() {
     { label: "Videos", to: "/videos" },
     { label: "Designs", to: "/design" },
     { label: "Clients", to: "/clients" },
-    { label: "Endorsements", to: "/#endorsements" },
+    { label: "Endorsements", to: "/endorsements" },
     { label: "About", to: "/#about" },
     { label: "CV", to: `${baseURL}Mohamed-Hamed-Resume.pdf`, download: true },
     { label: "Contact", to: "#" },
