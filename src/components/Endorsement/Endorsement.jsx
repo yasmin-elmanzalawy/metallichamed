@@ -75,7 +75,7 @@ function EndorsementCard({ img, name, text }) {
   return (
     <div
       className="relative flex items-start  p-8 rounded-2xl overflow-hidden leading-relaxed
-      transition-all duration-[480ms] ease-[cubic-bezier(0.23,1,0.32,1)] txt-size
+      transition-all duration-[480ms] ease-[cubic-bezier(0.23,1,0.32,1)] txt-size justify-center
       hover:scale-105 min-h-[500px] m-5 shadow-lg hover:shadow-2xl border border-[#FFCC02]
       bg-cover bg-center"
       style={{ backgroundImage: `url(${bg} )` }}
