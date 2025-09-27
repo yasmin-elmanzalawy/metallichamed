@@ -154,7 +154,7 @@ export default function ClientsCarousel() {
               className="client-slide group flex flex-col items-center "
             >
               {/* Image */}
-              <div className="client-image-container w-[100%] flex-shrink-0">
+              <div className="client-image-container w-[80%] flex-shrink-0">
                 <img
                   src={image}
                   alt={name}

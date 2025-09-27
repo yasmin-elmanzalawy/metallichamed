@@ -10,6 +10,11 @@ import ads from "../../assets/thumbnails/ads.avif";
 import podcast from "../../assets/thumbnails/podcast.avif";
 import tiktok from "../../assets/thumbnails/tiktok.avif";
 import doc from "../../assets/thumbnails/doc.avif";
+import ugc from "../../assets/thumbnails/ugc.avif";
+import mem from "../../assets/thumbnails/memes.avif";
+import test from "../../assets/thumbnails/test.avif";
+import highlight from "../../assets/thumbnails/highlights.avif";
+import others from "../../assets/thumbnails/others.avif";
 import mazag from "../../assets/thumbnails/bestof/3.avif"; 
 
 import Footer from "../Footer/Footer";
@@ -566,7 +571,7 @@ const cards = [
   },
   {
     id: 6,
-    image: fea1,
+    image: ugc,
     name: "UGC",
     shortVideos: [
       {
@@ -613,7 +618,7 @@ const cards = [
   {
     id: 7,
     name: "Other",
-    image: fea1,
+    image: others,
     shortVideos: [
       {
         id: 1,
@@ -685,7 +690,7 @@ const cards = [
   {
     id: 8,
     name: "Highlights",
-    image: fea1,
+    image: highlight,
     shortVideos: [
       {
         id: 1,
@@ -736,7 +741,7 @@ const cards = [
   {
     id: 9,
     name: "Memes",
-    image: fea1,
+    image: mem,
     shortVideos: [
       {
         id: 1,
@@ -799,7 +804,7 @@ const cards = [
   },
   {
     id: 11,
-    image: fea1,
+    image: test,
     name: "Tests",
     shortVideos: [
       {
@@ -890,12 +895,13 @@ export default function Videos() {
   const [activeTab, setActiveTab] = useState("short");
 
   return (
-    <div className="min-h-screen bg-[#30054A] text-white ">
-      <div className="mb-28">
+    <div className=" bg-[#30054A] text-white  ">
+      <div className="mb-24 md:mb-32">
         <Navbar />
       </div>
 
-      <AnimatePresence mode="wait">
+      <div className=" min-h-[90vh] mb-16">
+        <AnimatePresence mode="wait">
         {!selectedCard ? (
           // === Cards Grid ===
           <motion.div
@@ -905,21 +911,24 @@ export default function Videos() {
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="md:mx-24 px-5 py-12 mx-4 md:p-12 grid grid-cols-1 md:grid-cols-4 2xl:grid-cols-4
-            [@media(min-width:1920px)]:grid-cols-5 gap-6 bg-[#662390] m-8 rounded-[30px] min-h-screen"
+            [@media(min-width:1920px)]:grid-cols-5 gap-6 bg-[#662390] m-8 rounded-[30px] "
           >
             {cards.map((card) => (
-              <div
-                key={card.id}
-                onClick={() => setSelectedCard(card)}
-                className="cursor-pointer flex flex-col items-center transition-transform"
-              >
-                <img
-                  src={card.image}
-                  alt={card.name}
-                  className="object-cover rounded-lg border border-transparent transition-transform duration-300 hover:scale-105 hover:border-gold"
-                />
-                <p className="mt-2 text-gold font-semibold">{card.name}</p>
-              </div>
+            <div
+  key={card.id}
+  onClick={() => {
+    setSelectedCard(card);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // 👈 scrolls to top
+  }}
+  className="cursor-pointer flex flex-col items-center transition-transform"
+>
+  <img
+    src={card.image}
+    alt={card.name}
+    className="object-cover rounded-lg border border-transparent transition-transform duration-300 hover:scale-105 hover:border-gold"
+  />
+</div>
+
             ))}
           </motion.div>
         ) : (
@@ -938,7 +947,7 @@ export default function Videos() {
                 setSelectedCard(null);
                 setActiveTab("short");
               }}
-              className="mb-6 px-4 py-2 bg-gold text-black txt-size rounded-lg hover:bg-yellow-400 transition"
+              className="mb-6 px-4 py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition"
             >
               ← Back
             </button>
@@ -959,7 +968,7 @@ export default function Videos() {
               selectedCard.name !== "Tests" && (
                 <div className="flex gap-5 md:mt-[20px] mt-[20px] mb-6 max-w-md mx-auto rounded-md overflow-hidden">
                   <button
-                    className={`btn txt-size flex-1 text-center font-semibold transition-colors duration-300 ${
+                    className={`btn text-sm md:text-lg flex-1 text-center font-semibold transition-colors duration-300 ${
                       activeTab === "short"
                         ? "bg-[#30054A] text-gold"
                         : "bg-[#662390] text-white"
@@ -969,7 +978,7 @@ export default function Videos() {
                     Short Form
                   </button>
                   <button
-                    className={`btn txt-size flex-1 text-center font-semibold transition-colors duration-300 ${
+                    className={`btn text-sm md:text-lg flex-1 text-center font-semibold transition-colors duration-300 ${
                       activeTab === "long"
                         ? "bg-[#30054A] text-gold"
                         : "bg-[#662390] text-white"
@@ -1042,7 +1051,7 @@ export default function Videos() {
           }`}
                         />
                         {/* Dark overlay on hover */}
-                        <div className="absolute inset-0 rounded-xl bg-black/0 hover:bg-black/20 transition-colors duration-300"></div>
+                        <div className="absolute inset-0 rounded-xl bg-black/0 hover:bg-black/30 transition-colors duration-300"></div>
                       </div>
 
                       <p className="text-[#E5D4D6] txt-size font-semibold text-center py-2">
@@ -1056,6 +1065,9 @@ export default function Videos() {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
+
+      <Footer></Footer>
     </div>
   );
 }

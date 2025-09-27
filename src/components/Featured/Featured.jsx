@@ -157,7 +157,7 @@ export default function Featured() {
                 rel="noopener noreferrer"
                 className="block group "
               >
-                <div className="relative w-full [@media(min-width:1920px)]:h-[180px] h-[150px] rounded-[20px] p-[3px] transition-transform duration-300 group-hover:scale-[1.03]">
+                <div className="relative w-full [@media(min-width:1920px)]:h-[180px] h-[150px] rounded-[20px] p-[3px] transition-transform duration-300  group-hover:scale-[1.03]">
                   <img
                     src={video.img}
                     alt={video.desc}

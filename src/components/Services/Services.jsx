@@ -29,7 +29,7 @@ export default function Services() {
       {/* Video Editing full row */}
       <div className="flex justify-center mb-12">
         <div className="p-6 rounded-2xl txt-size hover:scale-105 transition duration-300 w-full lg:w-[80%] flex flex-col items-center text-center">
-          <img src={services[0].icon} alt={services[0].title} className="w-28 h-28 mb-4" />
+          <img src={services[0].icon} alt={services[0].title} className="w-20 h-20  md:w-28 md:h-28 mb-4" />
           <h4 className="font-semibold text-gold mb-2">{services[0].title}</h4>
           <p className="text-neutral-white leading-relaxed">{services[0].desc}</p>
         </div>
@@ -42,7 +42,7 @@ export default function Services() {
             key={index}
             className="p-6 rounded-2xl txt-size hover:scale-105 transition duration-300 w-full sm:w-[80%] lg:w-[22%] flex flex-col items-center text-center"
           >
-            <img src={service.icon} alt={service.title} className="w-28 h-28 mb-4" />
+            <img src={service.icon} alt={service.title} className="w-20 h-20  md:w-28 md:h-28 mb-4" />
             <h4 className="font-semibold text-gold">{service.title}</h4>
           </div>
         ))}

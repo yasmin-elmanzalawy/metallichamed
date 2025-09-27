@@ -100,9 +100,9 @@ export default function Clients() {
       <Navbar />
 
       {/* Navigation Tabs */}
-      <div className="flex gap-5 md:mt-[120px] mt-[110px] mb-6 max-w-lg mx-auto rounded-md overflow-hidden">
+      <div className="flex  md:mt-[120px] mt-[110px] gap-5 mb-6 max-w-lg mx-auto rounded-md overflow-hidden">
         <button
-          className={`btn flex-1 txt-size text-center font-semibold transition-colors duration-300 ${
+          className={`btn flex-1 text-sm md:text-lg ms-8 text-center font-semibold transition-colors duration-300 ${
             activeTab === "companies" ? "bg-[#662390] text-gold" : "bg-[#30054A] text-white"
           }`}
           onClick={() => setActiveTab("companies")}
@@ -110,7 +110,7 @@ export default function Clients() {
           Companies
         </button>
         <button
-          className={`btn flex-1 txt-size text-center font-semibold transition-colors duration-300 ${
+          className={`btn flex-1 text-sm md:text-lg me-8 text-center font-semibold transition-colors duration-300 ${
             activeTab === "contentCreators" ? "bg-[#662390] text-gold" : "bg-[#30054A] text-white"
           }`}
           onClick={() => setActiveTab("contentCreators")}
