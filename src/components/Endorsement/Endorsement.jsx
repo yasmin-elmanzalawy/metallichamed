@@ -15,14 +15,18 @@ import logo3 from "../../assets/creators/6.avif";
 import Jellypeanut from "../../assets/creators/7.avif";
 import swarmio from "../../assets/companies/12.avif";
 import Sofyan from "../../assets/creators/11.avif";
+import ahmed from "../../assets/creators/3.avif";
 import Footer from "../Footer/Footer";
+import cancelrec1 from "../../assets/recs/cancel1.ogg";
+import cancelrec2 from "../../assets/recs/cancel2.ogg";
+import ahmedrec from "../../assets/recs/ahmedshow.ogg";
 
 const endorsements = [
-   {
+  {
     id: 7,
     img: Sofyan,
     name: "Sofyan",
-    text: "Mohammed is easily one of the best editors I've ever worked with, for me what separates him from most editors is that he really knows how youtube works.",
+    text: "Mohammed is easily one of the best editors I've ever worked with, for me what separates him from most editors is that he really knows how youtube works. he knows how to use his editing skills to keep the audience engaged throughout the video and thus create good retention which is really the most important thing right? If you ever need an editor with really good YouTube knowledge, Mohammed is your guy!",
   },
   {
     id: 1,
@@ -30,26 +34,26 @@ const endorsements = [
     name: "B3shr",
     text: "You are great! The video is amazing!",
   },
-   
 
   {
     id: 3,
     img: logo3,
     name: "CANCEL",
-    text: "I worked with Mohammed for nearly 2 years. He provided me with world-class editing services that contributed to high growth in audience retention and engagement.",
-  },  {
+    text: "I worked with Mohammed for nearly 2 years. He provided me with world-class editing services that contributed to high growth in audience retention and engagement. Providing a perfect combination of editing skills and a sense of humor with maintaining a high level of professionalism, makes Mohammed a great added value to any media production project.",
+  },
+  {
+    id: 7,
+    img: ahmed,
+    name: "Ahmed Show",
+
+    rec: ahmedrec,
+  },
+  {
     id: 2,
     img: Jellypeanut,
     name: "Jellypeanut",
     text: "Honestly I love it,I think it is really good!",
   },
-  {
-    id: 8,
-    img: Sofyan,
-    name: "Sofyan",
-    text: "he knows how to use his editing skills to keep the audience engaged throughout the video and thus create good retention which is really the most important thing right? If you ever need an editor with really good YouTube knowledge, Mohammed is your guy!",
-  },
- 
   {
     id: 4,
     img: swarmio,
@@ -62,28 +66,29 @@ const endorsements = [
     name: "MySalahMat",
     text: "his is so good, Really impressed! love the colours and transitions, because its for kids it will keep them interested.",
   },
-   {
-    id: 6,
+  {
+    id: 3,
     img: logo3,
     name: "CANCEL",
-    text: "Providing a perfect combination of editing skills and a sense of humor with maintaining a high level of professionalism, makes Mohammed a great added value to any media production project.",
+
+    rec: [cancelrec1, cancelrec2],
   },
- 
 ];
 
-function EndorsementCard({ img, name, text }) {
+function EndorsementCard({ img, name, text, rec }) {
   return (
     <div
       className="relative flex items-start  p-8 rounded-2xl overflow-hidden leading-relaxed
       transition-all duration-[480ms] ease-[cubic-bezier(0.23,1,0.32,1)] txt-size justify-center
-      hover:scale-105 min-h-[500px] m-5 shadow-lg hover:shadow-2xl border border-[#FFCC02]
+      hover:scale-105 min-h-[550px] m-5 shadow-lg hover:shadow-2xl border border-[#FFCC02]
       bg-cover bg-center"
       style={{ backgroundImage: `url(${bg} )` }}
     >
-      {/* Overlay for readability */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-[#662390]/50"></div>
 
-      <div className="relative flex flex-col  h-full gap-4 text-neutral-50 z-10">
+      <div className="relative flex flex-col h-full gap-4 text-neutral-50 z-10">
+        {/* Avatar + Name */}
         <div className="flex flex-col items-center gap-3">
           <img
             src={img}
@@ -94,6 +99,8 @@ function EndorsementCard({ img, name, text }) {
             {name}
           </strong>
         </div>
+
+        {/* Quote + Text */}
         <div className="flex flex-col items-start gap-2">
           <svg
             viewBox="0 0 24 24"
@@ -107,6 +114,53 @@ function EndorsementCard({ img, name, text }) {
           </svg>
           <p className="opacity-80 text-base txt-lg">{text}</p>
         </div>
+
+        {/* Recordings (if any) */}
+        {rec &&
+          (Array.isArray(rec) ? (
+            rec.map((r, index) => (
+              <div
+                key={index}
+                className="w-full bg-[#30054A]/70 p-3 rounded-xl shadow-md flex items-center gap-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-8 h-8 flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="#FFCC02"
+                >
+                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.75-4.15v8.3A4.5 4.5 0 0 0 16.5 12zm-2.75-9v2.06c3.39.49 6 3.39 6 6.94s-2.61 6.45-6 6.94V21c4.56-.5 8-4.36 8-9s-3.44-8.5-8-9z" />
+                </svg>
+                <audio
+                  controls
+                  controlsList="nodownload"
+                  className="flex-1 accent-[#FFCC02] rounded-lg"
+                >
+                  <source src={r} type="audio/ogg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            ))
+          ) : (
+            <div className="w-full bg-[#30054A]/70 p-3 rounded-xl shadow-md flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-8 h-8 flex-shrink-0"
+                viewBox="0 0 24 24"
+                fill="#FFCC02"
+              >
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.75-4.15v8.3A4.5 4.5 0 0 0 16.5 12zm-2.75-9v2.06c3.39.49 6 3.39 6 6.94s-2.61 6.45-6 6.94V21c4.56-.5 8-4.36 8-9s-3.44-8.5-8-9z" />
+              </svg>
+              <audio
+                controls
+                controlsList="nodownload"
+                className="flex-1 accent-[#FFCC02] rounded-lg"
+              >
+                <source src={rec} type="audio/ogg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          ))}
       </div>
     </div>
   );
@@ -134,67 +188,66 @@ export default function Endorsements() {
   }, [navEls.prevEl, navEls.nextEl]);
 
   return (
-   <div>
-     <div className="min-h-[90vh] mt-32">
-      <motion.div
-        key="cards"
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-        className="md:mx-24 px-5 py-12 mx-4  md:p-12 mt-28 bg-[#662390] m-8 rounded-[30px]"
-      >
-        <div className="relative">
-          <Swiper
-            modules={[Navigation, Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1}
-            loop={true}
-            autoplay={{ delay: 2500, disableOnInteraction: false }}
-            onBeforeInit={(swiper) => {
-              swiperRef.current = swiper;
-            }}
-            breakpoints={{
-              640: { slidesPerView: 1 }, 
-              900: { slidesPerView: 2 }, 
-              1424: { slidesPerView: 3 },
-              1780: { slidesPerView: 4 },
-            }}
-          >
-            {endorsements.map((endorsement) => (
-              <SwiperSlide key={endorsement.id}>
-                <EndorsementCard {...endorsement} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+    <div>
+      <div className="min-h-[90vh] mt-32">
+        <motion.div
+          key="cards"
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.9, opacity: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="md:mx-24 px-5 py-12 mx-4  md:p-12 mt-28 bg-[#662390] m-8 rounded-[30px]"
+        >
+          <div className="relative">
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              spaceBetween={20}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{ delay: 2500, disableOnInteraction: false }}
+              onBeforeInit={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                900: { slidesPerView: 2 },
+                1424: { slidesPerView: 3 },
+                1780: { slidesPerView: 4 },
+              }}
+            >
+              {endorsements.map((endorsement) => (
+                <SwiperSlide key={endorsement.id}>
+                  <EndorsementCard {...endorsement} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-          {/* Custom Arrows */}
-          <div
-            ref={(el) => {
-              if (el && navEls.prevEl !== el)
-                setNavEls((s) => ({ ...s, prevEl: el }));
-            }}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-[60] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
-            aria-label="Previous"
-          >
-            <FaChevronLeft className="text-white text-2xl" />
+            {/* Custom Arrows */}
+            <div
+              ref={(el) => {
+                if (el && navEls.prevEl !== el)
+                  setNavEls((s) => ({ ...s, prevEl: el }));
+              }}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-[60] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
+              aria-label="Previous"
+            >
+              <FaChevronLeft className="text-white text-2xl" />
+            </div>
+
+            <div
+              ref={(el) => {
+                if (el && navEls.nextEl !== el)
+                  setNavEls((s) => ({ ...s, nextEl: el }));
+              }}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-[60] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
+              aria-label="Next"
+            >
+              <FaChevronRight className="text-white text-2xl" />
+            </div>
           </div>
-
-          <div
-            ref={(el) => {
-              if (el && navEls.nextEl !== el)
-                setNavEls((s) => ({ ...s, nextEl: el }));
-            }}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-[60] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
-            aria-label="Next"
-          >
-            <FaChevronRight className="text-white text-2xl" />
-          </div>
-        </div>
-      </motion.div>
-
+        </motion.div>
+      </div>
+      <Footer />
     </div>
-      <Footer />     
-   </div>
   );
 }

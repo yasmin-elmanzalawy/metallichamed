@@ -44,8 +44,24 @@ const adsLong = import.meta.glob("../../assets/thumbnails/ads/*.avif", {
 const pocast = import.meta.glob("../../assets/thumbnails/podcast/*.avif", {
   eager: true,
 });
-// Podcast
+// tests
+const tests = import.meta.glob("../../assets/thumbnails/tests/*.avif", {
+  eager: true,
+});
+// tests
+const docum = import.meta.glob("../../assets/thumbnails/doc/*.avif", {
+  eager: true,
+});
+// memes
 const memes = import.meta.glob("../../assets/thumbnails/memes/*.avif", {
+  eager: true,
+});
+// ugc
+const ug = import.meta.glob("../../assets/thumbnails/ugc/*.avif", {
+  eager: true,
+});
+// tiktoks
+const tk = import.meta.glob("../../assets/thumbnails/tiktok/*.avif", {
   eager: true,
 });
 // others
@@ -53,6 +69,13 @@ const otherslg = import.meta.glob("../../assets/thumbnails/others/long/*.avif", 
   eager: true,
 });
 const otherssh = import.meta.glob("../../assets/thumbnails/others/short/*.avif", {
+  eager: true,
+});
+// highlights
+const hlg = import.meta.glob("../../assets/thumbnails/highlights/long/*.avif", {
+  eager: true,
+});
+const hls = import.meta.glob("../../assets/thumbnails/highlights/short/*.avif", {
   eager: true,
 });
 
@@ -72,9 +95,15 @@ const il = toArray(irlLong);
 const is = toArray(irlShort);
 const ad = toArray(adsLong);
 const pc = toArray(pocast);
+const t = toArray(tests);
+const u = toArray(ug);
+const dc = toArray(docum);
 const meme = toArray(memes);
 const otherlg = toArray(otherslg);
 const othersh = toArray(otherssh);
+const hs = toArray(hls);
+const hl = toArray(hlg);
+const tic = toArray(tk);
 
 const cards = [
   {
@@ -177,7 +206,7 @@ const cards = [
       },
       {
         id: 16,
-        title: "arenaesportsae",
+        title: "CoD Play Smart",
         thumbnail: gs[15],
         url: "https://drive.google.com/file/d/1Fdvd_J_h1FjkHahvCEiTUUVUWkKUJm5q/view",
       },
@@ -556,7 +585,7 @@ const cards = [
       {
         id: 2,
         title: "GAZA Genocide Film Documentary",
-        thumbnail: fea1,
+        thumbnail: dc[0],
         url: "https://youtu.be/I4GOsT57mDA",
       },
     ],
@@ -564,7 +593,7 @@ const cards = [
       {
         id: 1,
         title: "The Re-engineered Hope ",
-        thumbnail: fea1,
+        thumbnail: dc[1],
         url: "https://youtu.be/jGtL8l7NjCA",
       },
     ],
@@ -577,38 +606,38 @@ const cards = [
       {
         id: 1,
         title: "DL Media Test 1",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1bZhVpL0ovO3cXcRzP_SPLZ-C87TWzRQk/view?usp=sharing",
+        thumbnail: u[0],
+        url: "https://drive.google.com/file/d/1WuD9t_vd8YHg6Qk6Y-XWyQrokwN1DmyN/view?usp=sharing&t=1 ",
       },
       {
         id: 2,
         title: "Adjustable Glasses",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1WuD9t_vd8YHg6Qk6Y-XWyQrokwN1DmyN/view?usp=sharing&t=1",
+        thumbnail: u[1],
+        url: "https://drive.google.com/file/d/1bZhVpL0ovO3cXcRzP_SPLZ-C87TWzRQk/view?usp=sharing",
       },
 
       {
         id: 3,
         title: "Head Flashlight",
-        thumbnail: fea1,
+        thumbnail: u[2],
         url: "https://drive.google.com/file/d/1wXJx6zrkR8qaW_rCQ5lb00T0ZEvaZ0AR/view?usp=sharing",
       },
       {
         id: 4,
         title: "Heater",
-        thumbnail: fea1,
+        thumbnail: u[3],
         url: "https://drive.google.com/file/d/12-LP9tfzuGyQT9gsopfrmNEVDjr3J7oP/view?usp=sharing",
       },
       {
         id: 5,
         title: "Iconic Air Purifier",
-        thumbnail: fea1,
+        thumbnail: u[4],
         url: "https://drive.google.com/file/d/1NDUWJdPoyFtaNAOuFuJ6mYPN1xF7tdTF/view?usp=sharing",
       },
       {
         id: 6,
         title: "Mini Magnet Flashlight",
-        thumbnail: fea1,
+        thumbnail: u[5],
         url: "https://drive.google.com/file/d/1mkgB0cgpt00PtSmbzIRFOzHfrzJCy7hi/view?usp=sharing",
       },
       
@@ -695,25 +724,25 @@ const cards = [
       {
         id: 1,
         title: "Arena Esports",
-        thumbnail: fea1,
+        thumbnail: hs[0],
         url: "https://www.instagram.com/reel/Cvm7Wx1vxZQ",
       },
       {
         id: 2,
         title: "Gamer Grounds Philippines",
-        thumbnail: fea1,
+        thumbnail: hs[1],
         url: "https://www.facebook.com/reel/1202619947281518",
       },
       {
         id: 3,
         title: "ZainEsports",
-        thumbnail: fea1,
+        thumbnail: hs[2],
         url: "https://www.instagram.com/reel/DAd49Q9oUI8",
       },
       {
         id: 4,
         title: "OoredooEZ",
-        thumbnail: fea1,
+        thumbnail: hs[3],
         url: "https://www.instagram.com/reel/CnhjV7-J3Ty",
       },
     ],
@@ -721,19 +750,19 @@ const cards = [
       {
         id: 5,
         title: "(OoredooEZ) Community Highlights",
-        thumbnail: fea1,
+        thumbnail: hl[0],
         url: "https://drive.google.com/file/d/15mPHuBRUAp4qVrD-H23z3U-4IWvcvM5i/view",
       },
       {
         id: 6,
         title: "Frenzy",
-        thumbnail: fea1,
+        thumbnail: hl[1],
         url: "https://www.facebook.com/watch/?v=3733447676883448",
       },
       {
         id: 7,
         title: "PUBG: BATTLEGROUNDS",
-        thumbnail: fea1,
+        thumbnail: hl[2],
         url: "https://www.facebook.com/watch/?v=1025731131162862",
       },
     ],
@@ -771,32 +800,32 @@ const cards = [
     shortVideos: [
       {
         id: 1,
-        title: "Arabian League Stream Moment",
-        thumbnail:fea1,
+        title: "Colbymartel",
+        thumbnail:tic[0],
         url: "https://www.tiktok.com/@colbymartel/video/7503329191841107246?lang=en",
       },
       {
         id: 2,
-        title: "Arena Esports",
-        thumbnail: fea1,
+        title: "Colbymartel",
+        thumbnail: tic[1],
         url: "https://www.tiktok.com/@colbymartel/video/7502463977889418542?lang=en",
       },
       {
         id: 3,
-        title: "Arena Esports",
-        thumbnail: fea1,
+        title: "Colbymartel",
+        thumbnail: tic[2],
         url: "https://www.tiktok.com/@colbymartel/video/7499572035417296158?lang=en",
       },
       {
         id: 4,
-        title: "Arena Esports",
-        thumbnail: fea1,
+        title: "e-Talks",
+        thumbnail: tic[3],
         url: "https://www.youtube.com/shorts/Y-jJkZfdf3U",
       },
       {
         id: 3,
-        title: "Arena Esports",
-        thumbnail: fea1,
+        title: "OFFSIDE",
+        thumbnail: tic[4],
         url: "https://www.youtube.com/shorts/zADUh86ejKw",
       },
     ],
@@ -810,79 +839,67 @@ const cards = [
       {
         id: 1,
         title: "Airrack",
-        thumbnail: fea1,
+        thumbnail: t[0],
         url: "https://drive.google.com/file/d/1QLQJm1ADKItRVdk8jjuZRXVirtD20Lkn/view?usp=sharing",
       },
       {
         id: 2,
         title: "Amados Strategies",
-        thumbnail: fea1,
+        thumbnail: t[1],
         url: "https://drive.google.com/file/d/1eJa35pQRdnC9j1rShO4b0qCG-kqEcyry/view?usp=sharing&t=1",
       },
       {
         id: 3,
         title: "CommerceCore Hook 1",
-        thumbnail: fea1,
+        thumbnail: t[2],
         url: "https://drive.google.com/file/d/1HC3Vev0pK8bMWrFbTV9EUv8dA4CFn8rW/view?usp=sharing",
-      },
-      {
-        id: 4,
-        title: "CommerceCore Hook 2",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1c6UZ_iJFpH-kwOsoYpCddFvZHSP_DQLL/view?usp=sharing",
-      },
-      {
-        id: 5,
-        title: "CommerceCore Hook 3",
-        thumbnail: fea1,
-        url: "https://drive.google.com/file/d/1gTWyvPFSgG7Sl1EGgCozFNSQ6d4FWYZF/view?usp=sharing",
       },
       {
         id: 6,
         title: "DailyFuelUp",
-        thumbnail: fea1,
+        thumbnail: t[3],
         url: "https://drive.google.com/file/d/1h_g9pkCq1--TsQnrMHJcijBRxTFK4SN-/view?usp=sharing",
       },
       {
         id: 7,
         title: "KFM",
-        thumbnail: fea1,
+        thumbnail: t[4],
         url: "https://drive.google.com/file/d/1jh9W12z3gadjg_bCoJnE2sqyd_2JxGj8/view?usp=sharing",
       },
       {
         id: 8,
         title: "Maxian Football",
-        thumbnail: fea1,
+        thumbnail: t[5],
         url: "https://drive.google.com/file/d/1aeIhtt_llI3fDf8wc_Cu1HgIIRjR_mgC/view?usp=sharing",
       },
       {
         id: 9,
         title: "Pasynsoft",
-        thumbnail: fea1,
+        thumbnail: t[6],
         url: "https://drive.google.com/file/d/1ilMR8bIA1LZz83c7LGzsDt73_IZouyO_/view?usp=sharing",
       },
       {
         id: 10,
         title: "Saatchi & Saatchi Qatar",
-        thumbnail: fea1,
+        thumbnail: t[7],
         url: "https://drive.google.com/file/d/1bRsAc1vHtU0Elf-HALDOtIfORDHYBKpx/view?usp=sharing",
       },
       {
         id: 11,
         title: "VCL 25",
-        thumbnail: fea1,
+        thumbnail: t[8],
         url: "https://drive.google.com/file/d/1zj6G4cBdJgFzuYvwUVV-dPWL4kmvulGy/view?usp=sharing",
       },
       {
         id: 12,
         title: "MUDWTR Test Ad",
-        thumbnail: fea1,
+        thumbnail: t[9],
         url: "https://drive.google.com/file/d/1K0eXS2QNO4M4sdjN4mPc_vD6CVrB3Pek/view?usp=sharing",
       },
       {
         id: 13,
         title: "SNAPR",
-        thumbnail: fea1,
+        thumbnail: t[10],
         url: "https://drive.google.com/file/d/1-_-O3EEXJQI9xmWGlM2f5Ryb2PiUCpGC/view?usp=drive_link",
       },
     ],
@@ -920,12 +937,12 @@ export default function Videos() {
     setSelectedCard(card);
     window.scrollTo({ top: 0, behavior: "smooth" }); // 👈 scrolls to top
   }}
-  className="cursor-pointer flex flex-col items-center transition-transform"
+  className="cursor-pointer flex flex-col items-center transition-transform "
 >
   <img
     src={card.image}
     alt={card.name}
-    className="object-cover rounded-lg border border-transparent transition-transform duration-300 hover:scale-105 hover:border-gold"
+    className="object-cover rounded-lg border border-transparent transition-transform duration-300 hover:scale-105  hover:border-gold"
   />
 </div>
 
@@ -947,7 +964,7 @@ export default function Videos() {
                 setSelectedCard(null);
                 setActiveTab("short");
               }}
-              className="mb-6 px-4 py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition"
+              className="mb-6 px-4 py-2 bg-gold text-black text-lg rounded-lg  hover:bg-yellow-400 transition"
             >
               ← Back
             </button>

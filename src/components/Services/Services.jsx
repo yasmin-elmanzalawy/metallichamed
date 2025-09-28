@@ -3,18 +3,16 @@ import video from "../../assets/icons/videoediting.png";
 import tiktok from "../../assets/icons/tiktokicon.png";
 import thumbnail from "../../assets/icons/thumbnail.png";
 import events from "../../assets/icons/events.png";
+import motion from "../../assets/icons/motiongraphics.png";
 import community from "../../assets/icons/communities.png";
 
 export default function Services() {
   const services = [
-    {
-      icon: video,
-      title: "Video Editing",
-      desc: "I've worked on the following types: Gaming, Vlogs, Podcasts/Shows, Documentaries, Ads, TikTok, UGC, Events Recaps, Medical, Stylish, Highlights, Trailers, Memes, Case Studies, Announcements, Q&A, Music Clips, Islamic, Football, Tests/Drafts, IRL Challenges.",
-    },
+    { icon: video, title: "Video Editing" },
     { icon: tiktok, title: "Short-Form Content" },
     { icon: thumbnail, title: "Thumbnails" },
     { icon: events, title: "Event & Social Designs" },
+    { icon: motion, title: "Motion Graphics" },
     { icon: community, title: "Community Management" },
   ];
 
@@ -26,23 +24,18 @@ export default function Services() {
         </h3>
       </div>
 
-      {/* Video Editing full row */}
-      <div className="flex justify-center mb-12">
-        <div className="p-6 rounded-2xl txt-size hover:scale-105 transition duration-300 w-full lg:w-[80%] flex flex-col items-center text-center">
-          <img src={services[0].icon} alt={services[0].title} className="w-20 h-20  md:w-28 md:h-28 mb-4" />
-          <h4 className="font-semibold text-gold mb-2">{services[0].title}</h4>
-          <p className="text-neutral-white leading-relaxed">{services[0].desc}</p>
-        </div>
-      </div>
-
-      {/* Other services (icons + titles only) */}
-      <div className="flex flex-wrap justify-center gap-8">
-        {services.slice(1).map((service, index) => (
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
+        {services.map((service, index) => (
           <div
             key={index}
-            className="p-6 rounded-2xl txt-size hover:scale-105 transition duration-300 w-full sm:w-[80%] lg:w-[22%] flex flex-col items-center text-center"
+            className="p-6 rounded-2xl txt-size hover:scale-105 transition duration-300 flex flex-col items-center text-center"
           >
-            <img src={service.icon} alt={service.title} className="w-20 h-20  md:w-28 md:h-28 mb-4" />
+            <img
+              src={service.icon}
+              alt={service.title}
+              className="w-20 h-20 md:w-28 md:h-28 mb-4"
+            />
             <h4 className="font-semibold text-gold">{service.title}</h4>
           </div>
         ))}
