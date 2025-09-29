@@ -4,6 +4,10 @@ import Navbar from "../Navbar/Navbar";
 import Dashboard from "../Dashboard/Dashboard";
 import Featured from "../Featured/Featured";
 import gaming from "../../assets/icons/gamingicon.png";
+import cc from "../../assets/icons/cc.webp";
+import ae from "../../assets/icons/ae.webp";
+import ps from "../../assets/icons/ps.webp";
+import pr from "../../assets/icons/pr.webp";
 import hamed from "../../assets/hamed.avif";
 import ClientsCarousel from "../ClientsCarousel/ClientsCarousel";
 import Footer from "../Footer/Footer";
@@ -82,38 +86,107 @@ export default function Home() {
         }
       `}</style>
       {/* about */}
-      <section className=" md:mx-24 m-12 mx-4 py-8 " id="about">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-          <div className="w-full md:w-[50%] m-auto">
-            <img
-              src={hamed}
-              className="block w-[60%] mx-auto rounded-xl md:w-[100%] 2xl:w-[70%]
-              [@media(min-width:1920px)]:w-[60%] shadow-2xl transition-transform duration-300 hover:scale-105"
-              alt="About"
-            />
-          </div>
-          <div className="w-full md:w-[80%] md:px-12 px-4">
-            <h3
-              className="text-gold text-2xl sm:text-3xl md:text-3xl  xl:text-4xl 2xl:text-4xl
-              [@media(min-width:1920px)]:text-5xl font-bold "
-            >
-              A Senior Video Editor
-            </h3>
-            <p
-              className=" md:text-left text-neutral-white text-base txt-size"
-            >
-              <br />
-              With +6 years of experience delivering exceptional results for
-              major brands and content creators. <br />
-              Proven track record in increasing engagement, views, and channel
-              subscriptions through expert editing, color correction, motion
-              graphics, and visual storytelling.
-              <br /> Achieved more than 150 million cumulative views, after
-              editing over 1500 long form, short form and advertising videos.
-            </p>
-          </div>
-        </div>
-      </section>
+   
+   
+   <section className="md:mx-24 m-12 mx-4 py-8 relative" id="about">
+  {/* FLOATING KEYFRAMES */}
+  <style>
+    {`
+      @keyframes floatCC {
+        0%, 100% { transform: translateY(0px) rotate(-12deg); }
+        50% { transform: translateY(-12px) rotate(-12deg); }
+      }
+      @keyframes floatAE {
+        0%, 100% { transform: translateY(0px) rotate(8deg); }
+        50% { transform: translateY(-14px) rotate(8deg); }
+      }
+      @keyframes floatPR {
+        0%, 100% { transform: translateY(0px) rotate(15deg); }
+        50% { transform: translateY(-10px) rotate(15deg); }
+      }
+      @keyframes floatPS {
+        0%, 100% { transform: translateY(0px) rotate(-6deg); }
+        50% { transform: translateY(-16px) rotate(-6deg); }
+      }
+
+      .float-cc { animation: floatCC 4s ease-in-out infinite; }
+      .float-ae { animation: floatAE 5s ease-in-out infinite; }
+      .float-pr { animation: floatPR 6s ease-in-out infinite; }
+      .float-ps { animation: floatPS 4.5s ease-in-out infinite; }
+    `}
+  </style>
+
+  <div className="flex flex-col md:flex-row items-center justify-center gap-6 relative">
+    {/* IMAGE WRAPPER */}
+   <div className="w-full md:w-[50%] m-auto relative">
+  {/* IMAGE */}
+  <img
+    src={hamed}
+    className="block w-[80%] mx-auto rounded-xl md:w-[100%] 2xl:w-[70%]
+    [@media(min-width:1920px)]:w-[70%] transition-transform duration-300 relative z-10"
+    alt="About"
+  />
+
+{/* GRADIENT OVERLAY */}
+<div
+  className="absolute bottom-0 left-0 right-0 rounded-b-xl z-20 pointer-events-none"
+  style={{
+    height: "40%", // only cover lower 40% of the image
+    background: "linear-gradient(to top, #30054A, transparent)",
+    opacity: 1,
+  }}
+></div>
+
+  {/* FLOATING ICONS (all same sizes) */}
+  <img
+    src={cc}
+    alt="CC"
+    className="absolute top-[10%] left-[20%] w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-cc drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] "
+  />
+
+  <img
+    src={ae}
+    alt="AE"
+    className="absolute bottom-[17%] right-[10%] lg:right-[5%] xl:right-[10%] md:right-[-10%] z-30 w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-ae drop-shadow-[0_6px_10px_rgba(0,0,0,0.8)]"
+  />
+
+  <img
+    src={pr}
+    alt="PR"
+    className="absolute top-[55%] md:left-[-15%] lg:left-[-10%] 2xl:left-[5%] z-30 w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-pr drop-shadow-[0_8px_12px_rgba(0,0,0,0.6)]"
+  />
+
+  <img
+    src={ps}
+    alt="PS"
+    className="absolute top-[30%] md:top-[15%] right-[5%] z-30 w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-ps drop-shadow-[0_6px_10px_rgba(0,0,0,0.4)]"
+  />
+</div>
+
+
+    {/* TEXT SECTION */}
+    <div className="w-full md:w-[80%] md:px-12 px-4">
+      <h3
+        className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
+        [@media(min-width:1920px)]:text-5xl font-bold"
+      >
+        A Senior Video Editor
+      </h3>
+      <p className="md:text-left text-neutral-white text-base txt-size">
+        <br />
+        With +6 years of experience delivering exceptional results for
+        major brands and content creators. <br />
+        Proven track record in increasing engagement, views, and channel
+        subscriptions through expert editing, color correction, motion
+        graphics, and visual storytelling.
+        <br /> Achieved more than 150 million cumulative views, after
+        editing over 1500 long form, short form and advertising videos.
+      </p>
+    </div>
+  </div>
+</section>
+
+
 
       {/* services */}
       <Services></Services>

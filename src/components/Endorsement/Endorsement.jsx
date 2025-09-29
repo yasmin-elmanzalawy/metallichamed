@@ -131,12 +131,13 @@ function EndorsementCard({ img, name, text, rec }) {
                 >
                   <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.75-4.15v8.3A4.5 4.5 0 0 0 16.5 12zm-2.75-9v2.06c3.39.49 6 3.39 6 6.94s-2.61 6.45-6 6.94V21c4.56-.5 8-4.36 8-9s-3.44-8.5-8-9z" />
                 </svg>
-                <audio
+          
+                 <audio
                   controls
                   controlsList="nodownload"
-                  className="flex-1 accent-[#FFCC02] rounded-lg"
+                  className="flex-1 accent-[#FFCC02] rounded-lg w-[150px] lg:w-[260px]"
                 >
-                  <source src={r} type="audio/ogg" />
+                  <source src={r} type="audio/ogg"  />
                   Your browser does not support the audio element.
                 </audio>
               </div>
@@ -154,7 +155,7 @@ function EndorsementCard({ img, name, text, rec }) {
               <audio
                 controls
                 controlsList="nodownload"
-                className="flex-1 accent-[#FFCC02] rounded-lg"
+                className="flex-1 accent-[#FFCC02] rounded-lg w-[150px] lg:w-[260px]"
               >
                 <source src={rec} type="audio/ogg" />
                 Your browser does not support the audio element.
@@ -196,7 +197,7 @@ export default function Endorsements() {
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="md:mx-24 px-5 py-12 mx-4  md:p-12 mt-28 bg-[#662390] m-8 rounded-[30px]"
+          className="md:mx-24 px-1 py-12 mx-4  md:p-12 mt-28 bg-[#662390] m-8 rounded-[30px]"
         >
           <div className="relative">
             <Swiper
