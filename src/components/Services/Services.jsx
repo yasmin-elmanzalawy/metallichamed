@@ -17,7 +17,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="md:px-24 px-4 py-20 bg-[#3d135b]" id="about">
+    <section className="md:px-24 px-4 py-20 md:py-32 bg-[#3d135b] " id="about">
       <div>
         <h3 className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center mb-12">
           My Services
@@ -25,16 +25,16 @@ export default function Services() {
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         {services.map((service, index) => (
           <div
             key={index}
-            className="p-6 rounded-2xl txt-size hover:scale-105 transition duration-300 flex flex-col items-center text-center"
+            className="py-8 rounded-2xl txt-size hover:scale-105 transition duration-300 flex flex-col items-center text-center"
           >
             <img
               src={service.icon}
               alt={service.title}
-              className="w-20 h-20 md:w-28 md:h-28 mb-4"
+              className="w-20 h-20 md:w-36 md:h-36 mb-4"
             />
             <h4 className="font-semibold text-gold">{service.title}</h4>
           </div>

@@ -116,13 +116,13 @@ export default function Featured() {
       {/* Custom arrows */}
       <div
         ref={prevRef}
-        className="custom-arrow custom-prev absolute left-[-20px] top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-2 rounded-full shadow-lg"
+        className="custom-arrow custom-prev absolute left-[-20px] top-[63%] -translate-y-[50%] z-10 cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-2 rounded-full shadow-lg"
       >
         <FaChevronLeft className="text-white text-xl" />
       </div>
       <div
         ref={nextRef}
-        className="custom-arrow custom-next absolute right-[-20px] top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-2 rounded-full shadow-lg"
+        className="custom-arrow custom-next absolute right-[-20px] top-[63%] -translate-y-[50%] z-10 cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-2 rounded-full shadow-lg"
       >
         <FaChevronRight className="text-white text-xl" />
       </div>
@@ -169,12 +169,7 @@ export default function Featured() {
                     color="#f5bf03"
                   />
                 </div>
-                 
-                  <p className="text-[#FEF7E4] text-center leading-snug txt-size">
-                    {video.desc}
-                  </p>
-                <div className="">
-                </div>
+           
               </a>
             </div>
           </SwiperSlide>

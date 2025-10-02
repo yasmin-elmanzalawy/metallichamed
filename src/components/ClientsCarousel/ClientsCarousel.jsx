@@ -86,7 +86,7 @@ export default function ClientsCarousel() {
   const nextRef = useRef(null);
 
   return (
-    <div className="relative mt-5 clients-carousel-container">
+    <div className="relative mt-8 clients-carousel-container">
       <div className="flex items-center mb-5">
         <h3
           className="text-2xl text-gold font-bold sm:text-lg md:text-2xl lg:text-xl xl:text-lg 2xl:text-xl
@@ -105,14 +105,14 @@ export default function ClientsCarousel() {
       {/* Custom arrows */}
       <div
         ref={prevRef}
-        className="custom-arrow custom-prev"
+        className="custom-arrow custom-prev top-[30%] md:top-[45%]   z-10 cursor-pointer"
         aria-label="Previous Slide"
       >
         <FaChevronLeft className="text-white text-xl" />
       </div>
       <div
         ref={nextRef}
-        className="custom-arrow custom-next"
+        className="custom-arrow custom-next  top-[30%] md:top-[45%]  z-10 cursor-pointer"
         aria-label="Next Slide"
       >
         <FaChevronRight className="text-white text-xl" />
@@ -162,12 +162,7 @@ export default function ClientsCarousel() {
                 />
               </div>
 
-              {/* Text */}
-              <div className="client-text-container text-center  w-full">
-                <p className="text-[#FEF7E4] client-name md:text-xl break-words">
-                  {name}
-                </p>
-              </div>
+             
             </a>
           </SwiperSlide>
         ))}

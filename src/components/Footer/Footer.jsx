@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
 
           {/* Social Links: 30% */}
-          <div className="w-full lg:w-[30%] flex justify-center items-center gap-6">
+          <div className="w-full lg:w-[30%] flex justify-center mt-5 items-center gap-6 ">
             {/* LinkedIn */}
             <div className="tooltip-container relative cursor-pointer">
               <a

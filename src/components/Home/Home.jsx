@@ -24,7 +24,7 @@ export default function Home() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className=" bg-[#662390] md:mt-[100px] mt-[-30px] md:mx-24 m-12 mx-4 pb-20 p-8 md:p-12  rounded-[30px] relative overflow-hidden"
+        className=" bg-[#662390] md:mt-[100px] mt-[-30px] md:mx-24 m-12 mx-4  px-8 pt-8 md:p-12  rounded-[30px] relative overflow-hidden"
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text Section */}
@@ -170,17 +170,16 @@ export default function Home() {
         className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
         [@media(min-width:1920px)]:text-5xl font-bold"
       >
-        A Senior Video Editor
+        Senior Video Editor
       </h3>
       <p className="md:text-left text-neutral-white text-base txt-size">
         <br />
-        With +6 years of experience delivering exceptional results for
-        major brands and content creators. <br />
-        Proven track record in increasing engagement, views, and channel
-        subscriptions through expert editing, color correction, motion
-        graphics, and visual storytelling.
-        <br /> Achieved more than 150 million cumulative views, after
-        editing over 1500 long form, short form and advertising videos.
+        I have 6+ years of experience producing engaging, high-performing content for brands, influencers, 
+and gaming companies.<br></br> I’ve delivered more than 1,750 videos generating over 185 million views across YouTube, TikTok, and 
+social platforms. <br></br>My expertise includes YouTube content, TikTok ads, Gaming, UGC campaigns, and branded content. I’ve 
+collaborated on projects for Fortnite Middle East, Call of Duty Arabic, Ubisoft Middle East, and EA Middle East, creating 
+content that resonates with audiences and drives engagement.,<br></br> Skilled in video editing, storytelling, and motion graphics, I 
+bring creativity and precision to every project.
       </p>
     </div>
   </div>
