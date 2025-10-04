@@ -20,6 +20,19 @@ const toArray = (obj) =>
     .map((key) => obj[key].default);
 
 
+
+    const formatSubscribers = (num) => {
+  if (num >= 1_000_000) {
+    return (num / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M Subs";
+  } else if (num >= 1_000) {
+    return (num / 1_000).toFixed(1).replace(/\.0$/, "") + "K Subs";
+  }
+  return num + " Subs";
+};
+
+
+
+
 // Arrays ready to use
 const creator = toArray(creatorsImg);
 const company = toArray(companiesImg);
@@ -154,14 +167,12 @@ export default function Clients() {
               </a> */}
 
               {/* Show subscribers only for content creators */}
-              {activeTab === "contentCreators" && subscribers !== undefined && (
-                <>
-                  <span className="text-[#E8CCF9] text-xs sm:text-lg">
-                    {subscribers.toLocaleString()}
-                  </span>
-                  <p className="text-[#E8CCF9] text-sm sm:text-lg">subscribers</p>
-                </>
-              )}
+             {activeTab === "contentCreators" && subscribers !== undefined && (
+  <span className="text-[#E8CCF9] text-xs sm:text-sm mt-2">
+    {formatSubscribers(subscribers)}
+  </span>
+)}
+
             </div>
           ))}
         </motion.div>

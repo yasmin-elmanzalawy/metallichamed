@@ -223,6 +223,48 @@ const cards = [
         thumbnail: gs[17],
         url: "https://www.tiktok.com/@callofdutyarabic/video/7487579100622687506",
       },
+        {
+        id: 19,
+        title: "Arabian League Stream Moment",
+        thumbnail: meme[0],
+        url: "https://drive.google.com/file/d/1NtQLYnsNyjnj8-vueycTVkNmSsMRhMEn/view",
+      },
+      {
+        id: 20,
+        title: "Arena Esports",
+        thumbnail: meme[1],
+        url: "https://www.instagram.com/reel/CuFCPfZIO7C",
+      },
+      {
+        id: 21,
+        title: "Arena Esports",
+        thumbnail: meme[2],
+        url: "https://www.tiktok.com/@tundraesports/video/7462308222754426144",
+      },
+          {
+        id: 22,
+        title: "Arena Esports",
+        thumbnail: hs[0],
+        url: "https://www.instagram.com/reel/Cvm7Wx1vxZQ",
+      },
+      {
+        id: 23,
+        title: "Gamer Grounds Philippines",
+        thumbnail: hs[1],
+        url: "https://www.facebook.com/reel/1202619947281518",
+      },
+      {
+        id: 24,
+        title: "ZainEsports",
+        thumbnail: hs[2],
+        url: "https://www.instagram.com/reel/DAd49Q9oUI8",
+      },
+      {
+        id: 25,
+        title: "OoredooEZ",
+        thumbnail: hs[3],
+        url: "https://www.instagram.com/reel/CnhjV7-J3Ty",
+      },
     ],
     longVideos: [
       {
@@ -310,6 +352,24 @@ const cards = [
         title: "B3shr",
         thumbnail: gl[13],
         url: "https://youtu.be/mlt3C716x_E",
+      },
+        {
+        id: 15,
+        title: "(OoredooEZ) Community Highlights",
+        thumbnail: hl[0],
+        url: "https://drive.google.com/file/d/15mPHuBRUAp4qVrD-H23z3U-4IWvcvM5i/view",
+      },
+      {
+        id: 16,
+        title: "Frenzy",
+        thumbnail: hl[1],
+        url: "https://www.facebook.com/watch/?v=3733447676883448",
+      },
+      {
+        id: 17,
+        title: "PUBG: BATTLEGROUNDS",
+        thumbnail: hl[2],
+        url: "https://www.facebook.com/watch/?v=1025731131162862",
       },
     ],
   },
@@ -716,121 +776,64 @@ const cards = [
       }
     ],
   },
-  {
-    id: 8,
-    name: "Highlights",
-    image: highlight,
-    shortVideos: [
-      {
-        id: 1,
-        title: "Arena Esports",
-        thumbnail: hs[0],
-        url: "https://www.instagram.com/reel/Cvm7Wx1vxZQ",
-      },
-      {
-        id: 2,
-        title: "Gamer Grounds Philippines",
-        thumbnail: hs[1],
-        url: "https://www.facebook.com/reel/1202619947281518",
-      },
-      {
-        id: 3,
-        title: "ZainEsports",
-        thumbnail: hs[2],
-        url: "https://www.instagram.com/reel/DAd49Q9oUI8",
-      },
-      {
-        id: 4,
-        title: "OoredooEZ",
-        thumbnail: hs[3],
-        url: "https://www.instagram.com/reel/CnhjV7-J3Ty",
-      },
-    ],
-    longVideos: [
-      {
-        id: 5,
-        title: "(OoredooEZ) Community Highlights",
-        thumbnail: hl[0],
-        url: "https://drive.google.com/file/d/15mPHuBRUAp4qVrD-H23z3U-4IWvcvM5i/view",
-      },
-      {
-        id: 6,
-        title: "Frenzy",
-        thumbnail: hl[1],
-        url: "https://www.facebook.com/watch/?v=3733447676883448",
-      },
-      {
-        id: 7,
-        title: "PUBG: BATTLEGROUNDS",
-        thumbnail: hl[2],
-        url: "https://www.facebook.com/watch/?v=1025731131162862",
-      },
-    ],
-  },
-  {
-    id: 9,
-    name: "Memes",
-    image: mem,
-    shortVideos: [
-      {
-        id: 1,
-        title: "Arabian League Stream Moment",
-        thumbnail: meme[0],
-        url: "https://drive.google.com/file/d/1NtQLYnsNyjnj8-vueycTVkNmSsMRhMEn/view",
-      },
-      {
-        id: 2,
-        title: "Arena Esports",
-        thumbnail: meme[1],
-        url: "https://www.instagram.com/reel/CuFCPfZIO7C",
-      },
-      {
-        id: 3,
-        title: "Arena Esports",
-        thumbnail: meme[2],
-        url: "https://www.tiktok.com/@tundraesports/video/7462308222754426144",
-      },
-    ],
-    longVideos: [],
-  },
-  {
-    id: 10,
-    name: "Tiktoks",
-    image: tiktok,
-    shortVideos: [
-      {
-        id: 1,
-        title: "Colbymartel",
-        thumbnail:tic[0],
-        url: "https://www.tiktok.com/@colbymartel/video/7503329191841107246?lang=en",
-      },
-      {
-        id: 2,
-        title: "Colbymartel",
-        thumbnail: tic[1],
-        url: "https://www.tiktok.com/@colbymartel/video/7502463977889418542?lang=en",
-      },
-      {
-        id: 3,
-        title: "Colbymartel",
-        thumbnail: tic[2],
-        url: "https://www.tiktok.com/@colbymartel/video/7499572035417296158?lang=en",
-      },
-      {
-        id: 4,
-        title: "e-Talks",
-        thumbnail: tic[3],
-        url: "https://www.youtube.com/shorts/Y-jJkZfdf3U",
-      },
-      {
-        id: 3,
-        title: "OFFSIDE",
-        thumbnail: tic[4],
-        url: "https://www.youtube.com/shorts/zADUh86ejKw",
-      },
-    ],
-    longVideos: [],
-  },
+  // {
+  //   id: 8,
+  //   name: "Highlights",
+  //   image: highlight,
+  //   shortVideos: [
+  
+  //   ],
+  //   longVideos: [
+    
+  //   ],
+  // },
+  // {
+  //   id: 9,
+  //   name: "Memes",
+  //   image: mem,
+  //   shortVideos: [
+    
+  //   ],
+  //   longVideos: [],
+  // },
+  // {
+  //   id: 10,
+  //   name: "Tiktoks",
+  //   image: tiktok,
+  //   shortVideos: [
+  //     {
+  //       id: 1,
+  //       title: "Colbymartel",
+  //       thumbnail:tic[0],
+  //       url: "https://www.tiktok.com/@colbymartel/video/7503329191841107246?lang=en",
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "Colbymartel",
+  //       thumbnail: tic[1],
+  //       url: "https://www.tiktok.com/@colbymartel/video/7502463977889418542?lang=en",
+  //     },
+  //     {
+  //       id: 3,
+  //       title: "Colbymartel",
+  //       thumbnail: tic[2],
+  //       url: "https://www.tiktok.com/@colbymartel/video/7499572035417296158?lang=en",
+  //     },
+  //     {
+  //       id: 4,
+  //       title: "e-Talks",
+  //       thumbnail: tic[3],
+  //       url: "https://www.youtube.com/shorts/Y-jJkZfdf3U",
+  //     },
+  //     {
+  //       id: 3,
+  //       title: "OFFSIDE",
+  //       thumbnail: tic[4],
+  //       url: "https://www.youtube.com/shorts/zADUh86ejKw",
+  //     },
+  //   ],
+  //   longVideos: [],
+  // },
   {
     id: 11,
     image: test,
@@ -1071,9 +1074,9 @@ export default function Videos() {
                         <div className="absolute inset-0 rounded-xl bg-black/0 hover:bg-black/30 transition-colors duration-300"></div>
                       </div>
 
-                      <p className="text-[#E5D4D6] txt-size font-semibold text-center py-2">
-                        {video.title}
-                      </p>
+                        {/* <p className="text-[#E5D4D6] txt-size font-semibold text-center py-2">
+                          {video.title}
+                        </p> */}
                     </a>
                   </div>
                 ))}
