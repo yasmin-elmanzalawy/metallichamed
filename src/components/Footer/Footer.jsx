@@ -125,7 +125,7 @@ export default function Footer() {
       {/* Copyright aligned under the quote */}
     <div className="bg-[#170324]">
   <div className="container mx-auto px-2">
-    <div className="w-full lg:w-[40%] mx-auto lg:ml-0 text-center py-5 text-lg text-[#7f2bb4]">
+    {/* <div className="w-full lg:w-[40%] mx-auto lg:ml-0 text-center py-5 text-lg text-[#7f2bb4]">
       © 2025 All Rights Reserved. Created by{" "}
       <a
         href="mailto:elmanzalawyyasmine@gmail.com"
@@ -133,7 +133,7 @@ export default function Footer() {
       >
         Yarci.
       </a>
-    </div>
+    </div> */}
   </div>
 </div>
 
