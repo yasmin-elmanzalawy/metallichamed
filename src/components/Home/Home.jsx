@@ -141,25 +141,25 @@ export default function Home() {
   <img
     src={cc}
     alt="CC"
-    className="absolute top-[10%] left-[20%] w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-cc drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] "
+    className="absolute top-[20%] left-[20%] [@media(min-width:1920px)]:left-[25%] w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 [@media(min-width:1920px)]:w-32 float-cc drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)] "
   />
 
   <img
     src={ae}
     alt="AE"
-    className="absolute bottom-[17%] right-[10%] lg:right-[5%] xl:right-[10%] md:right-[-10%] z-30 w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-ae drop-shadow-[0_6px_10px_rgba(0,0,0,0.8)]"
+    className="absolute bottom-[17%] [@media(min-width:1920px)]:right-[22%]  [@media(min-width:1920px)]:w-28 right-[10%] lg:right-[5%] xl:right-[10%] md:right-[-10%] z-30 w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-ae drop-shadow-[0_6px_10px_rgba(0,0,0,0.8)]"
   />
 
   <img
     src={pr}
     alt="PR"
-    className="absolute top-[55%] md:left-[-15%] lg:left-[-10%] 2xl:left-[5%] z-30 w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-pr drop-shadow-[0_8px_12px_rgba(0,0,0,0.6)]"
+    className="absolute top-[65%] [@media(min-width:1920px)]:w-24 [@media(min-width:1920px)]:left-[15%] md:left-[-15%] lg:left-[-10%] 2xl:left-[5%] z-30 w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-pr drop-shadow-[0_8px_12px_rgba(0,0,0,0.6)]"
   />
 
   <img
     src={ps}
     alt="PS"
-    className="absolute top-[30%] md:top-[15%] right-[5%] z-30 w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-ps drop-shadow-[0_6px_10px_rgba(0,0,0,0.4)]"
+    className="absolute top-[30%] md:top-[17%] [@media(min-width:1920px)]:top-[33%] [@media(min-width:1920px)]:right-[18%] right-[12%] z-30 w-14 sm:w-24 [@media(min-width:1920px)]:w-28 md:w-16 lg:w-20 xl:w-22 float-ps drop-shadow-[0_6px_10px_rgba(0,0,0,0.4)]"
   />
 </div>
 
