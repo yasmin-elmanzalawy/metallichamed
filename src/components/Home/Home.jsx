@@ -153,7 +153,7 @@ export default function Home() {
   <img
     src={pr}
     alt="PR"
-    className="absolute top-[65%] [@media(min-width:1920px)]:w-24 [@media(min-width:1920px)]:left-[15%] md:left-[-15%] lg:left-[-10%] 2xl:left-[5%] z-30 w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-pr drop-shadow-[0_8px_12px_rgba(0,0,0,0.6)]"
+    className="absolute top-[65%] [@media(min-width:1920px)]:w-24 [@media(min-width:1920px)]:left-[15%] left-[10%] lg:left-[-10%] 2xl:left-[5%] z-30 w-14 sm:w-24 md:w-16 lg:w-20 xl:w-24 float-pr drop-shadow-[0_8px_12px_rgba(0,0,0,0.6)]"
   />
 
   <img
