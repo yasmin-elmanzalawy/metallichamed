@@ -24,7 +24,7 @@ export default function Home() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className=" bg-[#662390] md:mt-[100px] mt-[-30px] md:mx-24 m-12 mx-4  px-8 pt-8 md:p-12  rounded-[30px] relative overflow-hidden"
+        className=" bg-[#662390] md:mt-[100px] mt-[-30px] md:mx-24 m-12 mx-4  px-8 pt-8 md:px-12  rounded-[30px] relative overflow-hidden"
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text Section */}

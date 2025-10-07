@@ -19,11 +19,18 @@ import abofalah from "../../assets/creators/1.avif";
 import aldaej from "../../assets/creators/Abdullahaldaej.avif";
 import Sofyan from "../../assets/creators/11.avif";
 import ahmed from "../../assets/creators/3.avif";
+import trend1 from "../../assets/trends/1.avif";
+import trend2 from "../../assets/trends/2.avif";
+import trend3 from "../../assets/trends/3.avif";
+import trend4 from "../../assets/trends/4.avif";
+import trend5 from "../../assets/trends/5.avif";
+import trend6 from "../../assets/trends/6.avif";
 import Footer from "../Footer/Footer";
 import cancelrec from "../../assets/recs/CANCEL.ogg";
 import ahmedrec from "../../assets/recs/ahmedshow.ogg";
 import azizrec from "../../assets/recs/AZIZ.ogg";
 import abofalahrec from "../../assets/recs/ABOFLAH.ogg";
+import Trending from "../Trending/Trending";
 
 const endorsements = [
     {
@@ -226,7 +233,6 @@ export default function Endorsements() {
     try {
       if (swiper.navigation) swiper.navigation.destroy();
     } catch (e) {
-      /* ignore */
     }
     swiper.navigation.init();
     swiper.navigation.update();
@@ -267,7 +273,6 @@ export default function Endorsements() {
               ))}
             </Swiper>
 
-            {/* Custom Arrows */}
             <div
               ref={(el) => {
                 if (el && navEls.prevEl !== el)
@@ -290,6 +295,7 @@ export default function Endorsements() {
               <FaChevronRight className="text-white text-2xl" />
             </div>
           </div>
+          <Trending></Trending>
         </motion.div>
       </div>
       <Footer />
