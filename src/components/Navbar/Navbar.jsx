@@ -75,7 +75,7 @@ export default function Navbar() {
     <nav
       ref={navRef}
       className={`fixed top-0 left-0 w-full z-50 backdrop-blur-lg transition-all duration-300 bg-[#30054A] text-gold ${
-        scrolled ? "py-2 2xl:py-3" : "py-4 [@media(min-width:1920px)]:py-8 2xl:py-6"
+        scrolled ? "py-2 2xl:py-3" : "py-4 [@media(min-width:1920px)]:py-8 2xl:py-6  "
       }`}
     >
       <div className="md:mx-24 mx-18 px-8 md:px-4 flex justify-end items-center h-14">

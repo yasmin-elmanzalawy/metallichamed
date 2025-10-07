@@ -114,7 +114,7 @@ function EndorsementCard({ img, name, text, rec }) {
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#662390]/50"></div>
 
-      <div className="relative flex flex-col h-full gap-4 text-neutral-50 z-10">
+      <div className="relative flex flex-col h-full gap-4 text-neutral-50 z-[10]">
         {/* Avatar + Name */}
         <div className="flex flex-col items-center gap-3">
           <img
@@ -278,7 +278,7 @@ export default function Endorsements() {
                 if (el && navEls.prevEl !== el)
                   setNavEls((s) => ({ ...s, prevEl: el }));
               }}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-[60] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
               aria-label="Previous"
             >
               <FaChevronLeft className="text-white text-2xl" />
@@ -289,7 +289,7 @@ export default function Endorsements() {
                 if (el && navEls.nextEl !== el)
                   setNavEls((s) => ({ ...s, nextEl: el }));
               }}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-[60] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
               aria-label="Next"
             >
               <FaChevronRight className="text-white text-2xl" />
