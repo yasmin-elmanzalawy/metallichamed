@@ -962,15 +962,28 @@ export default function Videos() {
             className="bg-[#662390] md:mx-24 mx-4 p-8 md:p-12 rounded-[30px]"
           >
             {/* Back Button */}
-            <button
-              onClick={() => {
-                setSelectedCard(null);
-                setActiveTab("short");
-              }}
-              className="mb-6 px-4 py-2 bg-gold text-black text-lg rounded-lg  hover:bg-yellow-400 transition"
-            >
-              ← Back
-            </button>
+           {/* Top Buttons Row */}
+<div className="flex justify-between items-center mb-6">
+  {/* Back Button */}
+  <button
+    onClick={() => {
+      setSelectedCard(null);
+      setActiveTab("short");
+    }}
+    className="px-4 py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition"
+  >
+    ← Back
+  </button>
+
+  {/* Home Button (mobile only) */}
+  <button
+    onClick={() => (window.location.href = "/")}
+    className="px-4 py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition md:hidden flex items-center gap-2"
+  >
+    Home →
+  </button>
+</div>
+
 
             {/* <h2 className="text-2xl font-bold text-gold mb-6">
               {selectedCard.name} Edits

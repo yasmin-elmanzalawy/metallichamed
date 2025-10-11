@@ -9,39 +9,40 @@ export default function Footer() {
         id="footer"
         className="bg-[#210434] text-white py-10 p-6 sm:p-10 lg:px-12 rounded-t-3xl"
       >
-        <div className="container mx-auto px-2 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-6">
+        <div className="container mx-auto px-2 flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10 lg:gap-6">
           {/* Quote: 40% */}
-          <div className="w-full lg:w-[40%] flex justify-center items-center text-center">
+          <div className="w-full lg:w-[40%] flex justify-center lg:justify-start items-center text-center lg:text-left">
             <p
               className="text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-4xl 
-              [@media(min-width:1920px)]:text-4xl font-medium text-gold"
+              [@media(min-width:1920px)]:text-4xl font-medium text-gold leading-tight"
             >
               Let's make your content shine.
             </p>
           </div>
 
-          {/* Email: 30% */}
-          <div className="w-full lg:w-[30%] flex justify-center items-center text-center">
-            <a
-              href="mailto:metallichamed@gmail.com"
-              className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors cursor-pointer text-base sm:text-lg md:text-xl xl:text-xl 2xl:text-2xl"
-            >
-              <FaEnvelope className="text-lg sm:text-xl" />
-              <span className="break-all">metallichamed@gmail.com</span>
-            </a>
-          </div>
+         {/* Email: 30% */}
+<div className="w-full lg:w-[30%] flex justify-center items-center text-center">
+  <a
+    href="mailto:metallichamed@gmail.com"
+    className="flex items-center justify-center gap-2 text-white hover:text-blue-400 transition-colors cursor-pointer text-base sm:text-lg md:text-xl xl:text-xl 2xl:text-2xl"
+  >
+    <FaEnvelope className=" relative top-[2px]" />
+    <span className="break-all">metallichamed@gmail.com</span>
+  </a>
+</div>
+
 
           {/* Social Links: 30% */}
-          <div className="w-full lg:w-[30%] flex justify-center mt-5 items-center gap-6 ">
+          <div className="w-full lg:w-[30%] flex justify-center lg:justify-end items-center gap-6">
             {/* LinkedIn */}
-            <div className="tooltip-container relative cursor-pointer">
+            <div className="tooltip-container relative cursor-pointer flex items-center">
               <a
                 href="https://www.linkedin.com/in/metallichamed"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center text-white no-underline"
               >
-                <div className="layer w-10 h-10 sm:w-12 sm:h-12 relative transition-transform duration-300">
+                <div className="layer w-10 h-10 sm:w-12 sm:h-12 relative transition-transform duration-300 flex items-center justify-center">
                   <span className="absolute inset-0 border border-blue-500 rounded-md transition-all"></span>
                   <span className="absolute inset-0 border border-blue-500 rounded-md transition-all"></span>
                   <span className="absolute inset-0 border border-blue-500 rounded-md transition-all"></span>
@@ -56,21 +57,18 @@ export default function Footer() {
                     </svg>
                   </span>
                 </div>
-                <span className="mt-1 opacity-0 transition-all duration-300 tooltip-text text-sm">
-                  LinkedIn
-                </span>
               </a>
             </div>
 
             {/* WhatsApp */}
-            <div className="tooltip-container relative cursor-pointer">
+            <div className="tooltip-container relative cursor-pointer flex items-center">
               <a
                 href="https://wa.me/201143100875"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center text-white no-underline"
               >
-                <div className="layer w-10 h-10 sm:w-12 sm:h-12 relative transition-transform duration-300">
+                <div className="layer w-10 h-10 sm:w-12 sm:h-12 relative transition-transform duration-300 flex items-center justify-center">
                   <span className="absolute inset-0 border border-green-500 rounded-md transition-all"></span>
                   <span className="absolute inset-0 border border-green-500 rounded-md transition-all"></span>
                   <span className="absolute inset-0 border border-green-500 rounded-md transition-all"></span>
@@ -83,9 +81,6 @@ export default function Footer() {
                     />
                   </span>
                 </div>
-                <span className="mt-1 opacity-0 transition-all duration-300 tooltip-text text-sm">
-                  WhatsApp
-                </span>
               </a>
             </div>
           </div>
@@ -121,22 +116,6 @@ export default function Footer() {
           }
         `}</style>
       </footer>
-
-      {/* Copyright aligned under the quote */}
-    <div className="bg-[#170324]">
-  <div className="container mx-auto px-2">
-    {/* <div className="w-full lg:w-[40%] mx-auto lg:ml-0 text-center py-5 text-lg text-[#7f2bb4]">
-      © 2025 All Rights Reserved. Created by{" "}
-      <a
-        href="mailto:elmanzalawyyasmine@gmail.com"
-        className="text-[#b95af5] font-bold hover:underline"
-      >
-        Yarci.
-      </a>
-    </div> */}
-  </div>
-</div>
-
     </div>
   );
 }
