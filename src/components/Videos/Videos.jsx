@@ -481,6 +481,12 @@ const cards = [
         thumbnail: mazag,
         url: "https://youtu.be/F08cBZDa4WM",
       },
+      {
+        id: 9,
+        title: "PlayStation Arabia",
+        thumbnail: il[8],
+        url: "https://www.youtube.com/watch?v=f2O9evHDzrQ",
+      },
     ],
   },
   {

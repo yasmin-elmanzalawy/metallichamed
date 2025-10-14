@@ -16,9 +16,10 @@ import Jellypeanut from "../../assets/creators/7.avif";
 import swarmio from "../../assets/companies/12.avif";
 import aziz from "../../assets/creators/2.avif";
 import abofalah from "../../assets/creators/1.avif";
-import aldaej from "../../assets/creators/Abdullahaldaej.avif";
+import aldaej from "../../assets/Abdullahaldaej.avif";
 import Sofyan from "../../assets/creators/11.avif";
 import ahmed from "../../assets/creators/3.avif";
+import offside from "../../assets/creators/13.avif";
 import trend1 from "../../assets/trends/1.avif";
 import trend2 from "../../assets/trends/2.avif";
 import trend3 from "../../assets/trends/3.avif";
@@ -41,7 +42,7 @@ const endorsements = [
     rec: abofalahrec,
   },
   {
-    id: 7,
+    id: 10,
     img: Sofyan,
     name: "Sofyan",
     text: "Mohammed is easily one of the best editors I've ever worked with, for me what separates him from most editors is that he really knows how youtube works. he knows how to use his editing skills to keep the audience engaged throughout the video and thus create good retention which is really the most important thing right? If you ever need an editor with really good YouTube knowledge, Mohammed is your guy!",
@@ -71,7 +72,7 @@ const endorsements = [
     id: 2,
     img: Jellypeanut,
     name: "Jellypeanut",
-    text: "Honestly I love it,I think it is really good!",
+    text: "Honestly I love your work, I think it's really good.",
   },
     {
     id: 8,
@@ -90,7 +91,13 @@ const endorsements = [
     id: 5,
     img: mysalahmat,
     name: "MySalahMat",
-    text: "his is so good, Really impressed! love the colours and transitions, because its for kids it will keep them interested.",
+    text: "Your edit is so good, Really impressed! love the colours and transitions, because its for kids it will keep them interested.",
+  },
+  {
+    id: 11,
+    img: offside,
+    name: "OFFSIDE",
+    text: "Your edit is so INSANE from what I've seen, you're honestly insane, best video researcher out there, you're a legend bro!",
   },
   {
     id: 3,

@@ -42,7 +42,7 @@ export default function Design() {
             <h3
               className="h-[60px] flex items-center justify-center text-gold 
               text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
-              [@media(min-width:1920px)]:text-3xl font-bold my-6 text-center"
+              [@media(min-width:190px)]:text-3xl font-bold my-6 text-center"
             >
               Arab Woman Awards 2025 Event
             </h3>
@@ -56,7 +56,7 @@ export default function Design() {
                   onClick={() => setSelectedImage(img)}
                 >
                   <img
-                    className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] [@media(min-width:2500px)]:w-[550px] [@media(min-width:2500px)]:h-[550px]  w-[200px] 2xl:h-[250px] object-cover rounded-md 
+                    className="2xl:w-[250px] [@media(min-width:1910px)]:w-[500px] [@media(min-width:1910px)]:h-[500px] w-[200px] 2xl:h-[250px] object-cover rounded-md 
                     shadow-[0_4px_15px_#FED03B]/50" // golden glow
                     // shadow-lg shadow-black/40   // neutral alternative
                     src={img}
@@ -74,7 +74,7 @@ export default function Design() {
             <h3
               className="h-[60px] flex items-center justify-center text-gold 
               text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
-              [@media(min-width:1920px)]:text-3xl font-bold my-6 text-center"
+              [@media(min-width:190px)]:text-3xl font-bold my-6 text-center"
             >
               Fortnite Middle East
             </h3>
@@ -88,7 +88,7 @@ export default function Design() {
                   onClick={() => setSelectedImage(img)}
                 >
                   <img
-                    className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] w-[200px] 2xl:h-[250px]  [@media(min-width:2500px)]:w-[550px] [@media(min-width:2500px)]:h-[550px] object-cover rounded-md 
+                    className="2xl:w-[250px] [@media(min-width:190px)]:w-[500px] [@media(min-width:190px)]:h-[500px] w-[200px] 2xl:h-[250px]  [@media(min-width:2500px)]:w-[550px] [@media(min-width:2500px)]:h-[550px] object-cover rounded-md 
                     shadow-[0_4px_15px_#FED03B]/50"
                     src={img}
                     alt={`Fortnite project ${index + 1}`}
@@ -107,7 +107,7 @@ export default function Design() {
   <h3
     className="h-[60px] flex items-center justify-center text-gold 
     text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
-    [@media(min-width:1920px)]:text-3xl font-bold my-6 text-center"
+    [@media(min-width:190px)]:text-3xl font-bold my-6 text-center"
   >
     PlayStation & VoltechFPS
   </h3>
@@ -121,7 +121,7 @@ export default function Design() {
         onClick={() => setSelectedImage(img)}
       >
         <img
-          className="2xl:w-[250px] [@media(min-width:1920px)]:w-[400px] [@media(min-width:1920px)]:h-[400px] 
+          className="2xl:w-[250px] [@media(min-width:190px)]:w-[500px] [@media(min-width:190px)]:h-[500px] 
           [@media(min-width:2500px)]:w-[550px] [@media(min-width:2500px)]:h-[550px] 
           w-[200px] 2xl:h-[250px] object-cover rounded-md 
           shadow-[0_4px_15px_#FED03B]/50"

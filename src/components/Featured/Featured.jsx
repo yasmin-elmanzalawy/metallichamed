@@ -17,6 +17,7 @@ import bo9 from "../../assets/thumbnails/bestof/9.avif";
 import bo10 from "../../assets/thumbnails/bestof/10.avif";
 import bo11 from "../../assets/thumbnails/bestof/11.avif";
 import bo12 from "../../assets/thumbnails/bestof/12.avif";
+import bo13 from "../../assets/thumbnails/bestof/13.avif";
 
 import "./Featured.css";
 
@@ -92,6 +93,12 @@ const featuredVideos = [
     img: bo12,
     desc: "JellyPeanut ",
     link: "https://www.youtube.com/watch?v=RtHFYeANEfY",
+  },
+  {
+    id: 13,
+    img: bo13,
+    desc: "PlayStation Arabia",
+    link: "https://www.youtube.com/watch?v=f2O9evHDzrQ",
   },
 ];
 
