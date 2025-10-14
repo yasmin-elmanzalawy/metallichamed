@@ -34,10 +34,11 @@ export default function Trending() {
   }, [navEls.prevEl, navEls.nextEl]);
 
   return (
-    <div className="relative  md:mt-32 px-6 md:px-16">
+   <section>
+     <div className="relative md:mt-28 px-6 md:px-16">
         <h3
         className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
-        [@media(min-width:1920px)]:text-5xl font-bold my-5 md:my-12"
+        [@media(min-width:1920px)]:text-5xl font-bold my-5 md:my-12 text-center"
       >
         Trending
       </h3>
@@ -96,5 +97,6 @@ export default function Trending() {
         </div>
       </div>
     </div>
+   </section>
   );
 }

@@ -34,7 +34,7 @@ import abofalahrec from "../../assets/recs/ABOFLAH.ogg";
 import Trending from "../Trending/Trending";
 
 const endorsements = [
-    {
+  {
     id: 9,
     img: abofalah,
     name: "Abofalah",
@@ -47,7 +47,7 @@ const endorsements = [
     name: "Sofyan",
     text: "Mohammed is easily one of the best editors I've ever worked with, for me what separates him from most editors is that he really knows how youtube works. he knows how to use his editing skills to keep the audience engaged throughout the video and thus create good retention which is really the most important thing right? If you ever need an editor with really good YouTube knowledge, Mohammed is your guy!",
   },
-  
+
   {
     id: 1,
     img: b3shr,
@@ -74,7 +74,7 @@ const endorsements = [
     name: "Jellypeanut",
     text: "Honestly I love your work, I think it's really good.",
   },
-    {
+  {
     id: 8,
     img: aziz,
     name: "AZIZ",
@@ -106,7 +106,6 @@ const endorsements = [
 
     rec: cancelrec,
   },
-
 ];
 
 function EndorsementCard({ img, name, text, rec }) {
@@ -177,29 +176,36 @@ function EndorsementCard({ img, name, text, rec }) {
               </div>
             ))
           ) : (
-     <div className="w-full bg-[#30054A]/70 p-3 rounded-xl shadow-md flex items-center gap-3 border-2 border-[#662390]">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="w-8 h-8 flex-shrink-0"
-    viewBox="0 0 24 24"
-    fill="#FFCC02"
-  >
-    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.75-4.15v8.3A4.5 4.5 0 0 0 16.5 12zm-2.75-9v2.06c3.39.49 6 3.39 6 6.94s-2.61 6.45-6 6.94V21c4.56-.5 8-4.36 8-9s-3.44-8.5-8-9z" />
-  </svg>
+            <div className="w-full bg-[#30054A]/70 p-3 rounded-xl shadow-md flex items-center gap-3 border-1 border-gold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-8 h-8 flex-shrink-0"
+                viewBox="0 0 24 24"
+                fill="#FFCC02"
+              >
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.75-4.15v8.3A4.5 4.5 0 0 0 16.5 12zm-2.75-9v2.06c3.39.49 6 3.39 6 6.94s-2.61 6.45-6 6.94V21c4.56-.5 8-4.36 8-9s-3.44-8.5-8-9z" />
+              </svg>
 
-  <audio
-    controls
-    controlsList="nodownload"
-    className="flex-1 accent-[#FFCC02] rounded-lg w-[150px] lg:w-[260px] custom-audio"
-  >
-    <source src={rec} type="audio/ogg" />
-    Your browser does not support the audio element.
-  </audio>
+              <audio
+                controls
+                controlsList="nodownload"
+                className="flex-1  w-[150px] lg:w-[260px] custom-audio"
+              >
+                <source src={rec} className="" type="audio/ogg" />
+                Your browser does not support the audio element.
+              </audio>
 
-  <style>{`
-    .custom-audio::-webkit-media-controls-panel {
-      background-color: #30054A !important;
-    }
+              <style>{`
+    // .custom-audio::-webkit-media-controls-panel {
+    //   background-color: #30054A !important;
+    //   border:solid 2px black !important;
+    // }
+      .custom-audio::-webkit-media-controls-panel {
+  background-color: #30054A !important;
+  box-shadow: 0 0 0 1px #FFCC02 inset !important;
+  border-radius:30px;
+}
+
     .custom-audio::-webkit-media-controls-play-button,
     .custom-audio::-webkit-media-controls-current-time-display,
     .custom-audio::-webkit-media-controls-time-remaining-display,
@@ -216,10 +222,23 @@ function EndorsementCard({ img, name, text, rec }) {
     .custom-audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
       background-color: #FFCC02 !important;
     }
+      /* play/pause button */
+.custom-audio::-webkit-media-controls-play-button {
+ color: #FFCC02 !important;
+}
+ /* progress/timeline bar */
+.custom-audio::-webkit-media-controls-timeline {
+  filter: hue-rotate(0deg) brightness(1.5);
+  color: #FFCC02 !important;
+}
+  /* 3-dot (overflow) menu */
+.custom-audio::-webkit-media-controls-overflow-button {
+  background-color: #FFCC02 !important;
+  border-radius: 50%;
+}
+
   `}</style>
-</div>
-
-
+            </div>
           ))}
       </div>
     </div>
@@ -239,23 +258,28 @@ export default function Endorsements() {
 
     try {
       if (swiper.navigation) swiper.navigation.destroy();
-    } catch (e) {
-    }
+    } catch (e) {}
     swiper.navigation.init();
     swiper.navigation.update();
   }, [navEls.prevEl, navEls.nextEl]);
 
   return (
     <div>
-      <div className="min-h-[90vh] mt-32">
+      <div  id="endorsements" className="min-h-[90vh] mt-5">
         <motion.div
           key="cards"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="md:mx-24 px-1 py-12 mx-4  md:p-12 mt-28 bg-[#662390] m-8 rounded-[30px]"
+          className="md:mx-24 px-1 py-12 mx-4  md:p-12 mt-5  m-8 rounded-[30px]"
         >
+            <h3
+        className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
+        [@media(min-width:1920px)]:text-5xl font-bold my-5 md:my-12 text-center"
+      >
+        Endorsements
+      </h3>
           <div className="relative">
             <Swiper
               modules={[Navigation, Autoplay]}
@@ -263,6 +287,7 @@ export default function Endorsements() {
               slidesPerView={1}
               loop={true}
               autoplay={{ delay: 2500, disableOnInteraction: false }}
+              // autoplay={false}
               onBeforeInit={(swiper) => {
                 swiperRef.current = swiper;
               }}
@@ -305,7 +330,7 @@ export default function Endorsements() {
           <Trending></Trending>
         </motion.div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

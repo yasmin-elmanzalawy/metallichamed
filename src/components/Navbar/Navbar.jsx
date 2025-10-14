@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false); // ✅ new state
+  const [scrolled, setScrolled] = useState(false);
   const navRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -15,13 +15,12 @@ export default function Navbar() {
     { label: "Videos", to: "/videos" },
     { label: "Designs", to: "/design" },
     { label: "Clients", to: "/clients" },
-    { label: "Endorsements", to: "/endorsements" },
+    { label: "Endorsements", to: "/#endorsements" },
     { label: "About", to: "/#about" },
     { label: "CV", to: `${baseURL}Mohamed-Hamed-Resume.pdf`, download: true },
     { label: "Contact", to: "#" },
   ];
 
-  // ✅ Close mobile menu on outside click
   useEffect(() => {
     function handleClickOutside(event) {
       if (isOpen && navRef.current && !navRef.current.contains(event.target)) {
@@ -32,7 +31,6 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  // ✅ Detect scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -56,6 +54,7 @@ export default function Navbar() {
     let sectionId = null;
     if (label === "Home") sectionId = "hero";
     if (label === "About") sectionId = "about";
+    if (label === "Endorsements") sectionId = "endorsements";
 
     if (sectionId) {
       if (location.pathname !== "/") {
@@ -75,7 +74,9 @@ export default function Navbar() {
     <nav
       ref={navRef}
       className={`fixed top-0 left-0 w-full z-50 backdrop-blur-lg transition-all duration-300 bg-[#30054A] text-gold ${
-        scrolled ? "py-2 2xl:py-3" : "py-4 [@media(min-width:1920px)]:py-8 2xl:py-6  "
+        scrolled
+          ? "py-2 2xl:py-3"
+          : "py-4 [@media(min-width:1920px)]:py-8 2xl:py-6"
       }`}
     >
       <div className="md:mx-24 mx-18 px-8 md:px-4 flex justify-end items-center h-14">
@@ -102,7 +103,7 @@ export default function Navbar() {
                 <Link
                   to={to}
                   onClick={(e) => {
-                    if (label === "Home" || label === "About") {
+                    if (["Home", "About", "Endorsements"].includes(label)) {
                       e.preventDefault();
                       handleScrollLink(label);
                     }
@@ -169,7 +170,7 @@ export default function Navbar() {
                 <Link
                   to={to}
                   onClick={(e) => {
-                    if (label === "Home" || label === "About") {
+                    if (["Home", "About", "Endorsements"].includes(label)) {
                       e.preventDefault();
                       handleScrollLink(label);
                     }

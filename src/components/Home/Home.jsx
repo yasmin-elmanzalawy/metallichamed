@@ -44,8 +44,7 @@ export default function Home() {
             <p
               className="text-[#FEF7E4] text-base txt-size "
             >
-              Transforming raw footage into captivating visual experiences that
-              inspire and connect. 
+              Senior Video Editor that transform your footage to a solid videos that gain views and inspire viewers.
             </p>
           </div>
 
@@ -189,6 +188,7 @@ bring creativity and precision to every project.
 
       {/* services */}
       <Services></Services>
+      <Endorsement></Endorsement>
 
       <Footer></Footer>
     </div>
