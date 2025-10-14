@@ -56,7 +56,7 @@ export default function Design() {
                   onClick={() => setSelectedImage(img)}
                 >
                   <img
-                    className="2xl:w-[250px] [@media(min-width:1910px)]:w-[500px] [@media(min-width:1910px)]:h-[500px] [@media(min-width:2500px)]:w-[550px] [@media(min-width:2500px)]:h-[550px]  w-[200px] 2xl:h-[250px] object-cover rounded-md 
+                    className="2xl:w-[250px] [@media(min-width:1910px)]:w-[400px] [@media(min-width:1910px)]:h-[400px] [@media(min-width:2500px)]:w-[550px] [@media(min-width:2500px)]:h-[550px]  w-[200px] 2xl:h-[250px] object-cover rounded-md 
                     shadow-[0_4px_15px_#FED03B]/50" // golden glow
                     // shadow-lg shadow-black/40   // neutral alternative
                     src={img}
