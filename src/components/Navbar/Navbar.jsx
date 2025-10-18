@@ -4,10 +4,12 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [tooltipVisible, setTooltipVisible] = useState(false);
+  const tooltipTimeoutRef = useRef(null);
+
   const navRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
-
   const baseURL = import.meta.env.BASE_URL;
 
   const linkedNavItems = [
@@ -21,6 +23,7 @@ export default function Navbar() {
     { label: "Contact", to: "#" },
   ];
 
+  // Handle clicks outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (isOpen && navRef.current && !navRef.current.contains(event.target)) {
@@ -31,14 +34,9 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
+  // Handle scroll
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -70,6 +68,16 @@ export default function Navbar() {
     }
   };
 
+  // Tooltip handlers for linger effect
+  const showTooltip = () => {
+    clearTimeout(tooltipTimeoutRef.current);
+    setTooltipVisible(true);
+  };
+
+  const hideTooltip = () => {
+    tooltipTimeoutRef.current = setTimeout(() => setTooltipVisible(false), 3000);
+  };
+
   return (
     <nav
       ref={navRef}
@@ -79,8 +87,41 @@ export default function Navbar() {
           : "py-4 [@media(min-width:1920px)]:py-8 2xl:py-6"
       }`}
     >
-      <div className="md:mx-24 mx-18 px-8 md:px-4 flex justify-end items-center h-14">
-        {/* Desktop Menu */}
+      <div className="md:mx-24 mx-18 px-8 md:px-4 flex justify-between items-center h-14">
+       {/* === Left: Copyright Icon with Smooth Tooltip === */}
+<div className="relative flex items-center">
+  <div
+    className="text-[#E8CCF9] cursor-pointer text-xl [@media(min-width:1920px)]:text-2xl"
+    onMouseEnter={showTooltip}
+    onMouseLeave={hideTooltip}
+  >
+    ©
+  </div>
+
+  {/* Tooltip Block (always in DOM for smooth transition) */}
+  <div
+    className={`absolute left-full top-1/2 -translate-y-1/2 ml-2 w-max bg-[#662390] text-white text-sm rounded-lg px-4 py-2 shadow-lg
+      transition-all duration-500 max-w-[220px] md:max-w-[500px]
+      ${tooltipVisible ? "opacity-100 translate-x-0 pointer-events-auto" : "opacity-0 translate-x-2 pointer-events-none"}
+    `}
+    onMouseEnter={showTooltip}
+    onMouseLeave={hideTooltip}
+  >
+    © 2025 Designed and created by{" "}
+    <a
+      href="https://wa.me/201094837186"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#FED03B] font-bold hover:underline "
+    >
+      Yasmin Elmanzalawy
+    </a>
+  </div>
+</div>
+
+
+
+        {/* === Right: Desktop Menu === */}
         <ul className="hidden lg:flex space-x-6 font-semibold tracking-wide items-center">
           {linkedNavItems.map(({ label, to, download }) => (
             <li key={label}>
@@ -118,7 +159,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
+        {/* === Mobile Menu Button === */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
