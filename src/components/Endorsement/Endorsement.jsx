@@ -96,7 +96,7 @@ function CustomAudioPlayer({ src, onPlay, onPause }) {
   };
 
   return (
-    <div className="w-full bg-[#30054A] border border-[#FFCC02] rounded-full py-2 px-5 flex items-center justify-center gap-3 shadow-md">
+    <div className="w-full bg-[#30054A] border border-[#FFCC02] rounded-xl py-5 px-5 flex items-center justify-center gap-3 shadow-md">
       <button onClick={togglePlay} className="text-[#FFCC02] hover:scale-110 transition-transform">
         {isPlaying ? <FaPause /> : <FaPlay />}
       </button>
@@ -359,7 +359,7 @@ export default function Endorsements() {
                 if (el && navEls.prevEl !== el)
                   setNavEls((s) => ({ ...s, prevEl: el }));
               }}
-              className="absolute left-0 md:left-[-40px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl"
+              className="absolute left-[-15px] md:left-[-40px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-2 rounded-full shadow-xl"
               aria-label="Previous"
             >
               <FaChevronLeft className="text-white text-2xl" />
@@ -370,7 +370,7 @@ export default function Endorsements() {
                 if (el && navEls.nextEl !== el)
                   setNavEls((s) => ({ ...s, nextEl: el }));
               }}
-              className="absolute right-0 md:right-[-40px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl"
+              className="absolute right-[-15px] md:right-[-40px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-2 rounded-full shadow-xl"
               aria-label="Next"
             >
               <FaChevronRight className="text-white text-2xl" />

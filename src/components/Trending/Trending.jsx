@@ -103,7 +103,7 @@ export default function Trending() {
               if (el && navEls.prevEl !== el)
                 setNavEls((s) => ({ ...s, prevEl: el }));
             }}
-            className="absolute left-[-20px] md:left-[-60px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
+            className="absolute left-[-25px] md:left-[-60px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-2 rounded-full shadow-xl pointer-events-auto"
             aria-label="Previous"
           >
             <FaChevronLeft className="text-white text-2xl" />
@@ -114,7 +114,7 @@ export default function Trending() {
               if (el && navEls.nextEl !== el)
                 setNavEls((s) => ({ ...s, nextEl: el }));
             }}
-            className="absolute right-[-20px] md:right-[-60px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
+            className="absolute right-[-25px] md:right-[-60px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-2 rounded-full shadow-xl pointer-events-auto"
             aria-label="Next"
           >
             <FaChevronRight className="text-white text-2xl" />
