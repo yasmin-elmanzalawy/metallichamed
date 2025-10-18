@@ -70,13 +70,29 @@ export default function Navbar() {
 
   // Tooltip handlers for linger effect
   const showTooltip = () => {
-    clearTimeout(tooltipTimeoutRef.current);
+    if (tooltipTimeoutRef.current) clearTimeout(tooltipTimeoutRef.current);
     setTooltipVisible(true);
   };
 
   const hideTooltip = () => {
     tooltipTimeoutRef.current = setTimeout(() => setTooltipVisible(false), 3000);
   };
+
+  // Hide tooltip when clicking outside (for mobile)
+  const tooltipContainerRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (tooltipContainerRef.current && !tooltipContainerRef.current.contains(e.target)) {
+        setTooltipVisible(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav
@@ -88,38 +104,37 @@ export default function Navbar() {
       }`}
     >
       <div className="md:mx-24 mx-18 px-8 md:px-4 flex justify-between items-center h-14">
-       {/* === Left: Copyright Icon with Smooth Tooltip === */}
-<div className="relative flex items-center">
-  <div
-    className="text-[#E8CCF9] cursor-pointer text-xl [@media(min-width:1920px)]:text-2xl"
-    onMouseEnter={showTooltip}
-    onMouseLeave={hideTooltip}
-  >
-    ©
-  </div>
+        {/* === Left: Copyright Icon with Smooth Tooltip === */}
+        <div className="relative flex items-center" ref={tooltipContainerRef}>
+          <div
+            className="text-[#E8CCF9] cursor-pointer text-xl [@media(min-width:1920px)]:text-2xl"
+            onMouseEnter={showTooltip}
+            onMouseLeave={hideTooltip}
+            onClick={showTooltip} // tap to show on mobile
+          >
+            ©
+          </div>
 
-  {/* Tooltip Block (always in DOM for smooth transition) */}
-  <div
-    className={`absolute left-full top-1/2 -translate-y-1/2 ml-2 w-max bg-[#662390] text-white text-sm rounded-lg px-4 py-2 shadow-lg
-      transition-all duration-500 max-w-[220px] md:max-w-[500px]
-      ${tooltipVisible ? "opacity-100 translate-x-0 pointer-events-auto" : "opacity-0 translate-x-2 pointer-events-none"}
-    `}
-    onMouseEnter={showTooltip}
-    onMouseLeave={hideTooltip}
-  >
-    © 2025 Designed and created by{" "}
-    <a
-      href="https://wa.me/201094837186"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[#FED03B] font-bold hover:underline "
-    >
-      Yasmin Elmanzalawy
-    </a>
-  </div>
-</div>
-
-
+          {/* Tooltip Block (always in DOM for smooth transition) */}
+          <div
+            className={`absolute left-full top-1/2 -translate-y-1/2 ml-2 w-max bg-[#662390] text-white text-sm rounded-lg px-4 py-2 shadow-lg
+              transition-all duration-500 max-w-[250px] md:max-w-[500px]
+              ${tooltipVisible ? "opacity-100 translate-x-0 pointer-events-auto" : "opacity-0 translate-x-2 pointer-events-none"}
+            `}
+            onMouseEnter={showTooltip}
+            onMouseLeave={hideTooltip}
+          >
+            © 2025 Designed and created by{" "}
+            <a
+              href="https://wa.me/201094837186"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FED03B] font-bold hover:underline "
+            >
+              Yasmin Elmanzalawy
+            </a>
+          </div>
+        </div>
 
         {/* === Right: Desktop Menu === */}
         <ul className="hidden lg:flex space-x-6 font-semibold tracking-wide items-center">
