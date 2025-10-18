@@ -18,7 +18,7 @@ const trends = [
   { img: trend2, link: "" },
   { img: trend3, link: "https://www.youtube.com/watch?v=RALnd4Tidz8" },
   { img: trend4, link: "" },
-  { img: trend5, link: "" },
+  { img: trend5, link: "https://www.youtube.com/watch?v=RALnd4Tidz8" },
   { img: trend6, link: "https://www.youtube.com/watch?v=C59qDUGdjm8" },
 ];
 

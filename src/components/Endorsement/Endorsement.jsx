@@ -1,7 +1,15 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaPlay,
+  FaPause,
+  FaVolumeUp,
+  FaVolumeMute,
+  FaEllipsisV,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import "swiper/css";
@@ -24,12 +32,6 @@ import rokas from "../../assets/RokasKavaliauskas.avif";
 import Sofyan from "../../assets/creators/11.avif";
 import ahmed from "../../assets/creators/3.avif";
 import offside from "../../assets/creators/13.avif";
-import trend1 from "../../assets/trends/1.avif";
-import trend2 from "../../assets/trends/2.avif";
-import trend3 from "../../assets/trends/3.avif";
-import trend4 from "../../assets/trends/4.avif";
-import trend5 from "../../assets/trends/5.avif";
-import trend6 from "../../assets/trends/6.avif";
 import Footer from "../Footer/Footer";
 import cancelrec from "../../assets/recs/CANCEL.ogg";
 import ahmedrec from "../../assets/recs/ahmedshow.ogg";
@@ -37,125 +39,139 @@ import azizrec from "../../assets/recs/AZIZ.ogg";
 import abofalahrec from "../../assets/recs/ABOFLAH.ogg";
 import Trending from "../Trending/Trending";
 
+// ✅ Custom Audio Player (Updated)
+function CustomAudioPlayer({ src }) {
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [isMuted, setIsMuted] = useState(false);
+  const [currentTime, setCurrentTime] = useState(30); // starts at 0:30
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const updateTime = () => {
+      setCurrentTime(audio.currentTime + 30); // add 30 sec offset
+      setProgress((audio.currentTime / audio.duration) * 100 || 0);
+    };
+
+    audio.addEventListener("timeupdate", updateTime);
+    return () => audio.removeEventListener("timeupdate", updateTime);
+  }, []);
+
+  const togglePlay = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const toggleMute = () => {
+    if (!audioRef.current) return;
+    audioRef.current.muted = !audioRef.current.muted;
+    setIsMuted(!isMuted);
+  };
+
+  const handleSeek = (e) => {
+    const audio = audioRef.current;
+    const newTime = (e.target.value / 100) * audio.duration;
+    audio.currentTime = newTime;
+    setProgress(e.target.value);
+  };
+
+  const formatTime = (time) => {
+    if (isNaN(time)) return "0:00";
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60)
+      .toString()
+      .padStart(2, "0");
+    return `${minutes}:${seconds}`;
+  };
+
+  return (
+    <div className="w-full bg-[#30054A] border border-[#FFCC02] rounded-lg py-2 px-4 flex items-center gap-3 shadow-md">
+      <FaVolumeUp className="text-[#FFCC02] w-5 h-5 flex-shrink-0" />
+
+      <button
+        onClick={togglePlay}
+        className="text-[#FFCC02] hover:scale-110 transition-transform"
+      >
+        {isPlaying ? <FaPause /> : <FaPlay />}
+      </button>
+
+      {/* ✅ Single time only */}
+      <span className="text-[#FFCC02] text-sm font-medium min-w-[40px] text-center">
+        {formatTime(currentTime)}
+      </span>
+
+      {/* ✅ Shorter progress bar */}
+      <input
+        type="range"
+        value={progress}
+        onChange={handleSeek}
+        className="w-[100px] h-[4px] accent-[#FFCC02] cursor-pointer bg-[#FFCC02]/30 rounded-full appearance-none"
+        style={{
+          background: `linear-gradient(to right, #FFCC02 ${progress}%, rgba(255,204,2,0.3) ${progress}%)`,
+        }}
+      />
+
+      <button
+        onClick={toggleMute}
+        className="text-[#FFCC02] hover:scale-110 transition-transform"
+      >
+        {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+      </button>
+
+      <FaEllipsisV className="text-[#FFCC02] w-4 h-4 cursor-pointer hover:rotate-90 transition-transform" />
+
+      <audio
+        ref={audioRef}
+        src={src}
+        onEnded={() => setIsPlaying(false)}
+        preload="metadata"
+      />
+    </div>
+  );
+}
+
+
 const endorsements = [
-  {
-    id: 9,
-    img: abofalah,
-    name: "Abofalah",
-    rec: abofalahrec,
-  },
-  {
-    id: 10,
-    img: Sofyan,
-    name: "Sofyan",
-    text: "Mohammed is easily one of the best editors I've ever worked with, for me what separates him from most editors is that he really knows how youtube works. he knows how to use his editing skills to keep the audience engaged throughout the video and thus create good retention which is really the most important thing right? If you ever need an editor with really good YouTube knowledge, Mohammed is your guy!",
-  },
-  {
-    id: 1,
-    img: b3shr,
-    name: "B3shr",
-    text: "You are great! The video is amazing!",
-  },
-  {
-    id: 3,
-    img: aldaej,
-    name: "Abdullah Al Daej",
-    text: "I worked with Mohammed for nearly 2 years. He provided me with world-class editing services that contributed to high growth in audience retention and engagement. Providing a perfect combination of editing skills and a sense of humor with maintaining a high level of professionalism, makes Mohammed a great added value to any media production project.",
-  },
-  {
-    id: 12,
-    img: caio,
-    name: "Caio Borges",
-    subtitle: "OG Esports",
-    text: "Hamed surprised me positively. He is super proactive and has a wide range of skills. He also has great knowledge of the MENA market and how to make videos more attractive for this region. Without a doubt, a great choice for my team at that moment, and hope to work with Hamed again at some point.",
-  },
-  {
-    id: 13,
-    img: noof,
-    name: "Noof Abdulla",
-    subtitle: "Swarmio",
-    text: "I had the pleasure of working with Mohamed on creating social media and streaming content. He consistently demonstrated creativity, professionalism, and strong technical skills in his work. One of Mohamed’s standout qualities is his ability to clearly understand feedback and implement revisions with a quick turnaround, all while maintaining high-quality standards.",
-  },
-  {
-    id: 14,
-    img: bilal,
-    name: "Bilal Shreif",
-    subtitle: "The Esports & Gaming Agency - Middle East",
-    text: "I Highly recommend Hamed not only for his top quality work, but also for his dedication and love for his profession, his patience when the client numerous edits and for the speed of delivery. It has been more than two years i work with Hamed and he always strives to deliver better results. Always with you the best Hamed you deserve it!",
-  },
-  {
-    id: 15,
-    img: Nathany,
-    name: "Nathany Rabello",
-    subtitle: "Swarmio",
-    text: "Hammed is creative, dedicated and thinks fast. It's a great person to have around and excellent to work with. For more than a year, I could count on him to bring to life all the visual aspects of our marketing campaigns, especially for highlights and community content, always being available to learn new things and keep the deliveries fresh and exciting. I'm glad that I had the opportunity to work and share so much with him.",
-  },
-  {
-    id: 16,
-    img: rokas,
-    name: "Rokas Kavaliauskas",
-    subtitle: "Commerce Core",
-    text: "I’ve worked with Mohamed for a few months and it that time I’ve noticed that he is a talented video editor with a sharp eye for detail and creativity. He always delivers polished, engaging work that elevates every project.",
-  },
-  {
-    id: 7,
-    img: ahmed,
-    name: "Ahmed Show",
-    rec: ahmedrec,
-  },
-  {
-    id: 2,
-    img: Jellypeanut,
-    name: "Jellypeanut",
-    text: "Honestly I love your work, I think it's really good.",
-  },
-  {
-    id: 8,
-    img: aziz,
-    name: "AZIZ",
-    rec: azizrec,
-  },
-  {
-    id: 4,
-    img: swarmio,
-    name: "Swarmio Media",
-    text: "The platform videos for GGG and OEZ were highly praised, especially GGG's video.",
-  },
-  {
-    id: 5,
-    img: mysalahmat,
-    name: "MySalahMat",
-    text: "Your edit is so good, Really impressed! love the colours and transitions, because its for kids it will keep them interested.",
-  },
-  {
-    id: 11,
-    img: offside,
-    name: "OFFSIDE",
-    text: "Your edit is so INSANE from what I've seen, you're honestly insane, best video researcher out there, you're a legend bro!",
-  },
-  
-  {
-    id: 3,
-    img: cancel,
-    name: "CANCEL",
-    rec: cancelrec,
-  },
+  { id: 9, img: abofalah, name: "Abofalah", rec: abofalahrec },
+  { id: 10, img: Sofyan, name: "Sofyan", text: "Mohammed is easily one of the best editors I've ever worked with..." },
+  { id: 1, img: b3shr, name: "B3shr", text: "You are great! The video is amazing!" },
+  { id: 3, img: aldaej, name: "Abdullah Al Daej", text: "I worked with Mohammed for nearly 2 years. He provided world-class editing services..." },
+  { id: 12, img: caio, name: "Caio Borges", subtitle: "OG Esports", text: "Hamed surprised me positively. He is super proactive and has a wide range of skills..." },
+  { id: 13, img: noof, name: "Noof Abdulla", subtitle: "Swarmio", text: "I had the pleasure of working with Mohamed on creating social media and streaming content..." },
+  { id: 14, img: bilal, name: "Bilal Shreif", subtitle: "The Esports & Gaming Agency - Middle East", text: "I Highly recommend Hamed not only for his top quality work, but also for his dedication..." },
+  { id: 15, img: Nathany, name: "Nathany Rabello", subtitle: "Swarmio", text: "Hammed is creative, dedicated and thinks fast. It's a great person to have around..." },
+  { id: 16, img: rokas, name: "Rokas Kavaliauskas", subtitle: "Commerce Core", text: "I’ve worked with Mohamed for a few months and he is a talented video editor..." },
+  { id: 7, img: ahmed, name: "Ahmed Show", rec: ahmedrec },
+  { id: 2, img: Jellypeanut, name: "Jellypeanut", text: "Honestly I love your work, I think it's really good." },
+  { id: 8, img: aziz, name: "AZIZ", rec: azizrec },
+  { id: 4, img: swarmio, name: "Swarmio Media", text: "The platform videos for GGG and OEZ were highly praised..." },
+  { id: 5, img: mysalahmat, name: "MySalahMat", text: "Your edit is so good! Really impressed!" },
+  { id: 11, img: offside, name: "OFFSIDE", text: "Your edit is so INSANE, best video researcher out there!" },
+  { id: 3, img: cancel, name: "CANCEL", rec: cancelrec },
 ];
 
+// ✅ Card Component
+// ✅ Card Component
 function EndorsementCard({ img, name, subtitle, text, rec }) {
   return (
     <div
-      className=" relative flex items-start  p-8 rounded-2xl overflow-hidden leading-relaxed
-      transition-all duration-[480ms] ease-[cubic-bezier(0.23,1,0.32,1)] txt-size justify-center
-      hover:scale-105 min-h-[600px] m-5 shadow-lg hover:shadow-2xl border border-[#FFCC02]
-      bg-cover bg-center"
-      style={{ backgroundImage: `url(${bg} )` }}
+      className="relative flex items-start p-8 rounded-2xl overflow-hidden leading-relaxed transition-all duration-[480ms]
+      ease-[cubic-bezier(0.23,1,0.32,1)] justify-center hover:scale-105 min-h-[600px] m-5 shadow-lg hover:shadow-2xl
+      border border-[#FFCC02] bg-cover bg-center"
+      style={{ backgroundImage: `url(${bg})` }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-[#662390]/50"></div>
 
       <div className="relative flex flex-col h-full gap-4 text-neutral-50 z-[10]">
-        {/* Avatar + Name */}
+        {/* === Profile Info === */}
         <div className="flex flex-col items-center gap-3">
           <img
             src={img}
@@ -172,119 +188,55 @@ function EndorsementCard({ img, name, subtitle, text, rec }) {
           )}
         </div>
 
-        {/* Quote + Text */}
-        <div className="flex flex-col items-start gap-2">
-          <svg
-            viewBox="0 0 24 24"
-            className="w-12 h-12 quotes"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="#FFCC02"
-              d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"
-            />
-          </svg>
-          <p className="opacity-80 text-base txt-lg">{text}</p>
-        </div>
-
-        {/* Recordings (if any) */}
-        {rec &&
-          (Array.isArray(rec) ? (
-            rec.map((r, index) => (
-              <div
-                key={index}
-                className="w-full bg-[#30054A]/70 p-3 rounded-xl shadow-md flex items-center gap-3"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8 flex-shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="#FFCC02"
-                >
-                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.75-4.15v8.3A4.5 4.5 0 0 0 16.5 12zm-2.75-9v2.06c3.39.49 6 3.39 6 6.94s-2.61 6.45-6 6.94V21c4.56-.5 8-4.36 8-9s-3.44-8.5-8-9z" />
-                </svg>
-
-                <audio
-                  controls
-                  controlsList="nodownload"
-                  className="flex-1 accent-[#FFCC02] rounded-lg w-[150px] lg:w-[260px]"
-                >
-                  <source src={r} type="audio/ogg" />
-                  Your browser does not support the audio element.
-                </audio>
-              </div>
-            ))
-          ) : (
-            <div className="w-full bg-[#30054A]/70 p-3 rounded-xl shadow-md flex items-center gap-3 border-1 border-gold">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8 flex-shrink-0"
-                viewBox="0 0 24 24"
+        {/* === Quote + Text Endorsements === */}
+        {text && (
+          <div className="flex flex-col items-start gap-2">
+            <svg
+              viewBox="0 0 24 24"
+              className="w-12 h-12 quotes"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
                 fill="#FFCC02"
-              >
-                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.75-4.15v8.3A4.5 4.5 0 0 0 16.5 12zm-2.75-9v2.06c3.39.49 6 3.39 6 6.94s-2.61 6.45-6 6.94V21c4.56-.5 8-4.36 8-9s-3.44-8.5-8-9z" />
-              </svg>
+                d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"
+              />
+            </svg>
+            <p className="opacity-80 text-base">{text}</p>
+          </div>
+        )}
 
-              <audio
-                controls
-                controlsList="nodownload"
-                className="flex-1  w-[150px] lg:w-[260px] custom-audio"
-              >
-                <source src={rec} className="" type="audio/ogg" />
-                Your browser does not support the audio element.
-              </audio>
-
-              <style>{`
-      .custom-audio::-webkit-media-controls-panel {
-        background-color: #30054A !important;
-        box-shadow: 0 0 0 1px #FFCC02 inset !important;
-        border-radius:30px;
-      }
-
-      .custom-audio::-webkit-media-controls-play-button,
-      .custom-audio::-webkit-media-controls-current-time-display,
-      .custom-audio::-webkit-media-controls-time-remaining-display,
-      .custom-audio::-webkit-media-controls-volume-slider,
-      .custom-audio::-webkit-media-controls-mute-button {
-        color: #FFCC02 !important;
-        filter: brightness(1.4);  
-      }
-      .custom-audio::-webkit-media-controls-timeline::-webkit-slider-runnable-track {
-        background-color: #FFCC02 !important;
-      }
-      .custom-audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
-        background-color: #FFCC02 !important;
-      }
-      .custom-audio::-webkit-media-controls-play-button {
-        color: #FFCC02 !important;
-      }
-      .custom-audio::-webkit-media-controls-timeline {
-        filter: hue-rotate(0deg) brightness(1.5);
-        color: #FFCC02 !important;
-      }
-      .custom-audio::-webkit-media-controls-overflow-button {
-        background-color: #FFCC02 !important;
-        border-radius: 50%;
-      }
-    `}</style>
-            </div>
-          ))}
+        {/* === Quote + Audio Endorsements === */}
+        {rec && (
+          <div className="flex flex-col items-start gap-3">
+            <svg
+              viewBox="0 0 24 24"
+              className="w-12 h-12 quotes"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#FFCC02"
+                d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"
+              />
+            </svg>
+            <CustomAudioPlayer src={rec} />
+          </div>
+        )}
       </div>
     </div>
   );
 }
 
+
+// ✅ Main Component
 export default function Endorsements() {
   const [navEls, setNavEls] = useState({ prevEl: null, nextEl: null });
   const swiperRef = useRef(null);
 
   useEffect(() => {
     if (!swiperRef.current || !navEls.prevEl || !navEls.nextEl) return;
-
     const swiper = swiperRef.current;
     swiper.params.navigation.prevEl = navEls.prevEl;
     swiper.params.navigation.nextEl = navEls.nextEl;
-
     try {
       if (swiper.navigation) swiper.navigation.destroy();
     } catch (e) {}
@@ -294,21 +246,19 @@ export default function Endorsements() {
 
   return (
     <div>
-      <div id="endorsements" className="min-h-[90vh] mt-5 ">
+      <div id="endorsements" className="min-h-[90vh] mt-5">
         <motion.div
           key="cards"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="md:mx-24 px-1 py-12 mx-4  md:p-12 mt-5  m-8 rounded-[30px]"
+          className="md:mx-24 px-1 py-12 mx-4 md:p-12 mt-5 rounded-[30px]"
         >
-          <h3
-            className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
-        [@media(min-width:1920px)]:text-5xl font-bold my-5 md:my-12 text-center"
-          >
+          <h3 className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl font-bold my-5 md:my-12 text-center">
             Endorsements
           </h3>
+
           <div className="relative">
             <Swiper
               modules={[Navigation, Autoplay]}
@@ -338,7 +288,7 @@ export default function Endorsements() {
                 if (el && navEls.prevEl !== el)
                   setNavEls((s) => ({ ...s, prevEl: el }));
               }}
-              className="absolute left-0 md:left-[-40px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
+              className="absolute left-0 md:left-[-40px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl"
               aria-label="Previous"
             >
               <FaChevronLeft className="text-white text-2xl" />
@@ -349,13 +299,14 @@ export default function Endorsements() {
                 if (el && navEls.nextEl !== el)
                   setNavEls((s) => ({ ...s, nextEl: el }));
               }}
-              className="absolute right-0 md:right-[-40px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
+              className="absolute right-0 md:right-[-40px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl"
               aria-label="Next"
             >
               <FaChevronRight className="text-white text-2xl" />
             </div>
           </div>
-          <Trending></Trending>
+
+          <Trending />
         </motion.div>
       </div>
     </div>
