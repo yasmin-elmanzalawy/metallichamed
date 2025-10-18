@@ -134,27 +134,26 @@ export default function Featured() {
         <FaChevronRight className="text-white text-xl" />
       </div>
 
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-        }}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-          1880: { slidesPerView: 5 },
-        }}
-      >
+     <Swiper
+  modules={[Navigation, Autoplay]}
+  spaceBetween={20}
+  slidesPerView={1}
+  loop={true}
+  autoplay={{ delay: 2500, disableOnInteraction: false }}
+  onInit={(swiper) => {
+    swiper.params.navigation.prevEl = prevRef.current;
+    swiper.params.navigation.nextEl = nextRef.current;
+    swiper.navigation.init();
+    swiper.navigation.update();
+  }}
+  breakpoints={{
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+    1280: { slidesPerView: 4 },
+    1880: { slidesPerView: 5 },
+  }}
+>
+
         {featuredVideos.map((video) => (
           <SwiperSlide key={video.id}>
             <div className="py-5 px-5">

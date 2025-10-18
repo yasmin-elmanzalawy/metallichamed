@@ -383,7 +383,6 @@ const cards = [
   },
   {
     id: 2,
-    // name: "IRL / Vlogs",
     image: vlog,
     shortVideos: [
       {
@@ -984,7 +983,7 @@ export default function Videos() {
                     setSelectedCard(null);
                     setActiveTab("short");
                   }}
-                  className="px-4 py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition"
+                  className="px-4 md:py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition"
                 >
                   ← Back
                 </button>
@@ -992,7 +991,7 @@ export default function Videos() {
                 {/* Home Button (mobile only) */}
                 <button
                   onClick={() => (window.location.href = "/")}
-                  className="px-4 py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition md:hidden flex items-center gap-2"
+                  className="px-4  bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition md:hidden flex items-center gap-2"
                 >
                   Home →
                 </button>
