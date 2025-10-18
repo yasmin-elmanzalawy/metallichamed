@@ -16,6 +16,11 @@ import swarmio from "../../assets/companies/12.avif";
 import aziz from "../../assets/creators/2.avif";
 import abofalah from "../../assets/creators/1.avif";
 import aldaej from "../../assets/Abdullahaldaej.avif";
+import caio from "../../assets/Caioborges.avif";
+import Nathany from "../../assets/Nathany.avif";
+import noof from "../../assets/NoofAbdulla.avif";
+import bilal from "../../assets/BilalShreif.avif";
+import rokas from "../../assets/RokasKavaliauskas.avif";
 import Sofyan from "../../assets/creators/11.avif";
 import ahmed from "../../assets/creators/3.avif";
 import offside from "../../assets/creators/13.avif";
@@ -37,7 +42,6 @@ const endorsements = [
     id: 9,
     img: abofalah,
     name: "Abofalah",
-
     rec: abofalahrec,
   },
   {
@@ -46,14 +50,12 @@ const endorsements = [
     name: "Sofyan",
     text: "Mohammed is easily one of the best editors I've ever worked with, for me what separates him from most editors is that he really knows how youtube works. he knows how to use his editing skills to keep the audience engaged throughout the video and thus create good retention which is really the most important thing right? If you ever need an editor with really good YouTube knowledge, Mohammed is your guy!",
   },
-
   {
     id: 1,
     img: b3shr,
     name: "B3shr",
     text: "You are great! The video is amazing!",
   },
-
   {
     id: 3,
     img: aldaej,
@@ -61,10 +63,44 @@ const endorsements = [
     text: "I worked with Mohammed for nearly 2 years. He provided me with world-class editing services that contributed to high growth in audience retention and engagement. Providing a perfect combination of editing skills and a sense of humor with maintaining a high level of professionalism, makes Mohammed a great added value to any media production project.",
   },
   {
+    id: 12,
+    img: caio,
+    name: "Caio Borges",
+    subtitle: "OG Esports",
+    text: "Hamed surprised me positively. He is super proactive and has a wide range of skills. He also has great knowledge of the MENA market and how to make videos more attractive for this region. Without a doubt, a great choice for my team at that moment, and hope to work with Hamed again at some point.",
+  },
+  {
+    id: 13,
+    img: noof,
+    name: "Noof Abdulla",
+    subtitle: "Swarmio",
+    text: "I had the pleasure of working with Mohamed on creating social media and streaming content. He consistently demonstrated creativity, professionalism, and strong technical skills in his work. One of Mohamed’s standout qualities is his ability to clearly understand feedback and implement revisions with a quick turnaround, all while maintaining high-quality standards.",
+  },
+  {
+    id: 14,
+    img: bilal,
+    name: "Bilal Shreif",
+    subtitle: "The Esports & Gaming Agency - Middle East",
+    text: "I Highly recommend Hamed not only for his top quality work, but also for his dedication and love for his profession, his patience when the client numerous edits and for the speed of delivery. It has been more than two years i work with Hamed and he always strives to deliver better results. Always with you the best Hamed you deserve it!",
+  },
+  {
+    id: 15,
+    img: Nathany,
+    name: "Nathany Rabello",
+    subtitle: "Swarmio",
+    text: "Hammed is creative, dedicated and thinks fast. It's a great person to have around and excellent to work with. For more than a year, I could count on him to bring to life all the visual aspects of our marketing campaigns, especially for highlights and community content, always being available to learn new things and keep the deliveries fresh and exciting. I'm glad that I had the opportunity to work and share so much with him.",
+  },
+  {
+    id: 16,
+    img: rokas,
+    name: "Rokas Kavaliauskas",
+    subtitle: "Commerce Core",
+    text: "I’ve worked with Mohamed for a few months and it that time I’ve noticed that he is a talented video editor with a sharp eye for detail and creativity. He always delivers polished, engaging work that elevates every project.",
+  },
+  {
     id: 7,
     img: ahmed,
     name: "Ahmed Show",
-
     rec: ahmedrec,
   },
   {
@@ -77,7 +113,6 @@ const endorsements = [
     id: 8,
     img: aziz,
     name: "AZIZ",
-
     rec: azizrec,
   },
   {
@@ -98,21 +133,21 @@ const endorsements = [
     name: "OFFSIDE",
     text: "Your edit is so INSANE from what I've seen, you're honestly insane, best video researcher out there, you're a legend bro!",
   },
+  
   {
     id: 3,
     img: cancel,
     name: "CANCEL",
-
     rec: cancelrec,
   },
 ];
 
-function EndorsementCard({ img, name, text, rec }) {
+function EndorsementCard({ img, name, subtitle, text, rec }) {
   return (
     <div
       className=" relative flex items-start  p-8 rounded-2xl overflow-hidden leading-relaxed
       transition-all duration-[480ms] ease-[cubic-bezier(0.23,1,0.32,1)] txt-size justify-center
-      hover:scale-105 min-h-[550px] m-5 shadow-lg hover:shadow-2xl border border-[#FFCC02]
+      hover:scale-105 min-h-[600px] m-5 shadow-lg hover:shadow-2xl border border-[#FFCC02]
       bg-cover bg-center"
       style={{ backgroundImage: `url(${bg} )` }}
     >
@@ -130,6 +165,11 @@ function EndorsementCard({ img, name, text, rec }) {
           <strong className="block font-semibold text-center text-gold">
             {name}
           </strong>
+          {subtitle && (
+            <span className="block text-sm italic text-center text-[#FFCC02]/80">
+              {subtitle}
+            </span>
+          )}
         </div>
 
         {/* Quote + Text */}
@@ -195,48 +235,38 @@ function EndorsementCard({ img, name, text, rec }) {
               </audio>
 
               <style>{`
-    // .custom-audio::-webkit-media-controls-panel {
-    //   background-color: #30054A !important;
-    //   border:solid 2px black !important;
-    // }
       .custom-audio::-webkit-media-controls-panel {
-  background-color: #30054A !important;
-  box-shadow: 0 0 0 1px #FFCC02 inset !important;
-  border-radius:30px;
-}
+        background-color: #30054A !important;
+        box-shadow: 0 0 0 1px #FFCC02 inset !important;
+        border-radius:30px;
+      }
 
-    .custom-audio::-webkit-media-controls-play-button,
-    .custom-audio::-webkit-media-controls-current-time-display,
-    .custom-audio::-webkit-media-controls-time-remaining-display,
-    .custom-audio::-webkit-media-controls-volume-slider,
-    .custom-audio::-webkit-media-controls-mute-button {
-      color: #FFCC02 !important;
-      filter: brightness(1.4);  
-    }
-    /* Gold progress bar */
-    .custom-audio::-webkit-media-controls-timeline::-webkit-slider-runnable-track {
-      background-color: #FFCC02 !important;
-    }
-    /* Gold draggable thumb */
-    .custom-audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
-      background-color: #FFCC02 !important;
-    }
-      /* play/pause button */
-.custom-audio::-webkit-media-controls-play-button {
- color: #FFCC02 !important;
-}
- /* progress/timeline bar */
-.custom-audio::-webkit-media-controls-timeline {
-  filter: hue-rotate(0deg) brightness(1.5);
-  color: #FFCC02 !important;
-}
-  /* 3-dot (overflow) menu */
-.custom-audio::-webkit-media-controls-overflow-button {
-  background-color: #FFCC02 !important;
-  border-radius: 50%;
-}
-
-  `}</style>
+      .custom-audio::-webkit-media-controls-play-button,
+      .custom-audio::-webkit-media-controls-current-time-display,
+      .custom-audio::-webkit-media-controls-time-remaining-display,
+      .custom-audio::-webkit-media-controls-volume-slider,
+      .custom-audio::-webkit-media-controls-mute-button {
+        color: #FFCC02 !important;
+        filter: brightness(1.4);  
+      }
+      .custom-audio::-webkit-media-controls-timeline::-webkit-slider-runnable-track {
+        background-color: #FFCC02 !important;
+      }
+      .custom-audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
+        background-color: #FFCC02 !important;
+      }
+      .custom-audio::-webkit-media-controls-play-button {
+        color: #FFCC02 !important;
+      }
+      .custom-audio::-webkit-media-controls-timeline {
+        filter: hue-rotate(0deg) brightness(1.5);
+        color: #FFCC02 !important;
+      }
+      .custom-audio::-webkit-media-controls-overflow-button {
+        background-color: #FFCC02 !important;
+        border-radius: 50%;
+      }
+    `}</style>
             </div>
           ))}
       </div>
@@ -264,7 +294,7 @@ export default function Endorsements() {
 
   return (
     <div>
-      <div  id="endorsements" className="min-h-[90vh] mt-5 ">
+      <div id="endorsements" className="min-h-[90vh] mt-5 ">
         <motion.div
           key="cards"
           initial={{ scale: 0.9, opacity: 0 }}
@@ -273,12 +303,12 @@ export default function Endorsements() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="md:mx-24 px-1 py-12 mx-4  md:p-12 mt-5  m-8 rounded-[30px]"
         >
-            <h3
-        className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
+          <h3
+            className="text-gold text-2xl sm:text-3xl md:text-3xl xl:text-4xl 2xl:text-4xl
         [@media(min-width:1920px)]:text-5xl font-bold my-5 md:my-12 text-center"
-      >
-        Endorsements
-      </h3>
+          >
+            Endorsements
+          </h3>
           <div className="relative">
             <Swiper
               modules={[Navigation, Autoplay]}
@@ -286,7 +316,6 @@ export default function Endorsements() {
               slidesPerView={1}
               loop={true}
               autoplay={{ delay: 2500, disableOnInteraction: false }}
-              // autoplay={false}
               onBeforeInit={(swiper) => {
                 swiperRef.current = swiper;
               }}
@@ -329,7 +358,6 @@ export default function Endorsements() {
           <Trending></Trending>
         </motion.div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }
