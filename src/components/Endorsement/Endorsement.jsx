@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 
-// === Endorsements Data ===
 import bg from "../../assets/endorsement/endorsement.avif";
 import b3shr from "../../assets/creators/4.avif";
 import mysalahmat from "../../assets/companies/16.avif";
@@ -111,7 +110,7 @@ const endorsements = [
 function EndorsementCard({ img, name, text, rec }) {
   return (
     <div
-      className="relative flex items-start  p-8 rounded-2xl overflow-hidden leading-relaxed
+      className=" relative flex items-start  p-8 rounded-2xl overflow-hidden leading-relaxed
       transition-all duration-[480ms] ease-[cubic-bezier(0.23,1,0.32,1)] txt-size justify-center
       hover:scale-105 min-h-[550px] m-5 shadow-lg hover:shadow-2xl border border-[#FFCC02]
       bg-cover bg-center"
@@ -212,7 +211,7 @@ function EndorsementCard({ img, name, text, rec }) {
     .custom-audio::-webkit-media-controls-volume-slider,
     .custom-audio::-webkit-media-controls-mute-button {
       color: #FFCC02 !important;
-      filter: brightness(1.4);
+      filter: brightness(1.4);  
     }
     /* Gold progress bar */
     .custom-audio::-webkit-media-controls-timeline::-webkit-slider-runnable-track {
@@ -265,7 +264,7 @@ export default function Endorsements() {
 
   return (
     <div>
-      <div  id="endorsements" className="min-h-[90vh] mt-5">
+      <div  id="endorsements" className="min-h-[90vh] mt-5 ">
         <motion.div
           key="cards"
           initial={{ scale: 0.9, opacity: 0 }}
@@ -310,7 +309,7 @@ export default function Endorsements() {
                 if (el && navEls.prevEl !== el)
                   setNavEls((s) => ({ ...s, prevEl: el }));
               }}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
+              className="absolute left-0 md:left-[-40px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
               aria-label="Previous"
             >
               <FaChevronLeft className="text-white text-2xl" />
@@ -321,7 +320,7 @@ export default function Endorsements() {
                 if (el && navEls.nextEl !== el)
                   setNavEls((s) => ({ ...s, nextEl: el }));
               }}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
+              className="absolute right-0 md:right-[-40px] top-1/2 -translate-y-1/2 z-[10] cursor-pointer bg-white/30 hover:bg-white/60 transition-all p-3 rounded-full shadow-xl pointer-events-auto"
               aria-label="Next"
             >
               <FaChevronRight className="text-white text-2xl" />

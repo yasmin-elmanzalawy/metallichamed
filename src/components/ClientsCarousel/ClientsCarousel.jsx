@@ -105,14 +105,14 @@ export default function ClientsCarousel() {
       {/* Custom arrows */}
       <div
         ref={prevRef}
-        className="custom-arrow custom-prev top-[30%] md:top-[45%]   z-10 cursor-pointer"
+        className="custom-arrow custom-prev top-[30%] md:top-[40%]   z-10 cursor-pointer"
         aria-label="Previous Slide"
       >
         <FaChevronLeft className="text-white text-xl" />
       </div>
       <div
         ref={nextRef}
-        className="custom-arrow custom-next  top-[30%] md:top-[45%]  z-10 cursor-pointer"
+        className="custom-arrow custom-next  top-[30%] md:top-[40%]  z-10 cursor-pointer"
         aria-label="Next Slide"
       >
         <FaChevronRight className="text-white text-xl" />

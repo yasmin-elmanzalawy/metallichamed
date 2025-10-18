@@ -108,6 +108,7 @@ const tic = toArray(tk);
 const cards = [
   {
     id: 1,
+    name: "Gaming",
     image: gaming,
     shortVideos: [
       {
@@ -223,48 +224,7 @@ const cards = [
         thumbnail: gs[17],
         url: "https://www.tiktok.com/@callofdutyarabic/video/7487579100622687506",
       },
-        {
-        id: 19,
-        title: "Arabian League Stream Moment",
-        thumbnail: meme[0],
-        url: "https://drive.google.com/file/d/1NtQLYnsNyjnj8-vueycTVkNmSsMRhMEn/view",
-      },
-      {
-        id: 20,
-        title: "Arena Esports",
-        thumbnail: meme[1],
-        url: "https://www.instagram.com/reel/CuFCPfZIO7C",
-      },
-      {
-        id: 21,
-        title: "Arena Esports",
-        thumbnail: meme[2],
-        url: "https://www.tiktok.com/@tundraesports/video/7462308222754426144",
-      },
-          {
-        id: 22,
-        title: "Arena Esports",
-        thumbnail: hs[0],
-        url: "https://www.instagram.com/reel/Cvm7Wx1vxZQ",
-      },
-      {
-        id: 23,
-        title: "Gamer Grounds Philippines",
-        thumbnail: hs[1],
-        url: "https://www.facebook.com/reel/1202619947281518",
-      },
-      {
-        id: 24,
-        title: "ZainEsports",
-        thumbnail: hs[2],
-        url: "https://www.instagram.com/reel/DAd49Q9oUI8",
-      },
-      {
-        id: 25,
-        title: "OoredooEZ",
-        thumbnail: hs[3],
-        url: "https://www.instagram.com/reel/CnhjV7-J3Ty",
-      },
+      
     ],
     longVideos: [
       {
@@ -353,7 +313,55 @@ const cards = [
         thumbnail: gl[13],
         url: "https://youtu.be/mlt3C716x_E",
       },
+     
+    ],
+    memesVideos:[
         {
+        id: 19,
+        title: "Arabian League Stream Moment",
+        thumbnail: meme[0],
+        url: "https://drive.google.com/file/d/1NtQLYnsNyjnj8-vueycTVkNmSsMRhMEn/view",
+      },
+      {
+        id: 20,
+        title: "Arena Esports",
+        thumbnail: meme[1],
+        url: "https://www.instagram.com/reel/CuFCPfZIO7C",
+      },
+      {
+        id: 21,
+        title: "Arena Esports",
+        thumbnail: meme[2],
+        url: "https://www.tiktok.com/@tundraesports/video/7462308222754426144",
+      },
+    ],
+    highlightsVideos:[
+      
+          {
+        id: 22,
+        title: "Arena Esports",
+        thumbnail: hs[0],
+        url: "https://www.instagram.com/reel/Cvm7Wx1vxZQ",
+      },
+      {
+        id: 23,
+        title: "Gamer Grounds Philippines",
+        thumbnail: hs[1],
+        url: "https://www.facebook.com/reel/1202619947281518",
+      },
+      {
+        id: 24,
+        title: "ZainEsports",
+        thumbnail: hs[2],
+        url: "https://www.instagram.com/reel/DAd49Q9oUI8",
+      },
+      {
+        id: 25,
+        title: "OoredooEZ",
+        thumbnail: hs[3],
+        url: "https://www.instagram.com/reel/CnhjV7-J3Ty",
+      },
+         {
         id: 15,
         title: "(OoredooEZ) Community Highlights",
         thumbnail: hl[0],
@@ -371,7 +379,7 @@ const cards = [
         thumbnail: hl[2],
         url: "https://www.facebook.com/watch/?v=1025731131162862",
       },
-    ],
+    ]
   },
   {
     id: 2,
@@ -715,26 +723,7 @@ const cards = [
     name: "Other",
     image: others,
     shortVideos: [
-      {
-        id: 1,
-        title: "Arena Esports",
-        thumbnail: othersh[0],
-        url: "https://www.instagram.com/reel/CtcL9cyRR-c",
-      },
-      {
-        id: 2,
-        title: "The Ultimates",
-        thumbnail: othersh[1],
-        url: "https://x.com/TheUltimatesgg/status/1654913920849829888",
-      },
-   
-
-      {
-        id: 3,
-        title: "Claritine Arabia",
-        thumbnail: othersh[2],
-        url: "https://www.facebook.com/reel/1435410481075856",
-      },
+     
     ],
     longVideos: [
       {
@@ -744,11 +733,12 @@ const cards = [
         url: "https://youtu.be/N0dkH7sx4LU",
       },
       {
-        id: 2,
-        title: "B3shr",
-        thumbnail: otherlg[1],
-        url: "https://youtu.be/QiL6CgvH_rU",
+        id: 9,
+        title: "Ulta Beauty V3 Energetic",
+        thumbnail: otherlg[4],
+        url: "https://drive.google.com/file/d/11buqEQnX5GMZUWAxgbRuPiJDdJ5QHRWZ/view?usp=sharing",
       },
+     
       {
         id: 3,
         title: "OFFSIDE",
@@ -762,12 +752,7 @@ const cards = [
         url: "https://youtu.be/dMjK6BbLmqE",
       },
     
-      {
-        id: 9,
-        title: "Ulta Beauty V3 Energetic",
-        thumbnail: otherlg[4],
-        url: "https://drive.google.com/file/d/11buqEQnX5GMZUWAxgbRuPiJDdJ5QHRWZ/view?usp=sharing",
-      },
+      
       {
         id: 10,
         title: "Ulta Beauty V3 Stylish",
@@ -779,7 +764,32 @@ const cards = [
         title: "AboFlah",
         thumbnail: otherlg[5],
         url: "https://www.youtube.com/watch?v=1KJaZoZgTvw",
-      }
+      },
+       {
+        id: 11,
+        title: "Arena Esports",
+        thumbnail: othersh[0],
+        url: "https://www.instagram.com/reel/CtcL9cyRR-c",
+      },
+      {
+        id: 12,
+        title: "The Ultimates",
+        thumbnail: othersh[1],
+        url: "https://x.com/TheUltimatesgg/status/1654913920849829888",
+      },
+       {
+        id: 2,
+        title: "B3shr",
+        thumbnail: otherlg[1],
+        url: "https://youtu.be/QiL6CgvH_rU",
+      },
+
+      {
+        id: 13,
+        title: "Claritine Arabia",
+        thumbnail: othersh[2],
+        url: "https://www.facebook.com/reel/1435410481075856",
+      },
     ],
   },
   // {
@@ -915,10 +925,10 @@ const cards = [
     longVideos: [],
   },
 ];
-
 export default function Videos() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [activeTab, setActiveTab] = useState("short");
+  const [gamingTab, setGamingTab] = useState("short"); // for Gaming only
 
   return (
     <div className=" bg-[#30054A] text-white  ">
@@ -928,83 +938,100 @@ export default function Videos() {
 
       <div className=" min-h-[90vh] mb-16">
         <AnimatePresence mode="wait">
-        {!selectedCard ? (
-          // === Cards Grid ===
-          <motion.div
-            key="cards"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="md:mx-24 px-5 py-12 mx-4 md:p-12 grid grid-cols-1 md:grid-cols-4 2xl:grid-cols-4
+          {!selectedCard ? (
+            // === Cards Grid ===
+            <motion.div
+              key="cards"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="md:mx-24 px-5 py-12 mx-4 md:p-12 grid grid-cols-1 md:grid-cols-4 2xl:grid-cols-4
             [@media(min-width:1920px)]:grid-cols-5 gap-6 bg-[#662390] m-8 rounded-[30px] "
-          >
-            {cards.map((card) => (
-            <div
-  key={card.id}
-  onClick={() => {
-    setSelectedCard(card);
-    window.scrollTo({ top: 0, behavior: "smooth" }); // 👈 scrolls to top
-  }}
-  className="cursor-pointer flex flex-col items-center transition-transform "
->
-  <img
-    src={card.image}
-    alt={card.name}
-    className="object-cover rounded-lg border border-transparent transition-transform duration-300 hover:scale-105  hover:border-gold"
-  />
-</div>
+            >
+              {cards.map((card) => (
+                <div
+                  key={card.id}
+                  onClick={() => {
+                    setSelectedCard(card);
+                    window.scrollTo({ top: 0, behavior: "smooth" }); // 👈 scrolls to top
+                  }}
+                  className="cursor-pointer flex flex-col items-center transition-transform "
+                >
+                  <img
+                    src={card.image}
+                    alt={card.name}
+                    className="object-cover rounded-lg border border-transparent transition-transform duration-300 hover:scale-105  hover:border-gold"
+                  />
+                </div>
+              ))}
+            </motion.div>
+          ) : (
+            // === Card Details Page ===
+            <motion.div
+              key="details"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="bg-[#662390] md:mx-24 mx-4 p-8 md:p-12 rounded-[30px]"
+            >
+              {/* Top Buttons Row */}
+              <div className="flex justify-between items-center mb-6">
+                {/* Back Button */}
+                <button
+                  onClick={() => {
+                    setSelectedCard(null);
+                    setActiveTab("short");
+                  }}
+                  className="px-4 py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition"
+                >
+                  ← Back
+                </button>
 
-            ))}
-          </motion.div>
-        ) : (
-          // === Card Details Page ===
-          <motion.div
-            key="details"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="bg-[#662390] md:mx-24 mx-4 p-8 md:p-12 rounded-[30px]"
-          >
-            {/* Back Button */}
-           {/* Top Buttons Row */}
-<div className="flex justify-between items-center mb-6">
-  {/* Back Button */}
-  <button
-    onClick={() => {
-      setSelectedCard(null);
-      setActiveTab("short");
-    }}
-    className="px-4 py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition"
-  >
-    ← Back
-  </button>
+                {/* Home Button (mobile only) */}
+                <button
+                  onClick={() => (window.location.href = "/")}
+                  className="px-4 py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition md:hidden flex items-center gap-2"
+                >
+                  Home →
+                </button>
+              </div>
 
-  {/* Home Button (mobile only) */}
-  <button
-    onClick={() => (window.location.href = "/")}
-    className="px-4 py-2 bg-gold text-black text-lg rounded-lg hover:bg-yellow-400 transition md:hidden flex items-center gap-2"
-  >
-    Home →
-  </button>
-</div>
+              {/* Tabs */}
+    {selectedCard.name === "Gaming" ? (
+  <div className="flex flex-wrap justify-center gap-3 md:mt-[20px] mt-[20px] mb-6 max-w-2xl mx-auto rounded-md overflow-hidden">
+    {["short", "long", "highlights", "memes"].map((tab) => (
+      <button
+        key={tab}
+        className={`btn capitalize text-sm md:text-lg w-[45%] sm:w-[45%] md:w-auto text-center font-semibold transition-colors duration-300 ${
+          gamingTab === tab
+            ? "bg-[#30054A] text-gold"
+            : "bg-[#662390] text-white"
+        }`}
+        onClick={() => setGamingTab(tab)}
+      >
+        {tab === "short"
+          ? "Short Form"
+          : tab === "long"
+          ? "Long Form"
+          : tab === "highlights"
+          ? "Highlights"
+          : "Memes"}
+      </button>
+    ))}
+  </div>
 
-
-            {/* <h2 className="text-2xl font-bold text-gold mb-6">
-              {selectedCard.name} Edits
-            </h2> */}
-
-            {/* Tabs (hide for Ads card) */}
-            
-            {
-             selectedCard.name === "Podcast" ||
-             selectedCard.name !== "Ads" &&
-              selectedCard.name !== "Documentary" &&
-              selectedCard.name !== "UGC" &&
-              selectedCard.name !== "Memes" &&
-              selectedCard.name !== "Tiktoks" &&
-              selectedCard.name !== "Tests" && (
+              ) : ![
+                  "Podcast",
+                  "Ads",
+                  "Documentary",
+                  "UGC",
+                  "Other",
+                  "Memes",
+                  "Tiktoks",
+                  "Tests",
+                ].includes(selectedCard.name) ? (
                 <div className="flex gap-5 md:mt-[20px] mt-[20px] mb-6 max-w-md mx-auto rounded-md overflow-hidden">
                   <button
                     className={`btn text-sm md:text-lg flex-1 text-center font-semibold transition-colors duration-300 ${
@@ -1027,83 +1054,89 @@ export default function Videos() {
                     Long Form
                   </button>
                 </div>
-              )}
+              ) : null}
 
-            {/* Videos Grid with animation */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTab}
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className={` grid gap-6 ${
-                  selectedCard.name === "Podcast" ||
-                  selectedCard.name === "Ads" ||
-                  selectedCard.name === "Documentary" ||
-                  selectedCard.name === "UGC" ||
-                  selectedCard.name === "Memes" ||
-                  selectedCard.name === "Tiktoks" ||
-                  selectedCard.name === "Tests"
-                    ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
-                    : activeTab === "short"
-                    ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
-                    : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
-                }`}
-              >
-                {(
-                  selectedCard.name === "Podcast" ||
-                selectedCard.name === "Documentary" ||
-                selectedCard.name === "UGC" ||
-                selectedCard.name === "Memes" ||
-                selectedCard.name === "Tiktoks" ||
-                selectedCard.name === "Tests"
-                  ? [...selectedCard.shortVideos, ...selectedCard.longVideos]
-                  : activeTab === "short"
-                  ? selectedCard.shortVideos
-                  : selectedCard.longVideos
-                ).map((video) => (
-                  <div
-                    key={video.id}
-                    className="overflow-hidden hover:scale-105 transition-transform duration-300 relative rounded-xl"
-                  >
-                    <a
-                      href={video.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block"
+              {/* Videos Grid with animation */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={selectedCard.name === "Gaming" ? gamingTab : activeTab}
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className={` grid gap-6 ${
+                    selectedCard.name === "Podcast" ||
+                    selectedCard.name === "Ads" ||
+                    selectedCard.name === "Documentary" ||
+                    selectedCard.name === "UGC" ||
+                    selectedCard.name === "Other" ||
+                    selectedCard.name === "Memes" ||
+                    selectedCard.name === "Tiktoks" ||
+                    selectedCard.name === "Tests"
+                      ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
+                      : activeTab === "short" || gamingTab === "short"
+                      ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
+                      : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
+                  }`}
+                >
+                  {(
+                    selectedCard.name === "Podcast" ||
+                    selectedCard.name === "Documentary" ||
+                    selectedCard.name === "UGC" ||
+                    selectedCard.name === "Other" ||
+                    selectedCard.name === "Memes" ||
+                    selectedCard.name === "Tiktoks" ||
+                    selectedCard.name === "Tests"
+                      ? [...selectedCard.shortVideos, ...selectedCard.longVideos]
+                      : selectedCard.name === "Gaming"
+                      ? gamingTab === "short"
+                        ? selectedCard.shortVideos
+                        : gamingTab === "long"
+                        ? selectedCard.longVideos
+                        : gamingTab === "highlights"
+                        ? selectedCard.highlightsVideos
+                        : selectedCard.memesVideos
+                      : activeTab === "short"
+                      ? selectedCard.shortVideos
+                      : selectedCard.longVideos
+                  ).map((video) => (
+                    <div
+                      key={video.id}
+                      className="overflow-hidden hover:scale-105 transition-transform duration-300 relative rounded-xl"
                     >
-                      <div className="relative">
-                        <img
-                          src={video.thumbnail}
-                          alt={video.title}
-                          className={`w-full rounded-xl object-cover shadow-sm hover:shadow-lg transition-shadow duration-300
+                      <a
+                        href={video.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block"
+                      >
+                        <div className="relative">
+                          <img
+                            src={video.thumbnail}
+                            alt={video.title}
+                            className={`w-full rounded-xl object-cover shadow-sm hover:shadow-lg transition-shadow duration-300
           ${
             selectedCard.name === "Podcast" ||
             selectedCard.name === "Documentary" ||
             selectedCard.name === "UGC" ||
+            selectedCard.name === "Other" ||
             selectedCard.name === "Tests"
               ? "aspect-video"
-              : activeTab === "short"
+              : activeTab === "short" || gamingTab === "short"
               ? "aspect-[2/3]"
               : "aspect-video"
           }`}
-                        />
-                        {/* Dark overlay on hover */}
-                        <div className="absolute inset-0 rounded-xl bg-black/0 hover:bg-black/30 transition-colors duration-300"></div>
-                      </div>
-
-                        {/* <p className="text-[#E5D4D6] txt-size font-semibold text-center py-2">
-                          {video.title}
-                        </p> */}
-                    </a>
-                  </div>
-                ))}
-              </motion.div>
-            </AnimatePresence>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                          />
+                          <div className="absolute inset-0 rounded-xl bg-black/0 hover:bg-black/30 transition-colors duration-300"></div>
+                        </div>
+                      </a>
+                    </div>
+                  ))}
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <Footer></Footer>

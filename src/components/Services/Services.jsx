@@ -5,6 +5,7 @@ import thumbnail from "../../assets/icons/thumbnail.png";
 import events from "../../assets/icons/events.png";
 import motion from "../../assets/icons/motiongraphics.png";
 import community from "../../assets/icons/communities.png";
+import contentcreator from "../../assets/icons/contentcreator.png";
 
 export default function Services() {
   const services = [
@@ -14,6 +15,7 @@ export default function Services() {
     { icon: events, title: "Event & Social Designs" },
     { icon: motion, title: "Motion Graphics" },
     { icon: community, title: "Community Management" },
+    { icon: contentcreator, title: "Content Creation" },
   ];
 
   return (
@@ -25,7 +27,7 @@ export default function Services() {
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
         {services.map((service, index) => (
           <div
             key={index}
