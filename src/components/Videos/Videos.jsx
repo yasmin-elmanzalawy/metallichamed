@@ -1110,22 +1110,24 @@ export default function Videos() {
                         className="block"
                       >
                         <div className="relative">
-                          <img
-                            src={video.thumbnail}
-                            alt={video.title}
-                            className={`w-full rounded-xl object-cover shadow-sm hover:shadow-lg transition-shadow duration-300
-          ${
-            selectedCard.name === "Podcast" ||
-            selectedCard.name === "Documentary" ||
-            selectedCard.name === "UGC" ||
-            selectedCard.name === "Other" ||
-            selectedCard.name === "Tests"
-              ? "aspect-video"
-              : activeTab === "short" || gamingTab === "short"
-              ? "aspect-[2/3]"
-              : "aspect-video"
-          }`}
-                          />
+                        <img
+  src={video.thumbnail}
+  alt={video.title}
+  className={`w-full rounded-xl object-cover shadow-sm hover:shadow-lg transition-shadow duration-300
+  ${
+    // Use aspect-video for Gaming long form and other long forms
+    (selectedCard.name === "Gaming" && gamingTab === "long") ||
+    activeTab === "long" ||
+    selectedCard.name === "Podcast" ||
+    selectedCard.name === "Documentary" ||
+    selectedCard.name === "UGC" ||
+    selectedCard.name === "Other" ||
+    selectedCard.name === "Tests"
+      ? "aspect-video"
+      : "aspect-[2/3]" // short form
+  }`}
+/>
+
                           <div className="absolute inset-0 rounded-xl bg-black/0 hover:bg-black/30 transition-colors duration-300"></div>
                         </div>
                       </a>

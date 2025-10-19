@@ -33,7 +33,7 @@ export default function Footer() {
                 {/* YouTube */}
                 <div className="tooltip-container relative cursor-pointer flex items-center">
                   <a
-                    href="http://www.youtube.com/@metallichamed"
+                    href="https://www.youtube.com/@hamedgamingshorts"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center text-white no-underline"

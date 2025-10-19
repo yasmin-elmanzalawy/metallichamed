@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaEye, FaVideo, FaUsers } from "react-icons/fa";
 
 const stats = [
-  { id: 2, icon: FaEye, prefix: "+", suffix: "M", target: 185 },
+  { id: 2,  icon: FaEye, prefix: "+", suffix: "M", target: 185 },
   { id: 3, icon: FaVideo, prefix: "+", target: 1750 },
   { id: 4, icon: FaUsers, prefix: "+", target: 60 },
 ];

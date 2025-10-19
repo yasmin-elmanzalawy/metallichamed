@@ -132,7 +132,7 @@ const endorsements = [
   {
     id: 9,
     img: abofalah,
-    name: "Abofalah",
+    name: "AboFlah",
     rec: abofalahrec,
   },
   {
