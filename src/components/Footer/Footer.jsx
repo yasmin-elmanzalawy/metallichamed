@@ -57,7 +57,7 @@ export default function Footer() {
                 {/* TikTok */}
                 <div className="tooltip-container relative cursor-pointer flex items-center">
                   <a
-                    href="https://www.tiktok.com/@hamedgaming_?_t=ZS-90ecs3fWnIt&_r=1"
+                    href="https://www.tiktok.com/@hamedgaming_"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center text-white no-underline"
