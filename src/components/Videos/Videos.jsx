@@ -313,6 +313,12 @@ const cards = [
         thumbnail: gl[13],
         url: "https://youtu.be/mlt3C716x_E",
       },
+      {
+        id: 14,
+        title: "Abo Flah",
+        thumbnail: gl[14],
+        url: "https://youtu.be/WDIVw69g1w0",
+      },
      
     ],
     memesVideos:[
@@ -489,10 +495,16 @@ const cards = [
         url: "https://youtu.be/F08cBZDa4WM",
       },
       {
-        id: 9,
+        id: 10,
         title: "PlayStation Arabia",
         thumbnail: il[8],
         url: "https://www.youtube.com/watch?v=f2O9evHDzrQ",
+      },
+      {
+        id: 11,
+        title: "Abo Flah",
+        thumbnail: il[9],
+        url: "https://youtu.be/v3B36-XFxOc",
       },
     ],
   },
@@ -788,6 +800,12 @@ const cards = [
         title: "Claritine Arabia",
         thumbnail: othersh[2],
         url: "https://www.facebook.com/reel/1435410481075856",
+      },
+             {
+        id: 17,
+        title: "AboFlah",
+        thumbnail: otherlg[6],
+        url: "https://youtu.be/G7bP2wSk-xw",
       },
     ],
   },
