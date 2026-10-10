@@ -124,7 +124,7 @@ export default function Navbar() {
             onMouseEnter={showTooltip}
             onMouseLeave={hideTooltip}
           >
-            © 2025 Designed and created by{" "}
+            © 2026 Designed and created by{" "}
             <a
               href="https://wa.me/201094837186"
               target="_blank"
